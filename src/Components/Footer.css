@@ -1,0 +1,331 @@
+h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+}
+
+p {
+    font-size: 14px;
+    color: #333333;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(23, 120, 161, 1) 89%);
+    color: white;
+    overflow: hidden;
+    background-color: rgba(173, 216, 230, 0.537);
+}
+
+.logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inner-header {
+    height: 60vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /* /Fix for safari gap/ */
+
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    padding: 20px 50px;
+    margin-bottom: 30px;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: black;
+    gap: 30px;
+}
+
+.content div {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: start;
+    flex-grow: 1;
+
+}
+
+.content div div a {
+    text-decoration: none;
+    color: black;
+}
+
+.content div div a:hover {
+    color: blue;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* /Shrinking for mobile/ */
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+.shark {
+    position: relative;
+}
+
+.box {
+    margin: auto;
+    animation: GFG 5s infinite linear;
+    position: absolute;
+    left: 500px;
+    top: 700px;
+
+}
+
+.box img {
+    height: 250px;
+    transform: rotate(-180deg);
+    
+    filter: drop-shadow(0px 0px 5px #c5ddff);
+
+}
+
+.rrr{
+    width: 25%;
+}
+
+
+@keyframes GFG {
+    0% {
+        transform: rotate(0deg) translateY(500px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(500px);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .box img {
+        height: 200px;
+        transform: rotate(-180deg);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .box img {
+        height: 170px;
+        transform: rotate(-180deg);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .box img {
+        height: 150px;
+        transform: rotate(-180deg);
+    }
+
+    .box {
+        margin: auto;
+        animation: GFG 5s infinite linear;
+        position: absolute;
+        left: -100px;
+        top: 200px;
+    }
+
+    @keyframes GFG {
+        0% {
+            transform: rotate(0deg) translateY(300px);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(300px);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .box img {
+        height: 120px;
+        transform: rotate(-180deg);
+    }
+
+    .box {
+        margin: auto;
+        animation: GFG 5s infinite linear;
+        position: absolute;
+        left: 120px;
+        top: 350px;
+    }
+    .rrr{
+        width: 40%;
+    }
+    @keyframes GFG {
+        0% {
+            transform: rotate(0deg) translateY(270px);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(270px);
+        }
+    }
+    .inner-header {
+        height: 45vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .inner-header {
+        height: 35vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .box img {
+        height: 100px;
+        transform: rotate(-180deg);
+    }
+
+    .box {
+        margin: auto;
+        animation: GFG 5s infinite linear;
+        position: absolute;
+        left: 100px;
+        top: 250px;
+    }
+    .rrr{
+        width: 40%;
+    }
+
+    @keyframes GFG {
+        0% {
+            transform: rotate(0deg) translateY(200px);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(200px);
+        }
+    }
+
+    .content {
+        position: relative;
+        height: 60vh;
+        text-align: center;
+        background-color: white;
+    }
+}
+
+#map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+#googleMap {
+    height: 100px;
+    width: 200px;
+    background-image: url("https://cache.careers360.mobi/media/colleges/staticmap/2024/1/8/4390.png");
+    background-size: contain;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 4px grey;
+}
+
+#googleMap a {
+    padding: 5px 10px;
+    color: aliceblue;
+    border-radius: 5px;
+    background-color: rgb(56, 110, 187);
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#googleMap a:hover {
+    background-color: rgb(4, 70, 4);
+
+}
+
+.follow {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px;
+    /* Optional: Adds space between icons */
+    align-items: center;
+    /* Centers vertically */
+    justify-content: center;
+    /* Centers horizontally */
+}
+
+.follow a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    /* Ensures the images don’t have extra padding or space */
+}

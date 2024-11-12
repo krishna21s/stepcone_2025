@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Great+Vibes&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Onest:wght@100..900&family=Orbitron:wght@400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poiret+One&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Onest:wght@100..900&family=Orbitron:wght@400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poiret+One&display=swap');
+
+
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+    z-index: 1003;
+}
+
+section div {
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+}
+
+section div h1:nth-child(4) {
+    color: blueviolet;
+}
+
+.presents {
+    gap: 10px;
+    align-items: center;
+}
+
+.text1 {
+    color: rgb(255, 255, 255);
+    /* background-image: url('https://static.vecteezy.com/system/resources/previews/015/655/858/large_2x/brushed-silver-metal-texture-polished-metal-texture-background-with-light-reflection-abstract-texture-background-free-photo.jpg'); */
+    background-clip: text;
+    color: transparent;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-family: Cinzel, serif;
+}
+
+.text2 {
+
+    font-family: Cinzel, serif;
+    font-size: 2.7rem;
+}

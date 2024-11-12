@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap'); */
+
+
+/* .main{
+    height: 100vh;
+} */
+.nav-bar {
+    position: fixed;
+} 
+
+.stepcone-text {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: Host Grotesk, sans-serif;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+
+.main-text {
+    font-weight: 500;
+    font-size: 65px;
+}
+
+.animated-cursor {
+    z-index: 1010;
+
+}
+
+.text-div {
+    z-index: 1000;
+    color: aliceblue;
+    position: absolute;
+    inset: 0;
+
+}
+
+.banner-1,
+.banner-2 {
+    z-index: -999;
+    height: 100vh;
+}
+
+
+.foreground-img {
+    height: 427vh;
+    filter: brightness(0.6);
+}
+
+.background-img {
+    filter: brightness(0.05);
+    /* filter: contrast(1.5); */
+}
+
+.cursor {
+    z-index: 1000;
+}
+
+.stepcone-logo-div {
+    padding-bottom: 100px;
+}
+
+/* This is the Css for the 2nd page */
+
+.page-2-main {
+    overflow: hidden;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 15%, rgba(3, 60, 92, 1) 48%, rgba(0, 0, 0, 1) 100%);
+}
+
+.page-2-main .sub-main {
+    flex-wrap: wrap;
+}
+
+.page-2-main .gmrit-img {
+    width: 100%;
+    max-width: 120vh;
+    /* You can set a max width for larger screens */
+    overflow: hidden;
+    text-align: center;
+    /* Centers the image within the div */
+}
+
+.ilovegmrit-text {
+    width: 50%;
+    max-width: 25vh;
+    /* Adjust as needed */
+    text-align: center;
+    /* Centers the image within the div */
+}
+
+.ilovegmrit-text img {
+    width: 100%;
+    height: auto;
+    filter: brightness(1.5);
+}
+
+.gmrit-img img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    /* Sets a maximum height for larger screens */
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+/* This is the Css for the Poster page (3rd page) */
+
+
+.poster-section {
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(32, 44, 77, 1) 100%);
+    overflow: hidden;
+
+}
+
+.poster-section .container {
+    margin-bottom: 70px;
+}
+
+.light-shadow-div {
+    position: absolute;
+    top: -5%;
+    justify-items: center;
+    align-content: center;
+}
+
+.light-shadow {
+    width: 80%;
+}
+
+.poster-text {
+    color: aliceblue;
+    text-align: justify;
+    align-content: center;
+}
+
+.poster-text p {
+    text-align: justify;
+    line-height: 25px;
+    display: flex;
+    font-family: "Host Grotesk";
+}
+
+.poster-img {
+    display: flex;
+    justify-content: center;
+}
+
+.poster-img img {
+    border-radius: 15px;
+}
+
+.gmrit-presents h1 {
+    font-size: 50px;
+}
+
+
+.poster-details {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+
+
+/* This is the start of StudentBodies Page (Page 4) */
+
+
+
+.bodies-main {
+    min-height: 100vh;
+    background: rgb(32, 44, 77);
+    background: linear-gradient(180deg, rgba(32, 44, 77, 1) 18%, rgba(0, 0, 0, 1) 86%);
+    align-content: center;
+}
+
+
+.studbodies-heading {
+    font-family: Host Grotesk, sans-serif;
+    border-bottom: 2px solid rgb(255, 174, 98);
+}
+
+.studbodies-heading h1 {
+    text-shadow: rgb(177, 122, 34) 1px 0 10px;
+    font-weight: lighter;
+    color: white;
+    letter-spacing: 2.5px;
+}
+
+/* for browsers that support spread, added in
+  https://drafts.csswg.org/css-text-decor-4/#text-shadow-property
+  currently: none browsers! none of them!
+  I can't even find a test: 
+  https://wpt.fyi/results/css/css-text-decor */
+@supports (text-shadow: 1px 1px 1px 1px black) {
+    .studbodies-heading h1 {
+        text-shadow:
+
+            var(--x-offset) var(--y-offset) 0px 0px var(--background-color),
+
+            var(--x-offset) var(--y-offset) var(--stroke) 0px var(--stroke-color);
+
+    }
+}
+
+.bodies-main {
+    overflow: hidden;
+}
+
+.bodies-main .sub-main .circles-div {}
+
+/* Circular Card Styling */
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    /* Dark theme shadow */
+    box-shadow: -7px -2px 9px rgba(206, 206, 206, 0.2), 5px 5px 17px rgba(0, 0, 0, 0.811);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.incircle {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    /* Dark theme inner shadow */
+    box-shadow: inset -5px -1px 2px rgba(89, 85, 141, 0.2), inset 5px 5px 7px rgba(0, 0, 0, 0.4);
+}
+
+.incircle1 {
+    background-image: url('../Assets/stud_chapterLogos/acm.png'), linear-gradient(to bottom, white, white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.incircle2 {
+    background-image: url('../Assets/stud_chapterLogos/csi.png'), linear-gradient(to bottom, white, white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.incircle3 {
+    background-image: url('../Assets/stud_chapterLogos/iiche.png'), linear-gradient(to bottom, white, white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.incircle4 {
+    background-image: url('../Assets/stud_chapterLogos/saeindia.png'), linear-gradient(to bottom, white, white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.incircle5 {
+    background-image: url('../Assets/stud_chapterLogos/acm-w.png'), linear-gradient(to bottom, white, white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.incircle6 {
+    background-image: url('../Assets/stud_chapterLogos/iste.png'), linear-gradient(to bottom, white, white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.incircle7 {
+    background-image: url('../Assets/stud_chapterLogos/iete.png'), linear-gradient(to bottom, white, white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.incircle8 {
+    background-image: url('../Assets/stud_chapterLogos/iic.png'), linear-gradient(to bottom, white, white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.incircle9 {
+    background-image: url('../Assets/stud_chapterLogos/ie.png'), linear-gradient(to bottom, white, white);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* These are the animations  to flip the cirlces */
+
+
+/* Media queries for the Responsive Feature */
+
+@media screen and (max-width:650px) {
+    .stepcone-logo {
+        height: 120px;
+    }
+
+    .main-text {
+        font-size: 40px;
+    }
+
+
+}
