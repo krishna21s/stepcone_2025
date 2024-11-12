@@ -17,8 +17,8 @@
 .menu {
     width: 250px;
     height: 500px;
-    background-color: rgba(240, 248, 255, 0.288);
-    backdrop-filter: blur(10px);
+    background-color: rgba(240, 248, 255, 0);
+    backdrop-filter: blur(15px);
     border-radius: 50% 0 0 50%;
     position: absolute;
     top: 20px;
@@ -38,13 +38,19 @@
     text-align: center;
     align-content: center;
     color: white;
+
 }
 
 .menu h4:hover {
-    background-color: rgba(240, 248, 255, 0.268);
+    background: rgb(20,198,209);
+    background: linear-gradient(90deg, rgba(20,198,209,0.27) 10%, rgba(0,0,0,0) 89%);
+
+    /* background-image: linear-gradient(to right, rgba(0, 255, 255, 0.496),rgba(0, 0, 0, 0)); */
     backdrop-filter: blur(20px);
     /* background-color: black; */
-    color: rgb(35, 28, 28);
+    color: rgba(255, 232, 213, 0.892);
+    font-weight: 500;
+    transform: scale(1.25);
 
 }
 

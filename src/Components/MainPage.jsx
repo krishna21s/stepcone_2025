@@ -1,5 +1,5 @@
 // imports of react components
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AnimatedCursor from "react-animated-cursor"
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
 
@@ -20,6 +20,34 @@ import StudentBodies_pg4 from './StudentBodies_pg4';
 import Footer from './Footer';
 
 const MainPage = () => {
+
+  const [foregroundSpeed, setForegroundSpeed] = useState(100); // Default speed for larger screens
+
+  useEffect(() => {
+
+    const updateSpeed = () => {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth <= 768) { // Mobile screen size
+        setForegroundSpeed(115); // Adjust speed for mobile
+      } else if (screenWidth <= 1024) { // Tablet screen size
+        setForegroundSpeed(100); // Adjust speed for tablet
+      } else {
+        setForegroundSpeed(100); // Adjust speed for larger screens
+      }
+    };
+
+    // Initial check
+    updateSpeed();
+
+    // Add event listener for resizing
+    window.addEventListener('resize', updateSpeed);
+
+    // Clean up event listener on unmount
+    return () => window.removeEventListener('resize', updateSpeed);
+  }, []);
+
+
 
   useEffect(() => {
     AOS.init({
@@ -82,13 +110,13 @@ const MainPage = () => {
               children: (
                 <div class="stepcone-logo-div position-absolute top-0 start-0 end-0 bottom-0 d-flex flex-column align-items-center justify-content-center">
                   <img className='stepcone-logo' data-aos='fade-down' data-aos-duration='1500' src={stepConeImg} alt="" height='200px' />
-                  <h1 class=" text-white main-text text-center" data-aos='zoom-out-up' style={{ fontFamily: "Orbitron, sans-serif" }}>StepCone 2025</h1>
+                  <h1 class=" text-white main-text text-center mx-3 my-3" data-aos='zoom-out-up' style={{ fontFamily: "Orbitron, sans-serif" }}>StepCone 2025</h1>
                 </div>
 
               ),
             },
             {
-              image: earthImg, speed: 100, className: "foreground-img "
+              image: earthImg, speed: foregroundSpeed, className: "foreground-img "
             },
           ]}
           className="aspect-[3/1] banner-1"

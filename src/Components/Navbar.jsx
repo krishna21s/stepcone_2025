@@ -20,7 +20,7 @@ const Navbar = () => {
       opacity: 0
     });
 
-    tl.from(".menu i", {
+    tl.from(".menu img", {
       opacity: 0
     });
 

@@ -234,7 +234,7 @@ p {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .inner-header {
         height: 35vh;
         width: 100%;
@@ -251,10 +251,11 @@ p {
         animation: GFG 5s infinite linear;
         position: absolute;
         left: 100px;
-        top: 250px;
+        top: 350px;
     }
     .rrr{
-        width: 40%;
+        width: 47%;
+
     }
 
     @keyframes GFG {

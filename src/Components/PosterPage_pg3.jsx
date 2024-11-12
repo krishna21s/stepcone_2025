@@ -31,7 +31,7 @@ const PosterPage_pg3 = () => {
             </p>
           </div>
           <div className='poster-img col col-12 col-lg-6 pt-3' data-aos='fade-up-left'>
-            <img src={stepconePoster} alt="" className='w-100 mb-3 mx-2' />
+            <img src={stepconePoster} alt="" className=' w-100 mb-3 mx-2' />
           </div>
         </div>
       </div>

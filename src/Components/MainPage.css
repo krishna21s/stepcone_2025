@@ -12,7 +12,7 @@
 } */
 .nav-bar {
     position: fixed;
-} 
+}
 
 .stepcone-text {
     text-decoration: none;
@@ -86,6 +86,10 @@
     /* Centers the image within the div */
 }
 
+.page-2-main .gmrit-img img{
+    border-radius: 10px;
+}
+
 .ilovegmrit-text {
     width: 50%;
     max-width: 25vh;
@@ -157,7 +161,7 @@
 }
 
 .poster-img img {
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 .gmrit-presents h1 {
@@ -315,8 +319,22 @@
     }
 
     .main-text {
-        font-size: 40px;
+        font-size: 45px;
+        letter-spacing: 5px;
     }
 
+}
 
+@media screen and (max-width:450px) {
+    .ilovegmrit-text {
+        align-content: center;
+    }
+
+    .ilovegmrit-text img {
+        height: 75px;
+        width: 250px;
+    }
+    .page-2-main .gmrit-img img{
+        height: 190px;
+    }
 }

@@ -13,8 +13,8 @@ const Page_2 = () => {
     return (
         <div className='page-2-main align-content-center'>
             <div className='sub-main container d-flex justify-content-around align-items-center'>
-                <div className='ilovegmrit-text my-5 img-fluid' data-aos = 'fade-left'>
-                    <img src={ILoveGmrit} alt="" />
+                <div className='ilovegmrit-text my-5 img-fluid d-flex justify-content-center' data-aos = 'fade-left'>
+                    <img className='' src={ILoveGmrit} alt="" />
                 </div>
                 <div className='gmrit-img img-fluid my-3' data-aos = 'fade-up-left'>
                     <img src={GmritImg} alt="" />
