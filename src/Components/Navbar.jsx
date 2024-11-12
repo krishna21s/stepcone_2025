@@ -50,8 +50,8 @@ const Navbar = () => {
         <img src={MenuIcon} height='46px' alt="" />
       </div>
       <div className="menu">
-      <img className=' menu-close m-2' src={CloseMenu} height='35px' alt="" />
-      {/* <i className="ri-close-line btn btn-outlined-light m-2"></i> */}
+        <img className=' menu-close m-2' src={CloseMenu} height='35px' alt="" />
+        {/* <i className="ri-close-line btn btn-outlined-light m-2"></i> */}
         <div className='h-75'>
           <a href="#home">
             <h4 className='fs-4  btn my-3'>Home</h4>
