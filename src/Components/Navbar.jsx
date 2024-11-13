@@ -1,8 +1,9 @@
 // Navbar.jsx
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
-import MenuIcon from '../Assets/menu_icon.png' // Ensure remix icon CSS is installed
-import CloseMenu from '../Assets/close_menu.png' // Ensure remix icon CSS is installed
+import MenuIcon from '../Assets/menu_icon.png'
+import CloseMenu from '../Assets/close_menu.png'
+import StepconeLogoImg from '../Assets/stepconelogoimg.png'
 import './Navbar.css';
 const Navbar = () => {
   useEffect(() => {
@@ -24,19 +25,19 @@ const Navbar = () => {
       opacity: 0
     });
 
-    document.querySelector(".nav img").addEventListener("click", () => {
-      document.querySelector(".nav img").style.display = "hidden"
+    document.querySelector(".nav .menu-icon").addEventListener("click", () => {
+      document.querySelector(".nav .menu-icon").style.display = "hidden"
       tl.play();
     });
 
     document.querySelector(".menu img").addEventListener("click", () => {
       tl.reverse();
-      document.querySelector(".nav img").style.display = "block"
+      document.querySelector(".nav .menu-icon").style.display = "block"
 
     });
 
     return () => {
-      document.querySelector(".nav img").removeEventListener("click", () => tl.play());
+      document.querySelector(".nav .menu-icon").removeEventListener("click", () => tl.play());
       document.querySelector(".menu img").removeEventListener("click", () => tl.reverse());
     };
   }, []);
@@ -45,9 +46,10 @@ const Navbar = () => {
     <div className="nav-main position-fixed">
       <div className="nav px-4 px-md-5 text-white ">
         <a href="# " className='text-decoration-none'>
-          <h1 className='stepcone-text fs-2'>Stepcone</h1>
+          {/* <h1 ></h1> */}
+          <img className='stepcone-text' src={StepconeLogoImg} alt="" />
         </a>
-        <img src={MenuIcon} height='46px' alt="" />
+        <img id='menu-icon' className='menu-icon' src={MenuIcon} height='46px' alt="" />
       </div>
       <div className="menu">
         <img className=' menu-close m-2' src={CloseMenu} height='35px' alt="" />

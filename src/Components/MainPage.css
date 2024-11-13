@@ -14,13 +14,7 @@
     position: fixed;
 }
 
-.stepcone-text {
-    text-decoration: none;
-    color: aliceblue;
-    font-family: Host Grotesk, sans-serif;
-    letter-spacing: 3px;
-    font-weight: 100;
-}
+
 
 .main-text {
     font-weight: 500;
@@ -86,7 +80,7 @@
     /* Centers the image within the div */
 }
 
-.page-2-main .gmrit-img img{
+.page-2-main .gmrit-img img {
     border-radius: 10px;
 }
 
@@ -330,11 +324,21 @@
         align-content: center;
     }
 
+
+
+    .page-2-main .gmrit-img img {
+        height: 190px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
     .ilovegmrit-text img {
         height: 75px;
         width: 250px;
     }
-    .page-2-main .gmrit-img img{
-        height: 190px;
+
+    .foreground-img {
+        width: 1450px;
     }
 }
