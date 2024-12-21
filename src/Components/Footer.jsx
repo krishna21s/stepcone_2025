@@ -1,7 +1,8 @@
 import React from 'react';
 import './Footer.css';
-import Dolphin from '../Assets/dolphin.png'
-import RRR from '../Assets/rrr.png'
+import Dolphin from '/Assets/dolphin.png'
+import RRR from '/Assets/rrr.png'
+import FooterDetails from './FooterDetails.jsx'
 const Footer = () => {
     return (
         <div>
@@ -31,7 +32,7 @@ const Footer = () => {
                             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                         </defs>
                         <g className="parallax">
-                            <use xlinkHref="#gentle-wave" x="48" y="0" fill="lightblue" />
+                            <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgb(03, 103, 161,0.4)" />
                             <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(173, 216, 230, 0.537)" />
                             <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(173, 216, 230, 0.3)" />
                             <use xlinkHref="#gentle-wave" x="48" y="7" fill="rgb(157, 166, 222,0.09)" />
@@ -42,9 +43,9 @@ const Footer = () => {
             </div>
             {/* <!--Header ends--> */}
 
-            <div className="content container">
+            {/* <div className="content container">
                 <div>
-                    <h3>LINKS</h3>
+                    <h3 >LINKS</h3>
                     <div>
                         <a href="">Gmrit</a>
                         <a href="">Events</a>
@@ -93,6 +94,9 @@ const Footer = () => {
                     </div>
 
                 </div>
+            </div> */}
+            <div className='w-100'>
+                <FooterDetails />
             </div>
         </div>
     );

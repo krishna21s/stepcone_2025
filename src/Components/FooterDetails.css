@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer-main {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: black !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #b8c1bf86 !important;
+    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 !important;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-main div {
+
+    width: 250px;
+
+}
+
+.footer-main div h4 {
+    font-weight: 700;
+    color: rgb(2, 34, 131)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Great+Vibes&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Onest:wght@100..900&family=Orbitron:wght@400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poiret+One&family=Signika+Negative:wght@300..700&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.footer-main div div div a {
+    color: #1e263bc0;
+    margin-right: 25px;
+    text-decoration: none;
+    transition: 0.8s;
+
+}
+
+.footer-main div div {
+    list-style-type: none;
+}
+
+.footer-main div div div {
+    margin-top: 7px;
+
+}
+
+.footer-main div div div a:hover {
+    color: rgb(0, 121, 109);
+}
+
+.map {
+    border-radius: 4px;
+    background: #00add4;
+    padding: 5px 2px;
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+.view {
+    color: aliceblue;
+    font-size: 10px;
+    top: 50%;
+}
+
+
+.follow div div a img {
+    width: 30px;
+}
+
+
+.developers,
+.developers h5 u {
+    color: #1e263bc0;
+}

@@ -1,0 +1,148 @@
+.reg-main {
+    background: radial-gradient(circle, rgb(109, 125, 172) 0%, rgb(40, 41, 66) 100%);
+    min-height: 100vh;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.reg-main h2 {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.reg-card {
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    background-image: linear-gradient(-245deg, rgba(17, 9, 71, 0.9), rgba(134, 165, 231, 0.914) 80%);
+    padding: 10px;
+    /* box-shadow: 0px 0px 14px rgba(147, 147, 255, 0.914); */
+}
+
+.reg-card h4,
+.reg-card h5 {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.reg-card:hover {
+    box-shadow: 0px 0px 30px rgb(16, 32, 49);
+}
+
+/* Header Section */
+.reg-page-header {
+    border: 1px solid rgba(180, 185, 189, 0.388);
+    border-radius: 15px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    /* gap: 10px; */
+    width: 90%;
+    display: flex;
+    top: 80px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    backdrop-filter: blur(200px);
+    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, inset rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, inset #e3edff94 0px -2px 6px 0px;
+    z-index: 20;
+    padding-bottom: 10px;
+
+}
+
+.reg-page-header div button {
+    color: white;
+    background-color: rgb(67, 94, 152);
+    border-radius: 10px;
+    /* border: 1px solid rgb(196, 222, 225); */
+    width: 130px;
+
+}
+
+.reg-page-header button:focus {
+    background-color: rgb(40, 52, 84) !important;
+    color: white;
+}
+
+.reg-page-header div button:hover {
+    color: white;
+    background-color: rgba(178, 70, 211, 0) !important;
+}
+
+.reg-page-header div {
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center !important;
+    align-content: center !important;
+    padding: 10px;
+}
+
+.reg-poster-images {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+}
+
+/* Duplicate Div to Offset Navbar */
+.dublicate-div {
+    padding-top: 90px;
+}
+
+.reg-footer-div {
+    height: 80px;
+    width: 100%;
+}
+
+.event-register-btn {
+    background-color: rgb(83, 110, 166);
+    border-radius: 7px;
+    border: 0;
+    padding: 7px 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.event-register-btn:hover {
+    transition: .4s;
+    background-color: rgb(52, 78, 131);
+}
+
+.event-header-btn {
+    background-color: rgb(83, 110, 166);
+    border-radius: 7px;
+    border: 0;
+    padding: 7px 17px !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.event-header-btn:hover {
+    transition: .4s;
+    background-color: rgb(52, 78, 131);
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    .events-data {
+        padding-top: 190px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .events-page-header {
+        border-radius: 17px;
+    }
+
+    .events-page-header div {
+        border-radius: 20px;
+    }
+
+}

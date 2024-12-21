@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Great+Vibes&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Onest:wght@100..900&family=Orbitron:wght@400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poiret+One&family=Signika+Negative:wght@300..700&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.profile-main {
+    min-height: 100vh;
+    background: #97a5c3;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #1e263bc0;
+
+
+}
+
+/* .profile-logo {
+    height: 180px;
+    width: 170px;
+    border-radius: 50%;
+    background-color: #95a3c2ff;
+} */
+
+.profile-logo img {
+    height:170px;
+    width: 160px;
+    border-radius: 50%;
+    border: 4px solid white;
+
+}
+
+.profile-event {
+    background: #7e7f7f8d;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+
+
+
+}
+
+/* .profile-info {} */

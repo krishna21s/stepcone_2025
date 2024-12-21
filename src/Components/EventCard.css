@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Great+Vibes&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Onest:wght@100..900&family=Orbitron:wght@400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poiret+One&family=Signika+Negative:wght@300..700&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    z-index: 2;
+
+}
+
+/* Card Container */
+.card-div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+
+
+    /* Adds perspective for 3D effect */
+}
+
+/* event card's parent */
+
+.event-card-parent {
+    height: 435px;
+    perspective: 1000px;
+    background: #6c6e9f4d;
+    /* border: 1px solid rgb(218, 179, 224); */
+    border-radius: 10px;
+    max-width: 350px;
+    padding: 10px;
+    /* z-index: 300; */
+    box-shadow: 10px 10px 15px rgba(49, 49, 60, 0.701), -6px 0px 34px #000000, 4px 0px 6px rgb(192, 197, 255);
+    margin: auto;
+}
+
+/* Card Styling */
+.event-card {
+    height: 414px;
+    /* width: 45%; */
+    /* max-width: 100%; */
+    background: rgb(25, 3, 70);
+    /* background: linear-gradient(90deg, rgba(152, 152, 210, 0.519) 0%, rgba(33, 102, 148, 0) 73%); */
+    border-radius: 5px;
+    backdrop-filter: blur(50px);
+    /* border: 1px solid rgba(168, 101, 186, 0.675); */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.455), inset -6px 0px 34px #000000;
+    transition: transform 0.4s;
+}
+
+.card-content {
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.2s;
+
+}
+
+.card-content:hover {
+    transform: scale(1.03);
+}
+
+/* Image Div */
+.img-div {
+    position: relative;
+    height: 60%;
+    width: 100%;
+    transition: transform 0.2s;
+    /* border: 1px solid white; */
+}
+
+.img-div img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.6s;
+}
+
+/* Headings Section */
+.headings {
+    width: 85%;
+
+    transition: transform 0.6s;
+}
+
+.headings h2 {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: large;
+    font-style: normal;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6), -3px -3px 5px rgba(255, 255, 255, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styling */
+.event-details-btn {
+    margin-top: 15px;
+    padding: 5px 7px;
+    background: #1f1649;
+    /* background-color: rgba(21, 21, 207, 0.938), rgba(191, 191, 204, 0.938);       */
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.455), inset 1px 1px 4px #ffffff;
+    transition: transform 0.3s;
+    border-radius: 4px;
+
+}
+
+.event-details-btn:hover {
+    background: #1f1649;
+
+}
+
+.event-details-btn:focus {
+    transform: scale(1.05);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-content:hover {
+        transform: scale(1.1);
+    }
+
+    #card-content,
+    .img-div,
+    .img-div img,
+    .headings,
+    .btn {
+        transform: none !important;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .img-div img {
+        margin-top: 30px;
+        height: 78%;
+        width: 95%;
+    }
+
+    .card-content {
+        transition: transform 1s;
+    }
+
+    .card-content:hover {
+        transform: scale(1.07);
+    }
+}

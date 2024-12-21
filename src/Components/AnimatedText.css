@@ -34,11 +34,32 @@ section div h1:nth-child(4) {
     color: transparent;
     font-size: 60px;
     letter-spacing: 5px;
-    font-family: Cinzel, serif;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .text2 {
-
-    font-family: Cinzel, serif;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     font-size: 2.7rem;
+}
+
+/* .G-letter,.R-letter, .I-letter,.T-letter{
+    color: rgb(69, 25, 172) !important;
+}
+.M-letter{
+    color: rgb(255, 0, 0) !important;
+} */
+.G-letter,
+.I-letter,
+.T-letter {
+    color: rgb(45, 94, 191) !important;
+}
+
+.M-letter {
+    color: rgba(255, 174, 0, 0.775) !important;
 }

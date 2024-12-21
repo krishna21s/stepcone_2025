@@ -25,11 +25,11 @@ const AnimatedText = () => {
     return (
         <section>
             <div>
-                <h1 className='text1 text-info'>G</h1>
-                <h1 className='text1 text-warning'>M</h1>
-                <h1 className='text1 text-danger'>R</h1>
-                <h1 className='text1 text-white'>I</h1>
-                <h1 className='text1 text-white'>T</h1>
+                <h1 className='text1 text-info G-letter'>G</h1>
+                <h1 className='text1 text-warning M-letter'>M</h1>
+                <h1 className='text1 text-danger R-letter'>R</h1>
+                <h1 className='text1 text-white I-letter'>I</h1>
+                <h1 className='text1 text-white T-letter'>T</h1>
             </div>
             <div className="presents">
                 <h3 className='text2 fs-3 text-white'>P</h3>

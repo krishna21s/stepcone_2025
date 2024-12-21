@@ -1,0 +1,45 @@
+.about-main {
+    /* background: radial-gradient(circle, rgb(75, 91, 138) 0%, rgb(40, 41, 66) 100%); */
+    background: linear-gradient(to bottom, rgb(0, 0, 0),  rgba(32, 44, 77, 1),black);
+    /* background: linear-gradient(180deg, rgba(32, 44, 77, 1) 18%, rgba(0, 0, 0, 1) 86%); */
+    /* background-color: black; */
+    min-height: 100vh;
+    flex-wrap: wrap !important;
+    overflow: hidden;
+}
+
+.about-main .container .dublicate-div {
+    height: 60px;
+}
+
+.about-main h1 {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.faculty-heading,
+.student-heading {
+    border-bottom: 1px solid rgb(129, 151, 166);
+}
+
+.student-coordinators h3,
+.faculty-coordinators h3 {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+    font-size: x-large;
+}
+
+.faculty-coordinators div h1,
+.student-coordinators div h1 {
+    color: rgb(216, 216, 216);
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}

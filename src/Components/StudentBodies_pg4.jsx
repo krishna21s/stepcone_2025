@@ -1,11 +1,11 @@
 import React from 'react'
-import BgImg from '../Assets/bgimage.png'
+import BgImg from '/Assets/bgimage.png'
 const StudentBodies_pg4 = (props) => {
   return (
     <div className='bodies-main '>
       <div className='.sub-main container d-flex flex-column py-5'>
         <div className='studbodies-heading m-2' data-aos='fade-down-right'>
-          <h1 className='text-center'>Our Professional Student Bodies</h1>
+          <h1 className='text-center fs-1'>Our Professional Student Bodies</h1>
         </div>
         <div className='row justify-content-center circles-div'>
 

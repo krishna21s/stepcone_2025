@@ -1,16 +1,18 @@
 .nav-main {
-    height: 100%;
     width: 100%;
-    overflow: hidden;
     padding: 5px;
-    z-index: 900;
+    padding-top: 10px;
+    position: absolute;
+    z-index: 30;
+    /* height: 50px; */
+    background: rgba(0, 0, 0, 0.515);
 }
 
 .nav {
     display: flex;
-    padding: 20px;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .stepcone-text {
@@ -19,43 +21,57 @@
     font-family: Host Grotesk, sans-serif;
     letter-spacing: 3px;
     font-weight: 100;
-    width:56px;
+    width: 56px;
 }
 
 .menu {
     width: 250px;
     height: 500px;
-    background-color: rgba(240, 248, 255, 0);
-    backdrop-filter: blur(15px);
     border-radius: 50% 0 0 50%;
     position: absolute;
     top: 20px;
     right: -250px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    transition: right 0.7s;
+    transition: right 0.5s ease-in-out;
+    border: 2px solid rgb(186, 216, 255);
     overflow: hidden;
-    border: 2px solid aqua;
+    backdrop-filter: blur(55px);
 }
 
-.menu h4 {
+.menu .sub-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.menu .sub-menu .nav-links {
     width: 100%;
     height: 50px;
-    text-align: center;
+    text-align: start;
     align-content: center;
     color: white;
-
+    background: linear-gradient(90deg, rgba(56, 108, 241, 0.332) 10%, rgba(0, 0, 0, 0) 60%);
+    border-radius: 0px 10px;
+    text-decoration: none;
+    text-align: center;
 }
 
-.menu h4:hover {
+.sub-menu .nav-links h4{
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.menu Link:hover {
     background: rgb(20, 198, 209);
     background: linear-gradient(90deg, rgba(20, 198, 209, 0.27) 10%, rgba(0, 0, 0, 0) 89%);
-
-    /* background-image: linear-gradient(to right, rgba(0, 255, 255, 0.496),rgba(0, 0, 0, 0)); */
     backdrop-filter: blur(20px);
-    /* background-color: black; */
     color: rgba(255, 232, 213, 0.892);
     font-weight: 500;
     transform: scale(1.25);
@@ -71,10 +87,4 @@
     cursor: pointer;
     outline: none;
     opacity: 0.6;
-    /* padding: 10px; */
-}
-
-.menu h4 {
-    font-family: Onest, sans-serif;
-    font-weight: 100;
 }

@@ -4,8 +4,13 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/stepcone_2025/',
-  build: {
-    outDir: 'build',  // Change output directory to 'build'
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost', // PHP server
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''), // Rewrite /api prefix
+      },
+    },
   },
 })

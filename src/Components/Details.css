@@ -1,0 +1,320 @@
+ /* Reset and fonts */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+ }
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap');
+
+ .details-main {
+     min-height: 100vh;
+     /* background: #000; */
+     color: aliceblue;
+     font-family: "Mulish", sans-serif;
+     font-weight: 300;
+     overflow: hidden;
+ }
+
+ /* Title styling */
+ .details-title {
+     font-size: 2rem;
+     word-spacing: 10px;
+     letter-spacing: 2px;
+     font-weight: 100;
+ }
+
+ .details-total-info {
+     width: 75%;
+ }
+
+ /* Main content styling */
+ .gmrit-clg {
+     object-fit: contain;
+     max-width: 100%;
+     height: auto;
+     /* Ensure it scales with width */
+     margin-bottom: 1rem;
+     border-radius: 10px;
+ }
+
+ .details-gmr {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     /* Allows items to stack on smaller screens */
+     gap: 1rem;
+     /* Add spacing between items */
+ }
+
+ .details-gmr div {
+     flex: 1 1 300px;
+     /* Make each item flexible */
+     text-align: justify;
+ }
+
+ .details-text {
+     word-spacing: 5px;
+     font-size: 17px;
+     line-height: 30px;
+ }
+
+ .circle-details {
+     width: 350px;
+     height: 350px;
+     border-radius: 50%;
+     background: rgb(9, 37, 151);
+     background: radial-gradient(circle, rgba(9, 37, 151, 1) 0%, rgba(0, 10, 51, 1) 55%);
+ }
+
+ .conic-shape {
+     width: 200px;
+     height: 200px;
+     background: #4caf50;
+     clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+     /* Adjust the polygon points to create the desired conic shape */
+ }
+
+ /* Breakpoints for responsiveness */
+ @media (max-width: 768px) {
+     .details-title {
+         font-size: 1.5rem;
+         /* Adjust title size */
+         text-align: center;
+     }
+
+     .details-gmr {
+         flex-direction: column;
+         /* Stack content vertically */
+         align-items: flex-start;
+         /* Left-align text */
+     }
+
+     .gmrit-clg {
+         margin: 0 auto;
+         /* Center image */
+     }
+ }
+
+ @media (min-width: 550px) and (max-width: 1000px) {
+     .details-gmr {
+         flex-direction: column;
+         /* Stack content vertically */
+         align-items: center;
+         /* Left-align text */
+     }
+
+     .details-gmr img {
+         height: 300px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .details-title {
+         font-size: 1.2rem;
+         /* Further reduce title size */
+     }
+
+     .details-gmr div {
+         flex: 1 1 100%;
+         /* Make each div full-width */
+     }
+
+     .details-main {
+         padding: 1rem;
+         /* Add padding for smaller screens */
+     }
+
+     .details-text {
+         word-spacing: 0px;
+         font-size: 17px;
+     }
+
+     .general-main {
+         margin-left: 0px;
+         padding-right: 5px;
+         text-wrap: wrap;
+         font-size: 13px;
+
+     }
+
+     .general img {
+         margin-left: 0px;
+     }
+
+     .video video {
+         width: 350px;
+
+     }
+
+     .details-total-info {
+         width: 100%;
+     }
+ }
+
+ .details-circle-design {
+     position: relative;
+     width: 300px;
+     height: 300px;
+     transform: rotateZ(45deg);
+     transition: 1s;
+     border-radius: 50%;
+     overflow: hidden;
+
+ }
+
+ /* Ensures slices are clipped to the circle */
+
+ .s1 {
+     height: 150px;
+     width: 150px;
+     background-image: linear-gradient(45deg, rgba(33, 36, 41, 0.763), rgba(0, 0, 0, 0.9) 50%);
+     border-bottom: 2px solid rgb(255, 255, 255);
+     position: absolute;
+     top: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ .s2 {
+     height: 150px;
+     width: 150px;
+     background-image: linear-gradient(135deg, rgba(33, 36, 41, 0.763), rgba(0, 0, 0, 0.9) 50%);
+     border-left: 2px solid rgb(255, 255, 255);
+     position: absolute;
+     right: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ .s3 {
+     height: 150px;
+     width: 150px;
+     background-image: linear-gradient(315deg, rgba(33, 36, 41, 0.763), rgba(0, 0, 0, 0.9) 50%);
+     border-right: 2px solid rgb(255, 255, 255);
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .s4 {
+     height: 150px;
+     width: 150px;
+     background-image: linear-gradient(225deg, rgba(33, 36, 41, 0.763), rgba(0, 0, 0, 0.9) 50%);
+     border-top: 2px solid rgb(255, 255, 255);
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ .stepcone-play {
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     background: #000;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .stepcone-play button {
+     background: #000;
+     outline: 0;
+     border: 0;
+     color: aliceblue;
+
+ }
+
+ .scrollimgs {
+     max-width: 500px;
+
+ }
+
+ /* .video {} */
+
+ .video video {
+     filter: drop-shadow(0px 0px 4px white);
+     min-width: 350px;
+     object-fit: cover;
+     border: 3px solid lightcyan;
+ }
+
+ .details-screen {
+     min-width: 380px;
+ }
+
+ .details-input {
+     width: 350px;
+     background: transparent;
+     border: 0;
+     border-bottom: 2px solid white;
+     outline: 0;
+     color: aqua;
+
+ }
+
+ .details-btn {
+     border: 0;
+     outline: 0;
+     box-shadow: inset 3px 0px 6px rgb(255, 255, 255), inset -5px 0px 6px black, 3px 4px 5px black;
+     transition: 0.5s;
+     padding: 7px 24px;
+ }
+
+ .details-btn:hover {
+     background: white;
+     color: #000 !important;
+
+ }
+
+ .general img {
+     margin-left: 0px;
+ }
+
+ .gallery,
+ .video,
+ .query,
+ .general-main {
+     display: none;
+ }
+
+ .general-main {
+     text-align: justify;
+ }
+
+ .circle-parent {
+     transition: 1s;
+ }
+
+
+ .carousel-control-next,
+ .carousel-control-prev {
+     z-index: 10;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+ }
+
+ .play-btn-note {
+     font-family: "Mulish", sans-serif;
+     font-weight: 100;
+     /* color: #4caf50 !important; */
+     /* font-size: 17px; */
+ }

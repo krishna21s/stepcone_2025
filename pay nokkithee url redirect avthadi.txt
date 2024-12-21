@@ -1,0 +1,11 @@
+pay nokkithee url redirect avthadi
+
+response callback.php velthadi
+
+call back resonse tho mail or !mail;
+
+if response:
+	mail, create Unique Id;
+
+else:
+	popup -> payment unsuccessful, Registration Failure.

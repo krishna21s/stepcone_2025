@@ -1,0 +1,317 @@
+import React, { useState } from "react";
+import { useEffect } from "react";
+
+import "./EventRegisterForm.css";
+import { useLocation, useNavigate, Link } from "react-router-dom";
+import axios from "axios";
+import Navbar from "./Navbar.jsx";
+import StepConeImg from '../Assets/STEPCONE[1].png';
+import EventRegisterImg from '../Assets/eventregister[1].png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faIndianRupeeSign,
+    faPeopleGroup,
+    faEnvelope
+} from "@fortawesome/free-solid-svg-icons";
+import LoadingAnimation from "./LoadingAnimation.jsx";
+
+const EventRegisterForm = () => {
+    const location = useLocation();
+    // const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+    const [dataInput, setDataInput] = useState(false);
+
+    // Default fallback for event data
+    const { event } = location.state || { event: { name: "", teamSize: 1, registrationFee: 0 } };
+    const teamsize = event.teamSize - 1; // Number of team members
+
+    const [formData, setFormData] = useState({
+        Teamname: "",
+        teamLeadEmail: "",
+        membersMail: Array(teamsize).fill(""), // Initialize with empty strings
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+
+        // Update specific member email fields
+        if (name.startsWith("member")) {
+            const memberIndex = parseInt(name.replace("member", "").replace("Mail", "")) - 1;
+            setFormData((prevState) => {
+                const updatedMembersMail = [...prevState.membersMail];
+                updatedMembersMail[memberIndex] = value;
+                return {
+                    ...prevState,
+                    membersMail: updatedMembersMail,
+                };
+            });
+        } else {
+            setFormData((prevState) => ({
+                ...prevState,
+                [name]: value,
+            }));
+        }
+    };
+
+
+    const handleSubmit = async (e) => {
+        if (dataInput) {
+            const formDataValue = {
+                email: formData.teamLeadEmail,
+                teamName: formData.Teamname,
+                teamLead: formData.teamLeadEmail,
+                members: formData.membersMail,
+                eventName: event.name,
+                teamSize: event.teamSize,
+                amount: event.registrationFee,
+            };
+            setLoading(true);
+            e.preventDefault();
+
+            console.log(formDataValue)
+
+
+
+            try {
+                // accessing the payresponse
+                const payResponse = await axios.post('api/stepcone_backend/paymentgateway.php', formDataValue)
+                const payInitialised = payResponse.data;
+                if (payInitialised.status == true) {
+
+                    setLoading(false);
+                    //     console.log(payData.redirectUrl);
+                    //     if (window.confirm(payData.message) === true) {
+                    window.location.href = payInitialised.redirectUrl;
+                    //     }
+                    //     console.log(payData);
+
+                    //     if (payData.status === true) {
+                    //         try {
+                    //             const response = await axios.post(
+                    //                 "http://localhost/stepcone_backend/eventregister.php",
+                    //                 formDataValue
+                    //             );
+                    //             console.log("Response from server:", response.data);
+                    //             const data = response.data;
+                    //             if (data.status === "success") {
+                    //                 alert(sessionStorage.getItem('message'));
+                    //                 console.log(sessionStorage.getItem('message'))
+                    //                 sessionStorage.setItem('message', data.message);
+                    //                 setLoading(false);
+                    //                 navigate("/profile");
+                    //             } else {
+                    //                 setLoading(false);
+                    //                 console.error("Error from backend:", data.message);
+                    //                 alert(data.message || "An error occured");
+                    //             }
+                    //         } catch (error) {
+                    //             console.error("Error:", error);
+                    //             alert("Failed to register, please try again later.");
+                    //         }
+                    //         finally {
+                    //             setLoading(false);
+                    //         }
+                    //     }
+                    //     else {
+                    //         setLoading(false);
+                    //         alert("Failed to register, please try again later.");
+                    //     }
+                    // }
+                    // console.log(payInitialised)
+                    // access the callback response
+                    const response = await axios.get('api/stepcone_backend/paymentcallback.php');
+                    const payData = response.data;
+                    console.log(payData)
+                    // if (payData.status === true) {
+                    //     setLoading(false);
+                    //     console.log(payData.redirectUrl);
+                    //     if (window.confirm(payData.message) === true) {
+                    //         window.location.href = payData.redirectUrl;
+                    //     }
+                    //     console.log(payData);
+
+                    //     if (payData.status === true) {
+                    //         try {
+                    //             const response = await axios.post(
+                    //                 "http://localhost/stepcone_backend/eventregister.php",
+                    //                 formDataValue
+                    //             );
+                    //             console.log("Response from server:", response.data);
+                    //             const data = response.data;
+                    //             if (data.status === "success") {
+                    //                 alert(sessionStorage.getItem('message'));
+                    //                 console.log(sessionStorage.getItem('message'))
+                    //                 sessionStorage.setItem('message', data.message);
+                    //                 setLoading(false);
+                    //                 navigate("/profile");
+                    //             } else {
+                    //                 setLoading(false);
+                    //                 console.error("Error from backend:", data.message);
+                    //                 alert(data.message || "An error occured");
+                    //             }
+                    //         } catch (error) {
+                    //             console.error("Error:", error);
+                    //             alert("Failed to register, please try again later.");
+                    //         }
+                    //         finally {
+                    //             setLoading(false);
+                    //         }
+                    //     }
+                    //     else {
+                    //         setLoading(false);
+                    //         alert("Failed to register, please try again later.");
+                    //     }
+                    // }
+                }
+                else {
+                    console.log("payment not initialized");
+                }
+            }
+            catch {
+                console.log("Error")
+            }
+
+            // useEffect(async () => {
+            //     if (payData.status === true) {
+            //         try {
+            //             const response = await axios.post(
+            //                 "http://localhost/stepcone_backend/eventregister.php",
+            //                 formDataValue
+            //             );
+            //             console.log("Response from server:", response.data);
+            //             const data = response.data;
+            //             if (data.status === "success") {
+            //                 setLoading(false);
+            //                 alert(data.message);
+            //                 navigate("/profile");
+            //             } else {
+            //                 setLoading(false);
+            //                 console.error("Error from backend:", data.message);
+            //                 alert(data.message || "An error occured");
+            //             }
+            //         } catch (error) {
+            //             console.error("Error:", error);
+            //             alert("Failed to register, please try again later.");
+            //         }
+            //         finally {
+            //             setLoading(false);
+            //         }
+            //     }
+            //     else {
+            //         setLoading(false);
+            //         alert("Failed to register, please try again later.");
+            //     }
+            // }, [payData])
+        }
+    };
+
+
+
+    useEffect(() => {
+        if (formData.Teamname !== "" && formData.teamLeadEmail !== "" && formData.membersMail.every(email => email !== "")) {
+            setDataInput(true);
+        } else {
+            setDataInput(false);
+        }
+    }, [formData]);
+
+
+    const navigate = useNavigate();
+
+    const handlePayClick = (event) => {
+        navigate("/makepayment", { state: { event } });
+    };
+
+    return (
+        <>
+            <Navbar />
+            <LoadingAnimation loading={loading} />
+            <div className="EventForm-main d-md-flex flex-column justify-content-center align-items-center align-content-center">
+                <div className="d-flex justify-content-center">
+                    <img src={StepConeImg} className="" height='80px' alt="" />
+                </div>
+                <h3 className="text-center mt-4 event-name">{event.name}</h3>
+
+                <div className="EventForm d-md-flex justify-content-between align-items-center p-3 gap-4 rounded-4 m-3">
+                    <div className="w-md-50 w-100">
+                        <form onSubmit={handleSubmit} action="/makepayment" state={{ event }}>
+                            <div className="mb-3">
+                                <FontAwesomeIcon icon={faPeopleGroup} className="mx-0" />
+                                <label htmlFor="Teamname" className="form-label">
+                                    Team Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="Teamname"
+                                    name="Teamname"
+                                    value={formData.Teamname}
+                                    onChange={handleInputChange}
+                                    required
+                                    className="form-control bg-transparent border-0 border-bottom rounded-0 text-light"
+                                />
+                            </div>
+
+                            <div className="mb-3">
+                                <FontAwesomeIcon icon={faEnvelope} className="mx-1" />
+                                <label htmlFor="teamLeadEmail" className="form-label">
+                                    Team Lead Email
+                                </label>
+                                <input
+                                    type="email"
+                                    id="teamLeadEmail"
+                                    name="teamLeadEmail"
+                                    value={formData.teamLeadEmail}
+                                    onChange={handleInputChange}
+                                    required
+                                    className="form-control bg-transparent border-0 border-bottom rounded-0 text-light"
+                                />
+                            </div>
+
+                            <div>
+                                {Array.from({ length: teamsize }).map((_, index) => (
+                                    <div key={index} className="mb-3">
+                                        <FontAwesomeIcon icon={faEnvelope} className="mx-1" />
+                                        <label htmlFor={`member${index + 1}Mail`} className="form-label">
+                                            Member {index + 1} Email
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id={`member${index + 1}Mail`}
+                                            name={`member${index + 1}Mail`}
+                                            value={formData.membersMail[index]}
+                                            onChange={handleInputChange}
+                                            required
+                                            className="form-control bg-transparent border-0 border-bottom rounded-0 text-light"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+
+
+                            <button type="submit" className="btn btn-primary mt-3"
+                            >
+                                {/* <Link
+                                    to="/makepayment"
+                                    state={{ event }}
+                                >
+                                </Link> */}
+                                <FontAwesomeIcon icon={faIndianRupeeSign} />
+                                &nbsp;PAY {event.registrationFee}/-
+                            </button>
+                        </form>
+                    </div>
+
+                    <div className="d-flex justify-content-center w-md-50 w-100">
+                        <img
+                            src={EventRegisterImg}
+                            className="img-fluid register-logo w-md-100 w-75"
+                            alt="Event Registration"
+                        />
+                    </div>
+                </div>
+            </div >
+        </>
+    );
+};
+
+export default EventRegisterForm;

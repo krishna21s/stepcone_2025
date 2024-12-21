@@ -1,0 +1,38 @@
+.queries-container {
+    /* background-color: #899fb5; */
+    border-radius: 8px;
+    padding: 20px;
+    height: 100vh !important;
+}
+
+.q-reply-txtarea {
+    resize: none;
+    width: 300px;
+}
+
+.queries-table-list {
+    margin-top: 20px;
+    background: #899fb5 !important;
+    /* height: 100vh; */
+     /* Ensures table spans the container */
+}
+
+.queries-db-hdng {
+    color: #afc1d3;
+}
+
+.queries-main {
+    height: 100vh;
+    background-color: #576f86;
+}
+
+.queries-table-wrapper {
+    overflow-x: auto;
+    /* max-height: 500px; Adjust as per your design */
+    border: 1px solid #ccc;
+    /* Optional: Adds a border to define the scrollable area */
+}
+
+.send-query-reply-btn {
+    min-height: 40px;
+}

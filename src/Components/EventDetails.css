@@ -1,0 +1,305 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.min-height100VH {
+    min-height: 100vh;
+}
+
+.event-details-main {
+    /* background: radial-gradient(circle, rgb(139, 15, 197) 0%, rgb(0, 0, 0) 100%); */
+    background: linear-gradient(to bottom, rgb(77, 85, 112) 0%, rgb(0, 0, 0) 100%, rgb(67, 73, 92) 0%);
+
+    min-height: 100vh;
+
+}
+
+.logo-eventName .img-div {
+    height: 60vh;
+    max-width: 90vh;
+    border-radius: 30px;
+}
+
+.logo-eventName .img-div img {
+    width: 100%;
+    height: 40%;
+
+    box-shadow:
+        7.6px 8.1px 4.3px rgba(0, 0, 0, 0.43),
+        25.5px 27.3px 14.3px rgba(0, 0, 0, 0.266),
+        114px 122px 64px rgba(0, 0, 0, 0.19);
+    height: auto;
+    /* Maintain the aspect ratio */
+    display: block;
+    /* Remove inline gap below the image */
+    /* object-fit: cover; */
+
+}
+
+.event-details-main {
+    padding: 15px;
+}
+
+.about-event p {
+    text-align: justify;
+}
+
+.about-prize h1 {
+    text-align: center !important;
+}
+
+.prize-money,
+.team-size,
+.registration-fee {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(229, 179, 118, 0.816);
+}
+
+.prize-money h5,
+.team-size h5,
+.registration-fee h5 {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: aliceblue;
+    font-size: 17px;
+    margin: 10px;
+}
+
+.event-pdf a {
+    color: lightblue;
+    border: 1px solid white;
+}
+
+.event-pdf a:hover {
+    background-color: rgb(101, 128, 163);
+}
+
+.details-event-name {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: 6px 2.5px 3px rgb(0, 0, 0);
+}
+
+.faculty-heading,
+.student-heading {
+    border-bottom: 1px solid rgb(129, 151, 166);
+}
+
+.student-coordinators h3,
+.faculty-coordinators h3 {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+    font-size: x-large;
+}
+
+.faculty-coordinators div h1,
+.student-coordinators div h1 {
+    color: rgb(216, 216, 216);
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.event-details-main .event-back-btn{
+    position: fixed;
+    z-index: 30;
+    top: 10px;
+    background: rgba(35, 69, 129, 0.545);
+    font-size: large;
+    box-shadow:
+        5.3px 3.4px 2.9px rgba(0, 0, 0, 0.065),
+        13.4px 8.7px 7.2px rgba(0, 0, 0, 0.093),
+        27.3px 17.7px 14.7px rgba(0, 0, 0, 0.117),
+        inset 0.2px 36.5px 30.3px rgba(0, 0, 0, 0.145),
+        inset 154px 100px 83px rgba(0, 0, 0, 0.21),
+        inset 2px 0px 6px rgba(255, 255, 255, 0.738);
+}
+
+.event-details-main .event-back-btn:hover {
+    transition: 0.4s;
+    background: rgb(118, 145, 190);
+}
+
+.event-details-main .back-btn  {
+    /* background-color: rgb(255, 255, 255); */
+    position: relative;
+    padding: 5px 12px;
+
+}
+
+.event-details-main .back-btn .btn:hover {
+    background-color: rgb(155, 168, 200);
+    color: rgb(0, 0, 0);
+}
+
+.fa-stud-card-parent {
+    width: 320px;
+    height: 350px;
+}
+
+.fa-stud-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: rgba(29, 9, 74, 0.507);
+    backdrop-filter: blur(30px);
+    box-shadow:
+        5.3px 3.4px 2.9px rgba(0, 0, 0, 0.065),
+        13.4px 8.7px 7.2px rgba(0, 0, 0, 0.093),
+        27.3px 17.7px 14.7px rgba(0, 0, 0, 0.117),
+        inset 0.2px 36.5px 30.3px rgba(0, 0, 0, 0.145),
+        inset 154px 100px 83px rgba(0, 0, 0, 0.21),
+        inset 2px 0px 6px rgba(255, 255, 255, 0.738);
+
+}
+
+.fa-stud-img {
+    width: 55%;
+}
+
+.fa-stud-img img {
+    width: 100%;
+}
+
+.fa-stud-details p {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.about-event-hdng {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+.event-description {
+    font-size: 17px;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.event-rulebook-btn {
+    background: rgba(35, 69, 129, 0.545);
+    font-size: large;
+    box-shadow:
+        5.3px 3.4px 2.9px rgba(0, 0, 0, 0.065),
+        13.4px 8.7px 7.2px rgba(0, 0, 0, 0.093),
+        27.3px 17.7px 14.7px rgba(0, 0, 0, 0.117),
+        inset 0.2px 36.5px 30.3px rgba(0, 0, 0, 0.145),
+        inset 154px 100px 83px rgba(0, 0, 0, 0.21),
+        inset 2px 0px 6px rgba(255, 255, 255, 0.738);
+}
+
+.event-rulebook-btn:hover {
+    transition: 0.5s;
+    background: rgba(47, 45, 58, 0.786) !important;
+}
+
+
+.details-register-btn {
+    background: rgba(35, 69, 129, 0.545);
+    padding: 4px 12px;
+    border: none;
+    background: rgba(35, 69, 129, 0.545);
+    font-size: large;
+
+    box-shadow:
+        5.3px 3.4px 2.9px rgba(0, 0, 0, 0.065),
+        13.4px 8.7px 7.2px rgba(0, 0, 0, 0.093),
+        27.3px 17.7px 14.7px rgba(0, 0, 0, 0.117),
+        inset 0.2px 36.5px 30.3px rgba(0, 0, 0, 0.145),
+        inset 154px 100px 83px rgba(0, 0, 0, 0.21),
+        inset 2px 0px 6px rgba(255, 255, 255, 0.738);
+}
+
+
+.details-register-btn:hover {
+    transition: 0.5s;
+    background: #9a808053;
+}
+
+
+
+
+.typewriter {
+    display: inline-block;
+    /* Fit the content naturally */
+    overflow: hidden;
+    /* Hide the text beyond the visible area */
+}
+
+.typewriter p {
+    /* Typewriter-style font */
+    margin: 0;
+    white-space: pre-wrap;
+    /* Allow wrapping but respect spaces */
+    overflow-wrap: break-word;
+    /* Enable word wrapping */
+    border-right: 2px solid black;
+    /* Simulate the cursor */
+    animation: typing 7s steps(60, end), blink 0.5s step-end infinite;
+}
+
+
+@keyframes typing {
+    from {
+        max-height: 0;
+        /* Start with nothing visible */
+    }
+
+    to {
+        max-height: 100vh;
+        /* Gradually reveal all text */
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: black;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 655px) {
+
+    .logo-eventName .img-div {
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-event {
+        margin-bottom: 100px;
+    }
+}

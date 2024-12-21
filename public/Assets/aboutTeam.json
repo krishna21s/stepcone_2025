@@ -1,0 +1,16 @@
+{
+    "facultyConvenors": [
+        {
+            "id": 1,
+            "name": "Dr. J. Sridhar",
+            "dept": "CIVIL",
+            "image": "sridhar"
+        },
+        {
+            "id": 2,
+            "name": "Dr. M. Satish",
+            "dept": "CSE",
+            "image": "satish"
+        }
+    ]
+}

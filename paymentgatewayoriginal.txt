@@ -1,0 +1,89 @@
+<?php
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: *");
+header("Access-Control-Allow-Headers: *");
+header('Content-Type: application/json');
+// The URL for the API endpoint (check if this is the correct one)
+// $url = 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay'; // Make sure this is correct
+$url = 'https://platformmarketplacejp-345732-ruby.b345732.dev.eastus.az.svc.builder.cafe/bx_block_phonepeintegration1/phonepe_checkout'; // Make sure this is correct
+
+
+
+
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $userData = json_decode(file_get_contents("php://input"), true);
+    // $userData = json_decode(json_encode($userData), true);
+    $userEmail =  $userData['email'];
+    // $userPhone =  $userData->mobile;
+    $userAmount =  $userData['amount'] * 100;
+    // Data you want to send in the request body
+    $data = [
+        "merchantId" => "PGTESTPAYUAT96", // replace with your merchant ID
+        "merchantTransactionId" => "MT9771377386386236", // replace with transaction ID
+        "merchantUserId" => "MUID123",
+        "amount" => $userAmount,
+        "redirectUrl" => "http://localhost:5173/profile",
+        "mobileNumber" => "9014519770",
+        "paymentInstrument" => [
+            "type" => "PAY_PAGE"
+        ]
+    ];
+
+    // Convert data to JSON format
+    $jsonData = json_encode($data);
+
+    // Initialize cURL session
+    $ch = curl_init();
+
+    // Set the necessary cURL options
+    curl_setopt($ch, CURLOPT_URL, $url); // Use the sandbox endpoint or production
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return the response as a string
+    curl_setopt($ch, CURLOPT_POST, true); // Use POST method
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData); // Attach the data to the request
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Follow redirects
+
+    // Set the necessary headers
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Content-Type: application/json', // Set content type as JSON
+        'X-API-KEY: 099eb0cd-02cf-4e2a-8aca-3e6c6aff0399'  // Use correct API key for sandbox or production
+    ]);
+
+    // Execute the request and get the response
+    $response = curl_exec($ch);
+
+    // Check for errors in the request
+    if (curl_errno($ch)) {
+        echo 'Curl error: ' . curl_error($ch);
+        curl_close($ch);
+        exit;
+    }
+
+    // Close the cURL session
+    curl_close($ch);
+
+    // Debug: Print the raw response
+    // echo "<pre>";
+    // echo "Raw Response: ";
+    // print_r($response);
+    // echo "</pre>";
+
+    // Decode the response from JSON
+    $responseData = json_decode($response, true);
+    // echo $responseData;
+    // Check if payment was initiated successfully
+    if (isset($responseData['success']) && $responseData['success'] == true) {
+        // Extract the redirect URL
+        $redirectUrl = $responseData['data']['instrumentResponse']['redirectInfo']['url'];
+
+        // Redirect to the extracted URL
+        // header('Location: ' . $redirectUrl);
+        echo json_encode(["status" => $responseData['success'], "message" => $responseData['message'], "data" => $responseData['data'], "redirectUrl" => $redirectUrl]);
+        exit(); // Ensure no further code is executed after the redirect
+    } else {
+        // Handle the case where payment initiation failed
+        echo "Error: " . $responseData['message'];
+    }
+}

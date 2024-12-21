@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "M. Venkata Krishna",
+        "Branch": "CSE",
+        "image": "VenkataKrishna",
+        "email": "venkatakrishnac60@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/venkata-krishna-meka",
+        "tech": "Full Stack Developer",
+        "bgImg": ""
+    },
+    {
+        "id": 2,
+        "name": "Abdul Yunus",
+        "Branch": "CSE",
+        "image": "AbdulYunus",
+        "email": "yunusabdul274@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/venkata-krishna-meka",
+        "tech": "Full Stack Developer",
+        "bgImg": ""
+    }
+ 
+]

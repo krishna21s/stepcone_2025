@@ -1,0 +1,1704 @@
+{
+  "events": [
+    {
+      "eventType": "central",
+      "departments": [
+        {
+          "dept": "General",
+          "events": [
+            {
+              "id": 1,
+              "dept": "General",
+              "name": "Paper Presentation",
+              "ruleBook": "/EVENT_SOP/CENTRAL/TPP.pdf",
+              "image": "PaperPresentation",
+              "description": "The STEPCONE platform aims to showcase empirical research outcomes across diverse engineering domains, emphasizing the identification of research gaps and advancements in emerging areas of engineering and technology. The platform also encourages the examination of current scientific contributions relevant to engineering research. Research communication, encompassing both novel perspectives on traditional domains and cutting-edge technologies, is highly encouraged.We invite full papers in the prescribed format from enthusiastic student researchers. Submissions are accepted either as a single-author contribution or as a collaborative effort with a maximum of two authors.",
+              "facultyCoordinators": [
+                {
+                  "name": "Dr. S.S.G. Prasad",
+                  "details": ""
+                },
+                {
+                  "name": "Mr. B.P.R.V.S Priyatham",
+                  "details": ""
+                },
+                {
+                  "name": "Dr. G. Janardhan",
+                  "details": ""
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "S. Lakshmi Prasanna",
+                  "details": "22345A0116, 3rd year, 5th sem, B-sec, 6303520926"
+                },
+                {
+                  "name": "M. Prasanth",
+                  "details": "22345A0121, 3rd year, 5th sem, B-sec, 9963540225"
+                },
+                {
+                  "name": "U.Nandini",
+                  "details": "22345A0123, 3rd year, 5th sem"
+                }
+              ],
+              "teamTarget": 250,
+              "registrationFee": 200,
+              "teamSize": 1,
+              "firstPrize": 2500,
+              "secondPrize": 1500,
+              "url": ""
+            },
+            {
+              "id": 2,
+              "dept": "General",
+              "name": "Project Exhibition and Contest",
+              "image": "ProjectExhibition",
+              "ruleBook": "/EVENT_SOP/CENTRAL/PDC_SOP.pdf",
+              "description": "The Project Exhibition and Contest for Engineering Students is an incredible opportunity to showcase technical ingenuity and innovative problem-solving. This event invites aspiring students to present their projects across various disciplines, of Engineering. Participants can demonstrate their skills, creativity, and practical applications of engineering concepts to industry experts, peers, and academia. The contest rewards outstanding projects based on innovation, technical excellence, feasibility, and societal impact. It’s a platform to gain recognition, exchange ideas, and inspire future advancements while fostering a spirit of collaboration and professional growth.",
+              "facultyCoordinators": [
+                {
+                  "name": "Dr. S.S.G. Prasad"
+                },
+                {
+                  "name": "Mr. B.P.R.V.S Priyatham"
+                },
+                {
+                  "name": "Dr.K.Sivaprasad"
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "S. Lakshmi Prasanna",
+                  "details": "22345A0116, 3rd year, 5th sem, B-sec, 6303520926"
+                },
+                {
+                  "name": "M. Prasanth",
+                  "details": "22345A0121, 3rd year, 5th sem, B-sec, 9963540225"
+                },
+                {
+                  "name": "Y. Jairam",
+                  "details": "22341A03F8,  3rd year, 5th sem"
+                }
+              ],
+              "teamTarget": 30,
+              "registrationFee": 1000,
+              "teamSize": 4,
+              "firstPrize": 10000,
+              "secondPrize": 5000
+            },
+            {
+              "id": 3,
+              "dept": "General",
+              "name": "GPL (Auction)",
+              "image": "Gpl",
+              "ruleBook": "/EVENT_SOP/CENTRAL/GPL_auction.pdf",
+              "description": "Every person taking part must register as a group of 2 members for this. Following that, three rounds will be conducted to choose the event's runner-up and winner. Participants are sorted into groups based on their responses to objective questions in Round 1, and teams are selected at random in Round 2. The GPL auction will take place in the final round, and the winners and runners-up will get cash prizes and certificates based on the strength and points of their respective teams.",
+              "facultyCoordinators": [
+                {
+                  "name": "Dr. S.S.G. Prasad",
+                  "details": ""
+                },
+                {
+                  "name": "Mr. B.P.R.V.S Priyatham",
+                  "details": ""
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "S. Lakshmi Prasanna",
+                  "details": "23345A0116, 3rd year, 5th sem, B-sec, 6303520926"
+                },
+                {
+                  "name": "M. Prasanth",
+                  "details": "23345A0121, 3rd year, 5th sem, B-sec, 9963540225"
+                }
+              ],
+              "teamTarget": 25,
+              "registrationFee": 500,
+              "teamSize": 4,
+              "firstPrize": 10000,
+              "secondPrize": 5000
+            },
+            {
+              "id": 4,
+              "dept": "General",
+              "name": "Startup Idea Contest",
+              "image": "StartupIdeaContest",
+              "ruleBook": "/EVENT_SOP/CENTRAL/Start_up_Idea_Contest.pdf",
+              "description": "The Startup Idea Contest is an exciting platform for aspiring entrepreneurs to showcase their innovative ideas and turn them into reality. Designed to spark creativity and problem-solving, this contest welcomes individuals and teams from diverse backgrounds to pitch groundbreaking solutions that address real-world challenges. Participants will have the chance to refine their concepts with expert mentorship, receive valuable feedback from industry leaders, and compete for seed funding or prizes to kickstart their ventures. Whether you're building a tech-driven startup, a social enterprise, or a creative business, this contest is the perfect launchpad to transform your vision into success.",
+              "facultyCoordinators": [
+                {
+                  "name": "Dr. S.S.G. Prasad",
+                  "details": ""
+                },
+                {
+                  "name": "Mr. B.P.R.V.S Priyatham",
+                  "details": ""
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "S. Lakshmi Prasanna",
+                  "details": "23345A0116, 3rd year, 5th sem, B-sec, 6303520926",
+                  "event": "Startup Idea Contest"
+                },
+                {
+                  "name": "M. Prasanth",
+                  "details": "23345A0121, 3rd year, 5th sem, B-sec, 9963540225",
+                  "event": "Startup Idea Contest"
+                }
+              ],
+              "teamTarget": 10,
+              "registrationFee": 1000,
+              "teamSize": 4,
+              "firstPrize": 10000,
+              "secondPrize": 5000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventType": "signature",
+      "departments": [
+        {
+          "dept": "CSE/IT/AI&ML/AI&DS",
+          "events": [
+            {
+              "id": 5,
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "name": "Hackhub",
+              "image": "HackHub",
+              "description": "Hackhub is an intense and exciting hacking competition where teams of 4 students compete against each other in a timed coding challenge. This flagship event provides participants with a real-world problem or set of problems that require both creativity and technical skills to solve. Teams are given a limited amount of time to design, develop, and implement their solutions, using a range of programming languages and tools to address complex issues. The event promotes teamwork, problem-solving, and the ability to work under pressure. Participants are expected to work efficiently and creatively to come up with innovative solutions. The competition is open to students from the fields of Computer Science Engineering (CSE), Information Technology (IT), Artificial Intelligence and Machine Learning (AI&ML), and Artificial Intelligence and Data Science (AI&DS). The winners of the event will receive a first prize of Rs. 30,000 and a second prize of Rs. 15,000, along with recognition for their coding and problem-solving prowess. The registration fee for the event is Rs. 1000.",
+              "teamSize": 4,
+              "registrationFee": 1000,
+              "firstPrize": 25000,
+              "secondPrize": 15000
+            },
+            {
+              "id": 6,
+              "name": "Web-Astra",
+              "dept": "IT",
+              "image": "WebAstra",
+              "ruleBook": "/EVENT_SOP/CSE/WEB--Astra.pdf",
+              "eventType": "Flagship Event",
+              "facultyCoordinators": [
+                {
+                  "name": "Dr. K. Jayasri"
+                },
+                {
+                  "name": "Dr. K. Aravind"
+                },
+                {
+                  "name": "Dr. P. Srihari"
+                },
+                {
+                  "name": "Mrs. P. Padmavathi"
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "P. Bhargavram",
+                  "details": "3rd, JNTU No: 23345A1203, Phone: 9550322143"
+                },
+                {
+                  "name": "Md. Sadik",
+                  "details": "3rd, JNTU No: 22341A1265, Phone: 9121809977"
+                },
+                {
+                  "name": "K. Udaya Sri",
+                  "details": "3rd, JNTU No: 22341A12C5, Phone: 7780546488"
+                },
+                {
+                  "name": "A. Navya Sri",
+                  "details": "3rd, JNTU No: 22341A1209, Phone: 8317668055"
+                },
+                {
+                  "name": "D. Sai Aditya",
+                  "details": "2nd, JNTU No: 23341A1226, Phone: 9390885866"
+                },
+                {
+                  "name": "V. Prathyusha",
+                  "details": "2nd, JNTU No: 23341A12C0, Phone: 8480306070"
+                }
+              ],
+              "description": "Web-Astra is a highly anticipated event that challenges participants in the field of web development, divided into two categories: front-end development and full-stack development. Category 1 focuses on building functional and visually appealing websites using front-end technologies like HTML, CSS, JavaScript, and frameworks like React.js or Angular. Category 2 is designed for those who want to showcase their skills in full-stack development, requiring participants to build both the front-end and back-end of a website, integrating databases, APIs, and server-side logic. The event encourages participants to think creatively while adhering to specific requirements, such as the inclusion of certain features, functionality, or design aesthetics. Each category has its own set of challenges, and the quality, usability, and overall functionality of the websites will be key factors in determining the winners. Teams are judged not only on the visual appeal but also on the performance, responsiveness, and overall user experience. The first prize for the event is Rs. 18,000, while the second prize is Rs. 12,000. The registration fee for this event is Rs. 1000.",
+              "eventDescription": {
+                "overview": "Web-Astra is a flagship event comprising two categories focusing on progressive website development for front-end and full-stack projects.",
+                "categories": [
+                  {
+                    "name": "Category 1",
+                    "eligibility": "1st and 2nd year students only",
+                    "description": "Participants progressively create a front-end website across multiple levels using technologies like HTML, CSS, JS, PHP, etc. Points are awarded based on code quality, creativity, and completion."
+                  },
+                  {
+                    "name": "Category 2",
+                    "eligibility": "Open for all",
+                    "description": "Participants progressively build a full-stack website through levels focusing on both front-end and back-end development. Points are awarded based on completion, code quality, and creativity."
+                  }
+                ]
+              },
+              "evaluationCriteria": [
+                "Complexity increases with each level, and allotted time for implementation extends accordingly.",
+                "Quality and completeness are assessed after each level.",
+                "Points are awarded based on requirements, creativity, and code quality."
+              ],
+              "eventGuidelines": [
+                "Participants must build a web interface based on the given problem statement.",
+                "Each participant should bring their own laptop.",
+                "Team size must be between 3-4 members for both categories.",
+                "Participants have 8 hours to complete the task; late submissions will not be considered.",
+                "All team members should be present at the venue at the start time.",
+                "No malpractice is allowed during the event."
+              ],
+              "planOfAction": {
+                "schedule": [
+                  {
+                    "Phase": "Introduction and Induction",
+                    "Duration": "30 minutes"
+                  },
+                  {
+                    "Activity": "Evaluation by judges after each level"
+                  },
+                  {
+                    "Activity": "Short breaks with snacks for participants"
+                  },
+                  {
+                    "Activity": "Networking and relaxation activities"
+                  }
+                ]
+              },
+              "judgingCriteria": [
+                "Meeting requirements and functionality",
+                "User interface and design skills",
+                "Execution and demonstration of the prototype",
+                "Solving challenges for extra points",
+                "Judges' decisions are final"
+              ],
+              "teamSize": "4",
+              "registrationFee": 1000,
+              "firstPrize": 18000,
+              "secondPrize": 12000
+            }
+          ]
+        },
+        {
+          "dept": "Civil",
+          "events": [
+            {
+              "id": 16,
+              "image": "HydroHike",
+              "name": "Hydrohike 2.0",
+              "dept": "Civil",
+              "ruleBook": "/EVENT_SOP/CE/Hydro_Hike.pdf",
+              "facultyCoordinators": [
+                {
+                  "name": "Dr. Bimalendu Dash",
+                  "details": ""
+                },
+                {
+                  "name": "Dr. S. Anil",
+                  "details": ""
+                },
+                {
+                  "name": "Dr. Abu Rashid",
+                  "details": ""
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "V. Rammohanrao",
+                  "details": "22341A01A9, 3rd year, 5th semester, B-section, 9391339251"
+                },
+                {
+                  "name": "D. Bhanuprakash",
+                  "details": "23345A0125, 3rd Year, 5th-sem, B-sec, 9347585662"
+                },
+                {
+                  "name": "V. Lokesh",
+                  "details": "23345A0119, 3rd year, 5th Sem, B-sec, 8688563815"
+                },
+                {
+                  "name": "P. Pavan Kumar",
+                  "details": "22341A0178, 3rd year, 5th-sem, B-sec, 9381606491"
+                },
+                {
+                  "name": "S. Sharmila",
+                  "details": "22341A0195, 3rd year, 5th sem, B-sec, 7989335524"
+                },
+                {
+                  "name": "V. Sai Kiran",
+                  "details": "23345A0104, 3rd year, 5th-sem, A-Section, 7386563712"
+                },
+                {
+                  "name": "P. Bhargava Naidu",
+                  "details": "23345A0102, 3rd year, 5th sem, A-Section, 6303951970"
+                },
+                {
+                  "name": "G. Jahanavi",
+                  "details": "22341A0130, 3rd year, 5th sem, A-section, 9985781816"
+                }
+              ],
+              "description": "Hydrohike 2.0 is a flagship event organized by the Civil Engineering department. In this event, participants operate a remote-controlled hovercraft to race on both land and water. The hovercraft must meet specific design requirements, including dimensions (length: 25cm to 40cm, width: 14cm to 26cm) and the ability to float on water at a depth of 0.4 meters. The hovercraft should be powered by DC 360 motors and run on a 9V or 12V rechargeable battery. Teams can use any materials to create their hovercraft, and the control can be done via a mobile or remote controller.The event takes place over two days with three rounds of racing. The first round, Fastest Hovercraft First, tests speed and maneuverability on both land and water. The second round, Intermediate Race, is similar to the first, where the fastest hovercrafts advance to the final round. The third round, The Floating Objects, presents a challenging race with obstacles on both land and water. Judging criteria include design compliance, control and maneuverability, speed and efficiency, obstacle navigation, and teamwork. The expected number of participants is 120, and the registration fee is 2000. The top teams can win prizes of up to 12000 for first place and 8000 for second place.",
+              "eventType": "Flagship Event",
+              "eventDescription": {
+                "task": "Operating the remote-controlled Hovercraft using a transmitter to run on the provided path and travel through water to accomplish the race. Certain rules and design requirements will be provided for the hovercraft.",
+                "designRequirements": {
+                  "specifications": {
+                    "type": "Radio-controlled Hovercraft",
+                    "shape": "Any shape",
+                    "motor": "DC 360 motors for equal competition",
+                    "battery": "9V or 12V",
+                    "materials": "Participants can use any materials to create the hovercraft."
+                  },
+                  "controlFeatures": {
+                    "controller": "Mobile or remote controller",
+                    "battery": "Rechargeable battery with respective features"
+                  },
+                  "dimensions": {
+                    "length": "25cm to 40cm",
+                    "width": "14cm to 26cm",
+                    "height": "Unrestricted, but should pass through tunnels or flyovers",
+                    "waterDepth": "Hovercraft should float on water at a depth of 0.4m"
+                  }
+                }
+              },
+              "eventGuidelines": {
+                "rounds": {
+                  "round1": {
+                    "title": "Fastest Hovercraft First",
+                    "description": "Hovercrafts compete on both land and water tracks, qualifying based on time and adherence to barriers."
+                  },
+                  "round2": {
+                    "title": "Intermediate Race",
+                    "description": "Qualified hovercrafts compete in a similar setup to Round 1 to advance to Round 3."
+                  },
+                  "round3": {
+                    "title": "The Floating Objects",
+                    "description": "A challenging race with obstacles on land and water, determining the winner based on time and adherence to guidelines."
+                  }
+                }
+              },
+              "teamSize": 8,
+              "planOfAction": {
+                "day1": "10:00 AM to 3:00 PM - 1st and 2nd Rounds",
+                "day2": "10:00 AM to 2:00 PM - 3rd Round"
+              },
+              "judgingCriteria": {
+                "designCompliance": "20 points for adherence to specifications (dimensions, motor, materials) and ability to float on water.",
+                "controlAndManeuverability": "25 points for smooth and accurate control using remote or mobile devices.",
+                "speedAndEfficiency": "30 points for fastest time without collisions.",
+                "obstacleNavigation": "15 points for completing obstacles in Round 3 within the shortest time.",
+                "teamworkAndStrategy": "10 points for coordination and effective communication within the team."
+              },
+              "expectedNoOfParticipants": 120,
+              "registrationFee": 2000,
+              "firstPrize": 12000,
+              "secondPrize": 8000
+            },
+            {
+              "id": 17,
+              "image": "MarvelModelling",
+              "name": "Marvel Modeling 2.0",
+              "ruleBook": "/EVENT_SOP/CE/Marvel_Modelling.pdf",
+              "facultyCoordinators": [
+                {
+                  "name": "Dr. A. Arun Solomon",
+                  "details": ""
+                },
+                {
+                  "name": "Dr. Pandi Mani",
+                  "details": ""
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "P. Sridevi",
+                  "details": "22341A0187, 3rd year, 5th sem, B-Section, 9866504590"
+                },
+                {
+                  "name": "S. Gayatri",
+                  "details": "22341A0197, 3rd year, 5th-sem, B-section, 6309171992"
+                },
+                {
+                  "name": "S. Hari Haran",
+                  "details": "23345A0118, 3rd year, 5th Sem, B-sec, 9959232245"
+                },
+                {
+                  "name": "P. Eswara Rao",
+                  "details": "22341A0183, 3rd year, 5th semester, B-section, 6301265951"
+                }
+              ],
+              "description": "Marvel Modeling 2.0, hosted by the Civil Engineering department, is a technical event where participants are challenged to design and create drawings and models using software like AutoCAD and Revit Architecture. The event consists of three rounds with increasing levels of difficulty. In Round 1, participants must create a 2D drawing (plan, elevation, and section) of a residential building using AutoCAD. Round 2 involves transforming the 2D design into a 3D model using Revit Architecture. In Round 3, participants will create a 3D model of a community campus, incorporating specific guidelines provided during the event.The event allows teams of up to four members, and the judging criteria include accuracy, completeness, innovation, technical proficiency, and creativity. The evaluation will be done after each round by a panel of judges. Refreshments will be provided during the breaks, and participants can expect a dynamic and engaging environment. The expected number of participants is 120, and the registration fee is 1000. The first-place prize is 6000, while the second-place prize is 4000.",
+              "dept": "Civil",
+              "eventType": "Technical Event",
+              "eventDescription": {
+                "overview": "Participants will design and create drawings and models using software like AutoCAD and Revit Architecture. Specifications and design rules will be provided during each round. The event challenges participants with increasing levels of difficulty across three rounds. Winners and runners will receive prizes, and all participants will get participation certificates.",
+                "roundDetails": [
+                  {
+                    "name": "Round 1: Residential Building Drawing",
+                    "duration": "10:00 PM - 12:00 AM",
+                    "description": [
+                      "Participants must create a plan, elevation, and section of a residential building using AutoCAD.",
+                      "Specifications will be provided during the event."
+                    ]
+                  },
+                  {
+                    "name": "Round 2: Residential Building Modeling",
+                    "duration": "12:30 AM - 2:30 AM",
+                    "description": [
+                      "Participants will develop a 3D model based on their 2D drawing from Round 1 using Revit Architecture or similar software.",
+                      "Specifications will be provided during the event."
+                    ]
+                  },
+                  {
+                    "name": "Round 3: Modeling of Community Campus",
+                    "duration": "3:00 AM - 6:00 AM",
+                    "description": [
+                      "Participants will create a 3D model of a community campus following the specifications provided during the event."
+                    ]
+                  }
+                ]
+              },
+              "eventGuidelines": [
+                "Teams can have a maximum of 4 members.",
+                "The event consists of 3 rounds with increasing difficulty.",
+                "Judges' decisions are final in case of disputes.",
+                "Participants must adhere to the specified time limits and guidelines."
+              ],
+              "planOfAction": {
+                "duration": "8 Hours",
+                "schedule": [
+                  {
+                    "Round": "Round 1",
+                    "Timing": "10:00 PM - 12:00 AM"
+                  },
+                  {
+                    "Break & Evaluation": "12:00 AM - 12:30 AM"
+                  },
+                  {
+                    "Round": "Round 2",
+                    "Timing": "12:30 AM - 2:30 AM"
+                  },
+                  {
+                    "Break & Evaluation": "2:30 AM - 3:00 AM"
+                  },
+                  {
+                    "Round": "Round 3",
+                    "Timing": "3:00 AM - 6:00 AM"
+                  },
+                  {
+                    "Final Evaluation": "6:00 AM - 6:30 AM"
+                  }
+                ],
+                "additionalNotes": [
+                  "Refreshments and goodies will be provided during round intervals.",
+                  "Performance will be evaluated by 2-3 judges.",
+                  "Evaluation will take place after each round."
+                ]
+              },
+              "judgingCriteria": [
+                {
+                  "round": "Round 1: Residential Building Drawing",
+                  "criteria": [
+                    {
+                      "Accuracy and Completeness": 40
+                    },
+                    {
+                      "Design Rule Compliance": 15
+                    },
+                    {
+                      "Innovation and Creativity": 10
+                    },
+                    {
+                      "Skill of Presentation": 25
+                    }
+                  ]
+                },
+                {
+                  "round": "Round 2: Residential Building Modeling",
+                  "criteria": [
+                    {
+                      "Technical Proficiency": 40
+                    },
+                    {
+                      "Detailing and Realism": 20
+                    },
+                    {
+                      "Compliance with Specifications": 15
+                    },
+                    {
+                      "Skill of Presentation": 25
+                    }
+                  ]
+                },
+                {
+                  "round": "Round 3: Modeling of Community Campus",
+                  "criteria": [
+                    {
+                      "Technical Proficiency": 30
+                    },
+                    {
+                      "Creativity and Execution": 40
+                    },
+                    {
+                      "Skill of Presentation": 30
+                    }
+                  ]
+                }
+              ],
+              "teamSize": "Maximum 4",
+              "maximumTeams": 30,
+              "expectedNoOfParticipants": 120,
+              "registrationFee": 1000,
+              "firstPrize": 6000,
+              "secondPrize": 4000
+            }
+          ]
+        },
+        {
+          "dept": "ECE",
+          "events": [
+            {
+              "id": 26,
+              "name": "Robo Race",
+              "image": "Robo_Race",
+              "ruleBook": "/EVENT_SOP/ECE/RoboRace.pdf",
+              "dept": "ECE",
+              "description": "Robo Race is an exciting competition where participants are tasked with designing and constructing a remote-controlled robot capable of racing in a tournament against other robots. The event encourages innovation and engineering skills as teams build robots that can navigate a racecourse with various obstacles. Each team must meet specific guidelines to ensure their robot adheres to the event's requirements. These include restrictions on the bot's mobility and design, such as no suction cups, diaphragms, or sticky devices. Additionally, the robot must be controlled through a wireless remote using either Bluetooth or Wi-Fi modules, with an onboard power supply and no external power sources.The event consists of two rounds: The first round serves as a basic testing phase where the bots are evaluated based on their design and accuracy. In the second round, the robots compete on a race track filled with different levels of traps. The goal is for each robot to navigate through the obstacles and reach the finish line in the shortest time possible while avoiding errors. The judging criteria focus on the bot's design, speed, accuracy, and ability to handle the challenges of the race track.The event is scheduled for a 4-hour day-shift duration, with a registration fee of Rs 1000 per team. The top-performing teams will be awarded cash prizes, with the first prize being Rs 12000 and the second prize Rs 8000. The Robo Race is a fantastic opportunity for participants to showcase their robotics and engineering skills in a fun and competitive environment.",
+              "firstPrize": "Rs 5000/-",
+              "secondPrize": "Rs 2500/-",
+              "teamSize": 4,
+              "guidelines": [
+                "Each bot must meet the requirements described in this problem statement. The total weight of all the bots and the dimensions of the combination of bots must satisfy the specifications.",
+                "All robots must have easily visible and controlled mobility in order to compete.",
+                "Robots should not secure itself on the ring surface by using suction cups, diaphragms, sticky treads, glue or other such devices.",
+                "The robot must be controlled only through a wireless remote (Bluetooth or Wi-Fi module), while all power supply must be on board.",
+                "The team must have an at least four-frequency wireless remote-control circuit or two dual control circuits.",
+                "The machine must be powered electrically. Use of an IC engine in any form is not allowed."
+              ],
+              "planOfAction": [
+                "Round 1: Basic round for testing bots based on constraints, checking accuracy of the bot.",
+                "Round 2: Bots compete inside a race track with different levels of traps. The bot should cross all the traps and reach the destination in the least time."
+              ],
+              "schedule": "Day-shift",
+              "duration": "4 hours",
+              "judgingCriteria": "The bots will be judged based on their design, accuracy, speed, and the ability to complete the race with minimal errors.",
+              "registrationFee": "1000/-",
+              "prizes": {
+                "firstPrize": "Rs 12000/-",
+                "secondPrize": "Rs 8000/-"
+              },
+              "facultyCoordinators": [
+                {
+                  "name": "Dr. B. Anil Kumar"
+                },
+                {
+                  "name": "Dr. N. Chandra Sekhar"
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "Atchyuta Valli",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Sankar Rao",
+                  "year": "2nd Year"
+                },
+                {
+                  "name": "Pallavi",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Tarun",
+                  "year": "2nd Year"
+                },
+                {
+                  "name": "Sudheer",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Vijaya Kumari",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Bhanu Sathwik Naidu",
+                  "year": "3rd Year"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dept": "MECH",
+          "events": [
+            {
+              "id": 29,
+              "name": "CAD-MANIA",
+              "dept": "MECH",
+              "image": "Cad_Mania",
+              "registrationFee": "1500",
+              "firstPrize": "10000",
+              "secondPrize": "8000",
+              "description": "CAD-MANIA is an exciting event focused on Computer-Aided Design (CAD), where participants showcase their skills in designing and modeling using CAD software. This event challenges participants to think creatively and apply their technical expertise in the field of design and engineering. With guidance from both faculty and student coordinators, participants work on various design tasks and compete for the best designs. The event is coordinated by Mr. G. Sasidhar and Dr. Bappa Mondal, alongside student coordinators L. Bhuvan Manikar, G. Asritha Vatsala, and P. Manikanta. CAD-MANIA serves as an excellent platform for students to refine their CAD skills, engage in technical problem-solving, and gain hands-on experience with industry-standard tools.",
+              "facultyCoordinators": [
+                {
+                  "name": "Mr. G. Sasidhar",
+                  "details": ""
+                },
+                {
+                  "name": "Dr. Bappa Mondal",
+                  "details": ""
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "L. Bhuvan Manikar",
+                  "id": "22341A0370"
+                },
+                {
+                  "name": "G. Asritha Vatsala",
+                  "id": "23345A0301"
+                },
+                {
+                  "name": "P. Manikanta",
+                  "id": "22341A0392"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventType": "workshops",
+      "departments": [
+        {
+          "dept": "CSE/IT/AI&ML/AI&DS",
+          "events": [
+            {
+              "id": 7,
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "name": "Drone Technology",
+              "description": "The Drone Technology Workshop is a hands-on learning event where participants explore the fundamentals of drone technology. In this workshop, individuals get the opportunity to understand the working principles, components, and applications of drones. The event focuses on providing participants with practical skills and insights related to the design, construction, and operation of drones. With a registration fee of 200, this workshop is an excellent opportunity for students to dive into the rapidly growing field of drone technology.",
+              "teamSize": 1,
+              "registrationFee": 200,
+              "firstPrize": "NA",
+              "secondPrize": "NA"
+            },
+            {
+              "id": 8,
+              "name": "LLM",
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "description": "The LLM (Legal Learning Module) Workshop is designed to enhance the participants' understanding of legal principles and the importance of law in various fields. This workshop aims to provide students with an in-depth view of legal frameworks and how they intersect with technology, business, and everyday life. Aimed at anyone interested in the law, this event charges a registration fee of 200 and offers valuable knowledge for those seeking to broaden their understanding of legal matters.",
+              "teamSize": 1,
+              "registrationFee": 200,
+              "firstPrize": "NA",
+              "secondPrize": "NA"
+            },
+            {
+              "id": 9,
+              "name": "Power BI",
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "description": "The Power BI Workshop introduces participants to the world of data visualization and business intelligence using Microsoft Power BI. Through this workshop, participants learn to connect various data sources, create interactive reports, and visualize data in meaningful ways. The event focuses on equipping students with the skills to analyze and present data effectively. With a registration fee of 200, this workshop offers a practical learning experience for those interested in data analysis and business intelligence.",
+              "teamSize": 1,
+              "registrationFee": 200,
+              "firstPrize": "NA",
+              "secondPrize": "NA"
+            },
+            {
+              "id": 10,
+              "name": "GisWorkshop",
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "description": "The GIS for Image Processing workshop is an informative session designed to educate participants about the application of Geographic Information Systems (GIS) in image processing. In this workshop, students learn how GIS can be integrated with image data for advanced analysis, interpretation, and visualization. The workshop will be coordinated by Dr. N. Nageswara Reddy, with student coordinators P. Prathyusha and P. Neeraja, both from the 3rd year, 5th semester. Participants will gain insights into how GIS technology can be applied to real-world challenges involving image data processing. The registration fee is 200, and this workshop provides a deep dive into cutting-edge image processing techniques in the context of GIS.",
+              "facultyCoordinators": [
+                "Dr. N. Nageswara Reddy"
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "P. Prathyusha",
+                  "details": "23345A0113, 3rd year, 5th sem, B-sec, 9182406142"
+                },
+                {
+                  "name": "P. Neeraja",
+                  "details": "22341A0182, 3rd year, 5th sem, B-sec, 6303520926"
+                }
+              ],
+              "teamSize": 1,
+              "registrationFee": 200,
+              "firstPrize": 0,
+              "secondPrize": 0
+            }
+          ]
+        },
+        {
+          "dept": "ECE",
+          "events": [
+            {
+              "id": 27,
+              "name": "Tinkercad",
+              "image": "Tinker_Cad",
+              "ruleBook": "/EVENT_SOP/ECE/TinkerCad.pdf",
+              "firstPrize": "Rs 3500/-",
+              "secondPrize": "Rs 2000/-",
+              "dept": "ECE",
+              "teamSize": 2,
+              "description": "Tinkercad is an open-source software used for 3D design, electronics, and coding. It is cloud-based and accessible from any operating system, allowing participants to design and modify electronic circuits flexibly within a browser environment. This event focuses on performance and accuracy in creating and testing circuits using the software. Teams of two members will compete, and each team will have one system to work with during the event. The event will be evaluated through three rounds, testing the participants' ability to solve problems related to electronics, Arduino code, and real-time project implementation on Tinkercad. The event has a registration fee of Rs. 400/-, and the first and second prizes are Rs. 3500/- and Rs. 2000/-, respectively. Dr. D. Suresh is the faculty coordinator for this event, and the student coordinators include Sailesh, Govind, Ankith, Aswini, and Laxmi Sandeep.",
+              "guidelines": [
+                "Participants need to understand how Tinkercad software works clearly.",
+                "Teams must not extend the given time limit while delivering their topic.",
+                "Participants should deliver the topic in an organized manner."
+              ],
+              "aboutTheEvent": "Open source software called Tinkercad is used for 3D design, electronics, and coding. It is available from any operating system and is cloud-based. With its assistance, we may create electronic circuits employing the components in a flexible way. Within the browser, the circuits may be instantly modified and tested. Prior to attending the programme, one must be familiar with the fundamentals of the ECE field and Tinkercad operation by setting up a new account in the software.",
+              "teamSpecifications": [
+                "Any team is welcome to take part in Tinkercad. A team may have two members, which may come from the same class or others.",
+                "Every team needs to have a distinctive name. Any team whose name is deemed unsuitable, derogatory, or contradictory may have their entries rejected.",
+                "Each team must identify a team representative (leader) during registration. All communications will be sent through the team representative.",
+                "The team representative must provide accurate contact information during registration.",
+                "During the event, each team will be allocated a single system to work with."
+              ],
+              "registration": "When the registration portal opens, a mail will be sent. Updates will be communicated to registrants via email or SMS.",
+              "evaluationAndResult": {
+                "round1": {
+                  "description": "In this round, there are 10 basic-level problem statements related to the ECE domain (EDC, LCD, MPMC, etc.). One hour is allotted for this round, and the score is based on the number of problems resolved."
+                },
+                "round2": {
+                  "description": "In this round, three issue statements involving Arduino code and its real-time project implementation are provided. The round takes about two hours, and performance and the number of problems resolved determine the score."
+                },
+                "round3": {
+                  "description": "In this round, a problem description based on an actual industrial project is provided. The round takes about two to three hours, and the performance and project execution on Tinkercad determine the score."
+                }
+              },
+              "requirements": [
+                "Access to both DSP and ECAD labs is required.",
+                "A lady faculty member is required."
+              ],
+              "registrationFee": "Rs. 400/-",
+              "schedule": "Overnight (8 Hours) event",
+              "prizes": {
+                "firstPrize": "Rs 3500/-",
+                "secondPrize": "Rs 2000/-"
+              },
+              "facultySpoc": "Dr. D. Suresh",
+              "studentSpocs": [
+                {
+                  "name": "Sailesh",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Govind",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Ankith",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Aswini",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Laxmi Sandeep",
+                  "year": "2nd Year"
+                }
+              ]
+            },
+            {
+              "id": 28,
+              "dept": "ECE",
+              "name": "Sensors, Sensing & Programming",
+              "image": "sensors",
+              "ruleBook": "/EVENT_SOP/ECE/Workshop.pdf",
+              "description": "The 'Sensors, Sensing & Programming' workshop offers hands-on exposure to embedded development boards and explores the features and applications of various sensors in the real world. Participants will also learn how to interface embedded boards with the cloud for Internet of Things (IoT) applications. The workshop consists of 3-hour sessions, and at the end, participants will take a quiz and provide feedback. The workshop is free of charge, and participants will receive a certificate upon completing the full session. The maximum number of participants is 60, and a minimum of 20 participants is required for the workshop to proceed. The event is coordinated by Dr. Yogesh Misra, with student coordinators Prashanthi, Varshini, and Praneeth.",
+              "guidelines": [
+                "Participants must attend the full session to be eligible for the certificate.",
+                "The workshop will be conducted only if a minimum of 20 participants register."
+              ],
+              "teamSize": "Maximum 60 participants",
+              "planOfAction": [
+                "3 hours sessions will be conducted throughout the workshop.",
+                "At the end of the workshop, participants will attempt a quiz and provide feedback."
+              ],
+              "schedule": "Full Day",
+              "requirements": [
+                "Access to Embedded Development Boards and sensors",
+                "Internet connection for cloud interfacing demonstrations"
+              ],
+              "registrationFee": "Free",
+              "prizes": {
+                "certificate": "Participants will receive a certificate upon completion of the full session."
+              },
+              "facultySpoc": "Dr. Yogesh Misra",
+              "studentSpocs": [
+                {
+                  "name": "Prashanthi",
+                  "year": "2nd Year"
+                },
+                {
+                  "name": "Varshini",
+                  "year": "2nd Year"
+                },
+                {
+                  "name": "Praneeth",
+                  "year": "2nd Year"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dept": "MECH",
+          "events": [
+            {
+              "id": 32,
+              "dept": "MECH",
+              "name": "CFD APPLICATIONS WORKSHOP",
+              "description": "The CFD Applications Workshop is a specialized session aimed at providing participants with a deep dive into the world of Computational Fluid Dynamics (CFD). CFD plays a crucial role in simulating fluid flow, heat transfer, and related physical processes in engineering applications. This workshop will focus on the practical applications of CFD and its importance in various fields, offering valuable insights and techniques to understand and apply CFD tools effectively. The workshop will be coordinated by Dr. T. R. Vijay Babu, with student coordinators V. Jyothsna, U. Nandini, and S. Damodar.",
+              "eventType": "WORKSHOP",
+              "facultyCoordinators": [
+                "Dr. T. R. Vijay Babu"
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "V. Jyothsna",
+                  "id": "22341A03E9"
+                },
+                {
+                  "name": "U. Nandini",
+                  "id": "22341A03E6"
+                },
+                {
+                  "name": "S. Damodar",
+                  "id": "22341A03C6"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventType": "frontline",
+      "departments": [
+        {
+          "dept": "CSE/IT/AI&ML/AI&DS",
+          "events": [
+            {
+              "id": 11,
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "name": "Code Refactor",
+              "description": "Code Refactor is an exciting technical event aimed at testing participants' skills in code optimization and improvement. Teams will be given a pre-written piece of code that may be inefficient or poorly structured. Their task is to refactor the code, optimizing it for better performance, readability, and efficiency. This event challenges participants to demonstrate their understanding of algorithms, data structures, and best programming practices while working within time constraints. It encourages participants to think critically, solve problems efficiently, and enhance their technical skills by reworking code to improve its quality.",
+              "teamSize": 3,
+              "registrationFee": 500,
+              "firstPrize": 6000,
+              "secondPrize": 3000
+            },
+            {
+              "id": 12,
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "name": "CodeCraze",
+              "teamSize": 3,
+              "registrationFee": 500,
+              "firstPrize": 6000,
+              "secondPrize": 3000
+            },
+            {
+              "id": 17,
+              "image": "MarvelModelling",
+              "name": "Marvel Modeling 2.0",
+              "dept": "Civil",
+              "eventType": "Technical Event",
+              "description": {
+                "overview": "Participants will design and create drawings and models using software like AutoCAD and Revit Architecture. Specifications and design rules will be provided during each round. The event challenges participants with increasing levels of difficulty across three rounds. Winners and runners will receive prizes, and all participants will get participation certificates.",
+                "roundDetails": [
+                  {
+                    "name": "Round 1: Residential Building Drawing",
+                    "duration": "10:00 PM - 12:00 AM",
+                    "description": [
+                      "Participants must create a plan, elevation, and section of a residential building using AutoCAD.",
+                      "Specifications will be provided during the event."
+                    ]
+                  },
+                  {
+                    "name": "Round 2: Residential Building Modeling",
+                    "duration": "12:30 AM - 2:30 AM",
+                    "description": [
+                      "Participants will develop a 3D model based on their 2D drawing from Round 1 using Revit Architecture or similar software.",
+                      "Specifications will be provided during the event."
+                    ]
+                  },
+                  {
+                    "name": "Round 3: Modeling of Community Campus",
+                    "duration": "3:00 AM - 6:00 AM",
+                    "description": [
+                      "Participants will create a 3D model of a community campus following the specifications provided during the event."
+                    ]
+                  }
+                ]
+              },
+              "eventGuidelines": [
+                "Teams can have a maximum of 4 members.",
+                "The event consists of 3 rounds with increasing difficulty.",
+                "Judges' decisions are final in case of disputes.",
+                "Participants must adhere to the specified time limits and guidelines."
+              ],
+              "planOfAction": {
+                "duration": "8 Hours",
+                "schedule": [
+                  {
+                    "Round": "Round 1",
+                    "Timing": "10:00 PM - 12:00 AM"
+                  },
+                  {
+                    "Break & Evaluation": "12:00 AM - 12:30 AM"
+                  },
+                  {
+                    "Round": "Round 2",
+                    "Timing": "12:30 AM - 2:30 AM"
+                  },
+                  {
+                    "Break & Evaluation": "2:30 AM - 3:00 AM"
+                  },
+                  {
+                    "Round": "Round 3",
+                    "Timing": "3:00 AM - 6:00 AM"
+                  },
+                  {
+                    "Final Evaluation": "6:00 AM - 6:30 AM"
+                  }
+                ],
+                "additionalNotes": [
+                  "Refreshments and goodies will be provided during round intervals.",
+                  "Performance will be evaluated by 2-3 judges.",
+                  "Evaluation will take place after each round."
+                ]
+              },
+              "judgingCriteria": [
+                {
+                  "round": "Round 1: Residential Building Drawing",
+                  "criteria": [
+                    {
+                      "Accuracy and Completeness": 40
+                    },
+                    {
+                      "Design Rule Compliance": 15
+                    },
+                    {
+                      "Innovation and Creativity": 10
+                    },
+                    {
+                      "Skill of Presentation": 25
+                    }
+                  ]
+                },
+                {
+                  "round": "Round 2: Residential Building Modeling",
+                  "criteria": [
+                    {
+                      "Technical Proficiency": 40
+                    },
+                    {
+                      "Detailing and Realism": 20
+                    },
+                    {
+                      "Compliance with Specifications": 15
+                    },
+                    {
+                      "Skill of Presentation": 25
+                    }
+                  ]
+                },
+                {
+                  "round": "Round 3: Modeling of Community Campus",
+                  "criteria": [
+                    {
+                      "Technical Proficiency": 30
+                    },
+                    {
+                      "Creativity and Execution": 40
+                    },
+                    {
+                      "Skill of Presentation": 30
+                    }
+                  ]
+                }
+              ],
+              "teamSize": "Maximum 4",
+              "maximumTeams": 30,
+              "expectedNoOfParticipants": 120,
+              "registrationFee": 1000,
+              "firstPrize": 6000,
+              "secondPrize": 4000
+            }
+          ]
+        },
+        {
+          "dept": "Civil Engineering",
+          "events": [
+            {
+              "id": 14,
+              "image": "CiviLogic",
+              "name": "CiviLogic",
+              "ruleBook": "/EVENT_SOP/CE/CiviLogic.pdf",
+              "dept": "Civil",
+              "eventType": "Technical Event",
+              "description": "CiviLogic is an exciting technical event organized by the Civil Department that challenges participants to solve coding problems using Python. Designed to test and enhance problem-solving and programming skills, the event is open to teams of 2-3 members. Over three rounds of increasing difficulty, participants will tackle a series of coding challenges, showcasing their accuracy, efficiency, and creativity. The first round introduces basic-level problems, followed by medium-difficulty challenges in the second round, and culminates with advanced-level problem statements in the final round. Points are awarded based on criteria such as code accuracy, efficiency, completion time, and structure. The event offers a dynamic learning experience, with certificates for all participants and attractive prizes for winners. Teams will compete for the ultimate title, with a registration fee of ₹300 and cash prizes of ₹2,000 for the first place and ₹1,000 for the second place.",
+              "eventDescription": {
+                "overview": "Participants will solve coding problems using Python within a set timeframe. The problems increase in difficulty across three rounds, and the team with the highest score at the end of all rounds is declared the winner. All participants receive a certificate, and winners receive prizes.",
+                "roundDetails": [
+                  {
+                    "name": "Round 1",
+                    "description": [
+                      "Basic-level problem statements will be provided.",
+                      "The first 10 teams to solve the problems within the time limit advance to Round 2."
+                    ]
+                  },
+                  {
+                    "name": "Round 2",
+                    "description": [
+                      "Medium-level coding challenges with increased difficulty.",
+                      "Points awarded based on accuracy and completion time.",
+                      "Top-scoring teams move to the final round."
+                    ]
+                  },
+                  {
+                    "name": "Round 3 (Final Round)",
+                    "description": [
+                      "Advanced-level problem statements.",
+                      "Teams demonstrate high-level problem-solving and coding skills.",
+                      "The team with the highest accumulated score wins."
+                    ]
+                  }
+                ]
+              },
+              "eventGuidelines": [
+                "Teams must consist of 2-3 members.",
+                "Participants must adhere to the rules and submit solutions within the given timeframe."
+              ],
+              "teamSize": "2 to 3 Members",
+              "planOfAction": {
+                "duration": "2 Hours",
+                "schedule": [
+                  "Conduct all three rounds in sequence: Basic, Medium, and Advanced coding challenges.",
+                  "Monitor participants’ progress and evaluate solutions for each round.",
+                  "Declare winners based on the final accumulated scores."
+                ]
+              },
+              "judgingCriteria": [
+                {
+                  "criteria": "Accuracy of Code",
+                  "weight": 40,
+                  "details": [
+                    "Evaluate whether the submitted code produces the correct output.",
+                    "Full points for accurate solutions without errors.",
+                    "Partial points for near-correct solutions with minor errors."
+                  ]
+                },
+                {
+                  "criteria": "Efficiency of Code",
+                  "weight": 20,
+                  "details": [
+                    "Consider algorithmic complexity, memory usage, and execution time.",
+                    "Higher scores for optimized and efficient solutions.",
+                    "Extra points for using advanced techniques and minimal lines of code."
+                  ]
+                },
+                {
+                  "criteria": "Time Taken to Solve Each Problem",
+                  "weight": 30,
+                  "details": [
+                    "Faster completion of problems earns higher points.",
+                    "Time penalties may be applied for exceeding the allocated time."
+                  ]
+                },
+                {
+                  "criteria": "Code Structure and Readability",
+                  "weight": 10,
+                  "details": [
+                    "Assess code organization, variable naming, and formatting.",
+                    "Points awarded for meaningful comments and clear explanations of complex code."
+                  ]
+                }
+              ],
+              "expectedNoOfParticipants": 60,
+              "registrationFee": 300,
+              "firstPrize": 2000,
+              "secondPrize": 1000
+            },
+            {
+              "id": 15,
+              "image": "Ttt1",
+              "name": "Trail of Towers to Treasure (TTT)",
+              "dept": "Civil",
+              "ruleBook": "/EVENT_SOP/CE/.pdf",
+              "eventType": "Non-Technical Event",
+              "facultyCoordinators": [
+                {
+                  "name": "Mr.G.Madhav Krishna Reddy"
+                },
+                {
+                  "name": "Ms. M. Jyothsna"
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "R. Akhila",
+                  "details": "22341A0188, 3rd year, 5th sem, B-sec, 6304249128"
+                },
+                {
+                  "name": "V. Joshika",
+                  "details": "22341A01B6, 3rd year, 5th sem, B-sec, 9848108585"
+                },
+                {
+                  "name": "N. Yaswanth",
+                  "details": "22341A0170, 3rd year, 5th sem, B-sec, 6305445802"
+                },
+                {
+                  "name": "U. Ananth",
+                  "details": "22341A01A6, 3rd year, 5th sem, B-sec, 9652970446"
+                }
+              ],
+              "description": "The 'Trail of Towers to Treasure' (TTT) is a captivating non-technical event hosted by the Department of Civil Engineering. Designed to test teamwork, creativity, problem-solving, and memory, this event engages participants through four thrilling rounds. Teams begin with a QR Code Hunt and Jigsaw Puzzle Assembly, where they use clues to collect puzzle pieces and assemble them into a complete image. Advancing teams then take on the Structure Building Round, recreating the image from the puzzle using provided materials, with accuracy and speed determining their progression.In the Memory Challenge and Balloon Burst, participants briefly view an image, then recreate it from memory while completing a balloon-bursting task, adding an element of physical fun. The final round, Bottle-Flipping and Structure Modification, combines skill and strategy as teams compete in a bottle-flipping game to earn the ability to enhance their own structures or sabotage their opponents. The event culminates in a showdown where the team with the most intact and well-built structure emerges victorious.With exciting prizes, a vibrant atmosphere, and activities designed to challenge both the mind and body, TTT promises to be an unforgettable experience for participants and spectators alike!",
+              "eventDescription": {
+                "overview": "Event consists of four rounds. Teams compete in a series of challenges that test their problem-solving, memory, and physical skills. The final team is crowned the winner, and the succeeding team will be the runner.",
+                "rounds": {
+                  "round1": {
+                    "title": "QR Code Hunt & Jigsaw Puzzle Assembly",
+                    "description": [
+                      "Teams must find QR codes using provided clues, scan them, and collect jigsaw puzzle pieces.",
+                      "Each QR code leads to a clue for the next QR code and a set of puzzle pieces.",
+                      "Teams must assemble the collected pieces to form a complete image.",
+                      "Teams that complete the puzzle within the allotted time qualify for the next round."
+                    ]
+                  },
+                  "round2": {
+                    "title": "Structure Building",
+                    "description": [
+                      "Teams recreate the structure based on the assembled image from Round 1 within a specified time.",
+                      "Materials for building the structure will be provided.",
+                      "Points are awarded based on accuracy and timely completion.",
+                      "The best-performing teams advance to Round 3."
+                    ]
+                  },
+                  "round3": {
+                    "title": "Memory Challenge and Balloon Burst",
+                    "description": [
+                      "Teams view an image briefly and then recreate the structure from memory.",
+                      "Before assembling, they must blow up and burst a balloon.",
+                      "The two teams that best recreate the image and complete the balloon task advance to the final round."
+                    ]
+                  },
+                  "round4": {
+                    "title": "Bottle-Flipping Challenge and Structure Modification",
+                    "description": [
+                      "Teams compete in a bottle-flipping game, with each successful flip allowing them to alter structures.",
+                      "For each successful flip, a team can either disassemble one part from the opposing team’s structure or add one part to their own structure.",
+                      "The team with the most intact and well-built structure at the end wins."
+                    ]
+                  }
+                }
+              },
+              "eventGuidelines": [
+                "Mobile phones are not allowed for the 2nd, 3rd, and 4th rounds.",
+                "Participants are not allowed to touch, remove, or throw other team's hints.",
+                "Participants are not allowed to take help from anyone other than teammates.",
+                "Teams may be eliminated/disqualified if they disobey the above rules."
+              ],
+              "teamSize": 2,
+              "planOfAction": {
+                "duration": "4 hours",
+                "schedule": "Day 1 - 10:00 AM to 3:00 PM"
+              },
+              "judgingCriteria": "From the finalized two teams, the team with the most well-built (high-rise) structure at the end wins, and the other team will be the runner.",
+              "expectedNoOfParticipants": 30,
+              "registrationFee": 300,
+              "firstPrize": 2500,
+              "secondPrize": 1500
+            }
+          ]
+        },
+        {
+          "dept": "ECE",
+          "events": [
+            {
+              "id": 24,
+              "name": "Circuit Debugging",
+              "image": "Circuit_Debugging",
+              "ruleBook": "/EVENT_SOP/ECE/Circuit_Debugging.pdf",
+              "dept": "ECE",
+              "firstPrize": 3000,
+              "secondPrize": 1000,
+              "teamSize": 2,
+              "description": "This contest invites electronics enthusiasts to test their skills in identifying and fixing faults in various circuits. Participants will diagnose intentional errors in a series of circuits, with each round increasing in complexity and requiring quick thinking, precision, and deep electronics knowledge. The goal is to debug each circuit within the time limit, showcasing expertise and gaining hands-on troubleshooting experience in a high-energy, competitive setting.",
+              "guidelines": [
+                "Open to all electronics students, enthusiasts, and professionals interested in circuit debugging.",
+                "Participants may enter individually or as teams.",
+                "Participants may not use external tools or components unless specified by the organizers.",
+                "Each round has a fixed time limit. Participants must submit their solutions before time expires.",
+                "Incorrect fixes or failure to explain solutions may lead to point deductions."
+              ],
+              "planOfAction": [
+                "Round 1: Participants will be given a circuit with intentional faults. They must identify and fix the issues within the time limit.",
+                "Round 2: The difficulty of the circuit is increased, and participants must debug more complex circuits.",
+                "Round 3: The final round will involve more challenging circuits, and the team that finishes the task with the highest accuracy and speed wins."
+              ],
+              "schedule": "Day-shift",
+              "duration": "4 hours",
+              "judgingCriteria": "Winners are determined by accuracy, speed, and explanation of fault identification and fixes.",
+              "registrationFee": "300/-",
+              "prizes": {
+                "firstPrize": "Rs 12000/-",
+                "secondPrize": "Rs 8000/-"
+              },
+              "facultySpoc": "Dr. T. Anil Kumar",
+              "studentSpocs": [
+                {
+                  "name": "Anil Kumar",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Sailesh",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Geetha Laxmi",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Tarun",
+                  "year": "2nd Year"
+                },
+                {
+                  "name": "Karthika",
+                  "year": "2nd Year"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dept": "MECH",
+          "events": [
+            {
+              "id": 30,
+              "dept": "MECH",
+              "name": "CNC CODATHON",
+              "eventType": "TECHNICAL EVENT-1",
+              "firstPrize": "5000",
+              "secondPrize": "3000",
+              "facultyCoordinators": [
+                "Dr. B. V. Suresh",
+                "Dr. Ch. Vinodbabu"
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "D. V. S. Sushmitha",
+                  "id": "23345A0302"
+                },
+                {
+                  "name": "B. Durga Prasad",
+                  "id": "22341A0312"
+                },
+                {
+                  "name": "P. Pavan Kumar",
+                  "id": "22341A0398"
+                },
+                {
+                  "name": "S. Kowshik",
+                  "id": "22341A03C0"
+                },
+                {
+                  "name": "K. Satish",
+                  "id": "22341A0346"
+                }
+              ]
+            },
+            {
+              "id": 31,
+              "dept": "MECH",
+              "name": "JAL - VEGA",
+              "firstPrize": "5000",
+              "secondPrize": "3000",
+              "image": "Jal_Vega",
+              "eventType": "TECHNICAL EVENT-2",
+              "facultyCoordinators": [
+                {
+                  "name": "Dr. U. Sudhakar"
+                },
+                {
+                  "name": "Dr. S. Ravibabu"
+                }
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "N. Krishnaveni",
+                  "details": "22341A0390"
+                },
+                {
+                  "name": "G. Divya",
+                  "details": "22341A0341"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventType": "onsite",
+      "departments": [
+        {
+          "dept": "CSE/IT/AI&ML/AI&DS",
+          "events": [
+            {
+              "id": 19,
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "name": "Level Up: The Arena of Champions(Gaming)",
+              "teamSize": 3,
+              "registrationFee": 500,
+              "firstPrize": 6000,
+              "secondPrize": 3000
+            },
+            {
+              "id": 20,
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "name": "Trade Masters (SPOT Event)",
+              "teamSize": 3,
+              "registrationFee": 500,
+              "firstPrize": 6000,
+              "secondPrize": 3000
+            },
+            {
+              "id": 21,
+              "dept": "CSE/IT/AI&ML/AI&DS",
+              "name": "Reel Studio (SPOT Event)",
+              "teamSize": 3,
+              "registrationFee": 500,
+              "firstPrize": 6000,
+              "secondPrize": 3000
+            }
+          ]
+        },
+        {
+          "dept": "Civil Engineering",
+          "events": [
+            {
+              "id": 22,
+              "image": "FunFusion",
+              "name": "Fun Fusion",
+              "dept": "Civil",
+              "ruleBook": "/EVENT_SOP/CE/Fun_Fusion.pdf",
+              "eventType": "Spot Event",
+              "eventDescription": {
+                "overview": "FUN FUSION is an engaging spot event aimed at refreshing participants with a mix of outdoor games and fun challenges. Participants will encounter interactive games and surprise challenges, designed to offer a lively experience and encourage teamwork.",
+                "gameDetails": [
+                  {
+                    "name": "Lip Sync Battle",
+                    "description": [
+                      "Player 1 wears headphones with high volume, and Player 2 lip-syncs given words.",
+                      "Player 1 guesses the words based on Player 2's lip movements within the time limit."
+                    ],
+                    "rules": [
+                      "Player 1 must not remove the headset.",
+                      "No hand or leg movements allowed for word clues.",
+                      "Minimum 2 players required."
+                    ]
+                  },
+                  {
+                    "name": "Cup Stack Relay",
+                    "description": [
+                      "Round 1: Identify a song after hearing its first 5 seconds to advance.",
+                      "Round 2: Build a cup pyramid in the shortest time possible to win."
+                    ],
+                    "rules": [
+                      "Strictly adhere to the tasks set by coordinators."
+                    ]
+                  },
+                  {
+                    "name": "Hands and Feet Hopscotch",
+                    "description": [
+                      "Players match hands and feet to specific markings row by row.",
+                      "The game requires coordination and agility within a time limit."
+                    ]
+                  },
+                  {
+                    "name": "Relay Pictionary",
+                    "description": [
+                      "A team of 4 works in a drawing relay where Player 1 views and draws a picture, and subsequent players observe and recreate it.",
+                      "The final player guesses the original picture based on the last drawing."
+                    ],
+                    "rules": [
+                      "Correct guesses earn rewards."
+                    ]
+                  },
+                  {
+                    "name": "Aim the Ball",
+                    "description": [
+                      "Players are given 5 balls to throw into glasses placed at a distance.",
+                      "Points are awarded based on the number of balls successfully thrown."
+                    ],
+                    "rules": [
+                      "Maintain the set distance during the game."
+                    ]
+                  }
+                ]
+              },
+              "eventGuidelines": [
+                "Participants may play one or more games based on their preference.",
+                "Points are accumulated based on completion time, rule compliance, teamwork, and creativity.",
+                "Rule violations or disruptive behavior may lead to deductions or disqualification."
+              ],
+              "teamSize": "2 to 5 Members",
+              "planOfAction": {
+                "duration": "2 Days",
+                "schedule": {
+                  "day1": [
+                    "Registration and team briefing.",
+                    "Conduct games in sequence: Lip Sync Battle, Cup Stack Relay, Hands and Feet Hopscotch, Relay Pictionary, and Aim the Ball.",
+                    "Monitor teams’ progress and track times for each game."
+                  ],
+                  "day2": [
+                    "Continue games for remaining teams.",
+                    "Announce winners based on fastest completion times and rule adherence.",
+                    "Distribute prizes to winning teams."
+                  ]
+                }
+              },
+              "judgingCriteria": [
+                {
+                  "criteria": "Completion Time",
+                  "points": 40,
+                  "details": [
+                    "Points are awarded based on finishing order for each game.",
+                    "1st Place: 40 points, 2nd Place: 35 points, 3rd Place: 30 points, others: 20 or fewer."
+                  ]
+                },
+                {
+                  "criteria": "Accuracy and Rule Compliance",
+                  "points": 30,
+                  "details": [
+                    "Ensures tasks are completed accurately and rules are followed.",
+                    "Includes proper guessing, stacking, placements, and drawings."
+                  ]
+                },
+                {
+                  "criteria": "Teamwork and Coordination",
+                  "points": 20,
+                  "details": [
+                    "Evaluates communication, effective coordination, and positive teamwork dynamics.",
+                    "Bonus points for exceptional teamwork."
+                  ]
+                },
+                {
+                  "criteria": "Creativity and Enthusiasm",
+                  "points": 10,
+                  "details": [
+                    "Rewards teams for enthusiasm, creativity, and positive participation."
+                  ]
+                }
+              ],
+              "expectedNoOfParticipants": 25,
+              "registrationFee": 300,
+              "firstPrize": 1500,
+              "secondPrize": 1000
+            }
+          ]
+        },
+        {
+          "dept": "ECE",
+          "events": [
+            {
+              "id": 23,
+              "dept": "ECE",
+              "name": "FOX_HUNT",
+              "image": "Fox_Hunt",
+              "ruleBook": "/EVENT_SOP/ECE/Fox_hunt_sop.pdf",
+              "teamSize": 2,
+              "registrationFee": 250,
+              "firstPrize": 2000,
+              "secondPrize": 1000,
+              "description": "Foxhunting is the simultaneous operation of two devices with overlapping frequencies. Rules for playing include certain boundary ranges. The transmitter is concealed, and each team is given a receiver. Teams adjust the receiver frequency and move accordingly. When the transmitter and receiver frequencies match, a sound is transmitted and heard through headphones, indicating the team must locate the transmitter.",
+              "guidelines": [
+                "Any damage or breakage done to the provided equipment by any member in the team is responsible for compensating the damage.",
+                "The team must hunt the transmitter within the provided boundaries.",
+                "Follow the organizer's instructions to tune the frequency levels.",
+                "If a team is unable to find the transmitter, the team should return the gadgets within the specified time frame."
+              ],
+              "planOfAction": [
+                "Round 1: Teams are given receivers with headsets. Each team has two members. The team that finds the transmitter first (within 3 minutes) progresses. The process is repeated for all teams, and shortlisted teams proceed to Round 2.",
+                "Round 2: Shortlisted teams from Round 1 compete. Winners are determined by how quickly they locate the transmitter."
+              ],
+              "schedule": "Day-shift",
+              "duration": "2 days",
+              "judgingCriteria": "Winners are determined by how quickly they locate the transmitter. Prize money will be awarded after the event concludes.",
+              "registration_fee": "250/- per team",
+              "prizes": {
+                "firstPrize": "Rs 2000/-",
+                "secondPrize": "Rs 1000/-"
+              },
+              "facultySpocs": "Mrs. P. Revathi",
+              "studentSpocs": [
+                {
+                  "name": "Renuka",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Amrutha",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Saran kumar",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Pranathi",
+                  "year": "2nd Year"
+                },
+                {
+                  "name": "Dharmendra",
+                  "year": "2nd Year"
+                }
+              ]
+            },
+            {
+              "id": 25,
+              "dept": "ECE",
+              "name": "Mind Spark",
+              "image": "Mind_Spark",
+              "ruleBook": "/EVENT_SOP/ECE/MindSpark.pdf",
+              "registrationFee": 250,
+              "firstPrize": 1000,
+              "secondPrize": 700,
+              "teamSize": 2,
+              "description": "Mind Spark is a thrilling three-round cognitive challenge designed to test your memory, problem-solving skills, and quick thinking. Participants will embark on a journey that demands attention to detail, critical thinking, and strategic reasoning. Participants will be presented with a series of visual and auditory stimuli and must remember key details to emerge victorious.",
+              "guidelines": [
+                "The event is open to all students.",
+                "Participants must follow instructions from event organizers.",
+                "Team members can collaborate during gameplay."
+              ],
+              "planOfAction": [
+                "Round 1: Memory Mastery - Participants will be given a few visuals or sounds and need to remember and write them in the proper order. Participants with the most accurate responses advance to Round 2.",
+                "Round 2: Puzzle Pursuit - For the qualifiers, a few hints will be given to find the hidden puzzle, and participants need to find and solve the puzzle within the time limit.",
+                "Round 3: Rapid Fire Frenzy - Qualifiers will have a rapid-fire round based on selected topics. The participants with the most correct responses claim victory."
+              ],
+              "schedule": "Day-shift",
+              "duration": "2-3 hours",
+              "judgingCriteria": "Winners are determined by the accuracy of responses, puzzle solving, and quick thinking in the rapid-fire round.",
+              "registration_fee": "250/- per team",
+              "prizes": {
+                "firstPrize": "Rs 1000/-",
+                "secondPrize": "Rs 700/-"
+              },
+              "facultySpoc": "Dr. T.V.S. Divakar",
+              "studentSpocs": [
+                {
+                  "name": "Priyanka",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Aparna",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "Pravallika",
+                  "year": "3rd Year"
+                },
+                {
+                  "name": "K. Tarun",
+                  "year": "2nd Year"
+                }
+              ],
+              "requirements": [
+                "Display screen/projector for visual stimuli",
+                "Sound system for audio stimuli",
+                "Venue with seating capacity for participants",
+                "Tables and chairs for participants"
+              ],
+              "registration": "When the registration portal opens, a link will be sent in your respective class groups. Participants can register through the link provided or they can directly contact the organizers for registration. Spot registrations are also available."
+            },
+            {
+              "id": 25,
+              "name": "Panchatantra",
+              "noOfStudentsPerTeam": 2,
+              "image": "Panchatantra",
+              "firstPrize": 2000,
+              "ruleBook": "/EVENT_SOP/ECE/Panchatantra.pdf",
+              "secondPrize": 1000,
+              "dept": "ECE",
+              "teamSize": 2,
+              "description": "Are you ready to put your senses to the ultimate test? Join us for Panchatantra, a thrilling event where your five senses will guide you through challenges that are as fun as they are fascinating.",
+              "guidelines": [
+                "Teams of 2 participants are required.",
+                "Participants must follow all instructions given by the organizers.",
+                "Collaboration and communication between team members are essential for success.",
+                "No cheating or unfair advantages will be allowed."
+              ],
+              "planOfAction": [
+                "Round 1: Visual Vortex - A picture filled with intricate details is shown for 20 seconds. Participants answer questions based on what they saw.",
+                "Round 2: Sounds Familiar - One participant conveys a dialogue or movie name using only gestures and expressions while the other guesses.",
+                "Round 3: Taste Bud Tangle - Participants taste mixed flavors and identify the components.",
+                "Round 4: Spin the Wheel - Perform the task shown by spinning the wheel.",
+                "Round 5: Trigger the Digital Bomb - Participants take turns choosing triggers from their 'bomb' to defuse it."
+              ],
+              "schedule": "Day-shift",
+              "duration": "2-3 hours",
+              "judgingCriteria": "Participants are judged based on the points accumulated in the first four rounds, with the top two highest scorers advancing to Round 5.",
+              "registrationFee": "250/-",
+              "prizes": {
+                "firstPrize": "Rs 2000/-",
+                "secondPrize": "Rs 1000/-"
+              },
+              "facultySpoc": "TBD",
+              "studentSpocs": [
+                {
+                  "name": "TBD",
+                  "year": "TBD"
+                },
+                {
+                  "name": "TBD",
+                  "year": "TBD"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dept": "MECH",
+          "events": [
+            {
+              "id": 33,
+              "dept": "MECH",
+              "name": "CIPHER CRACK",
+              "firstPrize": "5000",
+              "secondPrize": "3000",
+              "eventType": "SPOT EVENT",
+              "facultyCoordinators": [
+                "Ms. Y. Shirisha",
+                "Mr. N. Govinda Rao"
+              ],
+              "studentCoordinators": [
+                {
+                  "name": "B. Akhilesh",
+                  "id": "22341A0309"
+                },
+                {
+                  "name": "S. Sai",
+                  "id": "22341A03D3"
+                },
+                {
+                  "name": "CH. Gowri Naidu",
+                  "id": "22341A0323"
+                },
+                {
+                  "name": "M. Thanay",
+                  "id": "22341A0380"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

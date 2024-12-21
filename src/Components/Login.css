@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+#login-main {
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(circle, rgb(124, 137, 177) 0%, rgb(40, 41, 66) 100%) !important;
+    color: white;
+}
+
+.login-input {
+    padding: 5px 5px;
+    width: 100%;
+    color: blue;
+
+}
+
+.stepcone-login-logo {
+    width: 150px;
+}
+
+.login-sub {
+    border-radius: 15px;
+    border: 1px solid white;
+    background-color: rgba(29, 9, 74, 0.507);
+    backdrop-filter: blur(30px);
+    box-shadow:
+        5.3px 3.4px 2.9px rgba(0, 0, 0, 0.065),
+        13.4px 8.7px 7.2px rgba(0, 0, 0, 0.093),
+        27.3px 17.7px 14.7px rgba(0, 0, 0, 0.117),
+        inset 0.2px 36.5px 30.3px rgba(0, 0, 0, 0.145),
+        inset 154px 100px 83px rgba(0, 0, 0, 0.21),
+        inset 2px 0px 6px rgba(255, 255, 255, 0.738);
+}
