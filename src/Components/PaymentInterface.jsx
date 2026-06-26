@@ -33,7 +33,7 @@ const PaymentInterface = () => {
             paymentFee: paymentFee
         }
         // Here you can call your API to process the payment
-        const res = await axios.post("api/stepcone_backend/paymentgateway.php"
+        const res = await axios.post("/stepcone/stepcone_backend/paymentgateway.php"
             , userDetails
         );
         const data = res.data;

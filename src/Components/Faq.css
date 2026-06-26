@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.faq-main {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+}
+
+.faqmsgicon {
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(137, 141, 255);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faqmsgicon img {
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.faqmsgicon:hover {
+    transition: 0.5s;
+    background: #105370;
+    border: 2px aqua solid;
+
+}
+
+.faq-box {
+    background-color: rgb(48, 118, 179) !important;
+    width: 300px;
+    height: 300px;
+    overflow-y: scroll;
+    position: fixed;
+    right: 70px;
+    /* border: 2px solid rgb(0, 0, 0); */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    bottom: 60px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.msg-box-screen {
+    transition: 0.9s;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    display: hidden;
+}
+
+.custom-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+.accordion-button{
+    background: #c4dcff !important;
+    backdrop-filter: blur(15px) !important;
+}
+.accordion{
+    background: #000 !important;
+}

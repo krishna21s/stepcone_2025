@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Footer.css';
 import Dolphin from '/Assets/dolphin.png'
 import RRR from '/Assets/rrr.png'
 import FooterDetails from './FooterDetails.jsx'
+import axios from 'axios';
 const Footer = () => {
+    const [hitCount, setHitCount] = useState(0);
+
+
+    const getHitCount = async () => {
+
+        try {
+            const response = await axios.get('/stepcone/stepcone_backend/hit_count.php');
+            setHitCount(response.data.hitcount);
+        }
+        catch {
+            console.log("hit count error");
+        }
+    }
+
+    useEffect(() => {
+        getHitCount();
+    }, [])
+
     return (
         <div>
             <div className="header">
@@ -41,62 +60,11 @@ const Footer = () => {
                 </div>
                 {/* <!--Waves end--> */}
             </div>
-            {/* <!--Header ends--> */}
-
-            {/* <div className="content container">
-                <div>
-                    <h3 >LINKS</h3>
-                    <div>
-                        <a href="">Gmrit</a>
-                        <a href="">Events</a>
-                        <a href="">Contact us</a>
-                        <a href="">About</a>
-                    </div>
-                </div>
-                <div>
-                    <h3>CONTACT US</h3>
-                    <div>
-                        <a href="">College Contact</a>
-                        <a href="">SiteMap</a>
-                        <a href="">LandLine</a>
-                        <a href="">gmrit1998@gmail.com</a>
-                    </div>
-                </div>
-                <div>
-                    <h3>ADDRESS</h3>
-                    <div id="map">
-                        <div>
-                            <div>GMR nagar rajam</div>
-                            <div>Vizianagaram</div>
-                            <div>Ap-532127</div>
-                            <div>StepCone2025@gmail.com</div>
-                        </div>
-                        <div id="googleMap">
-                            <a href="https://www.google.com/maps/place/GMR+Institute+of+Technology" target="_blank" rel="noopener noreferrer">View Map</a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3>FOLLOW US</h3>
-                    <div className="follow gap-3">
-                        <a href="">
-                            <img src="https://toppng.com/uploads/preview/instagram-logo-circle-11549679754rhbcorxntv.png" alt="Instagram" />
-                        </a>
-                        <a href="">
-                            <img src="https://www.freeiconspng.com/uploads/logo-twitter-circle-png-transparent-image-1.png" alt="Twitter" />
-                        </a>
-                        <a href="">
-                            <img src="https://th.bing.com/th/id/OIP.yUWvf6InVFryrKNHtrgdBQHaHw?rs=1&pid=ImgDetMain" alt="Facebook" />
-                        </a>
-                        <a href="">
-                            <img src="https://i.pinimg.com/originals/d9/52/c0/d952c0b9fcd5292a4eaae2ae00fc3d47.png" alt="Pinterest" />
-                        </a>
-                    </div>
-
-                </div>
-            </div> */}
             <div className='w-100'>
                 <FooterDetails />
+            </div>
+            <div className='hitcount text-center'>
+                <small className='text-dark'>visits - {hitCount}</small>
             </div>
         </div>
     );

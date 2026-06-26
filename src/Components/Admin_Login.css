@@ -1,0 +1,12 @@
+.admin-login-main{
+    width: 100%;
+    height: 100vh;
+   
+}
+.admin-login-container{
+    height: 90vh;
+}
+.admin-login-box input{
+    border-radius: 7px;
+    border: 1px solid;
+}

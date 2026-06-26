@@ -43,7 +43,7 @@ const AdminPage = () => {
             "username": queryReplyData.username
         }
         console.log(replyData)
-        const response = await axios.post("/api/stepcone_backend/sc_queries_admin.php", replyData);
+        const response = await axios.post("/stepcone/stepcone_backend/sc_queries_admin.php", replyData);
         console.log("this is response", response.data);
         setStoredQueries(response.data.allQueriesData);
     }

@@ -43,53 +43,84 @@ const StepconeAdmin = () => {
     const [eventFetchedData, setEventFetchedData] = useState([]);
     const [currEvent, setCurrEvent] = useState('-----------');
     const [studCount, setStudCount] = useState(1);
+    const [teamsCount, setTeamsCount] = useState(0);
+    const [teamsCountArr, setTeamsCountArr] = useState([]);
 
     const handleEventClick = async (item) => {
-        try {
-            // Check if the item has a name (it's an event) or it's a label
+        if (item == 'allevents') {
+            const eventNameData = {
+                "event": item
+            }
             setCurrEvent(item.name || item);
-            if (currEvent !== "Internal" && currEvent !== "External") {
-                // setEventCount(0);
-                const eventNameData = {
-                    "event": item.name
-                }
-                const response = await axios.post(
-                    '/api/stepcone_backend/sc_admin.php',
-                    eventNameData
-                );
+            const response = await axios.post(
+                '/stepcone/stepcone_backend/sc_admin.php',
+                eventNameData
+            );
 
-                setEventFetchedData(response.data.EventData);
-                // console.log(response.data);
-                // const fetchedData = ;
-                // console.log(fetchedData[0]);
-                // console.log(response.data.EventData);
-                // setEventFetchedData(response.data.EventData);
-            }
-            else {
-                const studGet = {   
-                    "participant": item
-                }
-                const response = await axios.post(
-                    '/api/stepcone_backend/sc_admin_students.php',
-                    studGet
-                );
-
-                setEventFetchedData(response.data.EventData);
-                console.log(response.data);
-
-            }
-
+            setEventFetchedData(response.data.EventData);
         }
-        catch {
-            alert("No data found, Try again");
+
+        else {
+
+            try {
+                // Check if the item has a name (it's an event) or it's a label
+                setCurrEvent(item.name || item);
+                if (currEvent !== "Internal" && currEvent !== "External" && currEvent !== "six" && currEvent !== "four") {
+                    // setEventCount(0);
+                    const eventNameData = {
+                        "event": item.name
+                    }
+                    const response = await axios.post(
+                        '/stepcone/stepcone_backend/sc_admin.php',
+                        eventNameData
+                    );
+
+                    setEventFetchedData(response.data.EventData);
+                    // console.log(response.data);
+                    // const fetchedData = ;
+                    // console.log(fetchedData[0]);
+                    // console.log(response.data.EventData);
+                    // setEventFetchedData(response.data.EventData);
+                }
+                else {
+                    const studGet = {
+                        "participant": item
+                    }
+                    const response = await axios.post(
+                        '/stepcone/stepcone_backend/sc_admin_students.php',
+                        studGet
+                    );
+
+                    setEventFetchedData(response.data.EventData);
+                    console.log(response.data);
+
+                }
+
+            }
+            catch {
+                alert("No data found, Try again");
+            }
         }
 
     };
 
 
     useEffect(() => {
+        if (currEvent !== "Internal" && currEvent !== "External" && currEvent !== "six" && currEvent !== "four") {
+            try {
+                const uniqueTeamIds = [...new Set(eventFetchedData.map(team => team.teamId))];
+                setTeamsCountArr(uniqueTeamIds);
+                setTeamsCount(uniqueTeamIds.length);
+            } catch (error) {
+                console.error("Error updating teams count:", error);
+            }
+        }
+    }, [eventFetchedData, currEvent]);
+
+
+    useEffect(() => {
         // the default item to be fetched on page load
-        const defaultEvent = { name: "Paper Presentation" };
+        const defaultEvent = { name: "allevents" };
         handleEventClick(defaultEvent);
     }, []); // T
 
@@ -205,7 +236,7 @@ const StepconeAdmin = () => {
             <div className='sc-adm-nav d-flex justify-content-center align-items-center '>
                 <div className='d-flex align-items-center justify-content-around'>
                     <img src={StepconeLogo} height='40px' alt="Stepcone Logo" />
-                    <Link to="/sc-2025-adm-g19M98R">
+                    <Link to="/90sc86-2025-adm-g19M98R/">
                         <p className='pt-3 d-flex text-light mx-4'>STEPCONE ADMIN</p>
                     </Link>
                 </div>
@@ -216,8 +247,10 @@ const StepconeAdmin = () => {
                 <div className="row d-flex">
                     {/* Sidebar */}
                     <div className="sc-index col-2 ">
-                        <div className='text-center'>
+                        <div className='text-center d-flex gap-4'>
                             <div className='text-warning fs-4 text-center w-50'><FontAwesomeIcon icon={faListCheck} style={{ color: "darkblue" }} className='mx-2' />Index</div>
+                            <Link to='/90sc86-2025-adm-g19M98R/stepcone-queries'><button className='btn p-1 my-1 text-white'>➡️Queries</button>
+                            </Link>
                         </div>
                         <hr />
                         <div className='sc-index-data'>
@@ -226,8 +259,7 @@ const StepconeAdmin = () => {
                                     onClick={() => handleEventClick("Internal")}
                                 >
                                     <Link>
-                                        <p className='px-3 fs-5 border adm-login-details-btn '
-
+                                        <p className='px-3 fs-5 border adm-login-details-btn'
                                         >Internal</p>
                                     </Link>
                                 </button>
@@ -236,6 +268,25 @@ const StepconeAdmin = () => {
                                 >
                                     <Link>
                                         <p className='px-3 fs-5 border adm-login-details-btn '>External</p>
+                                    </Link>
+                                </button>
+                            </div>
+
+
+                            <div className='d-flex py-3 gap-2'>
+                                <button className='sc-adm-internal'
+                                    onClick={() => handleEventClick("six")}
+                                >
+                                    <Link>
+                                        <p className='px-3 fs-5 border adm-login-details-btn'
+                                        >₹600</p>
+                                    </Link>
+                                </button>
+                                <button className='sc-adm-external'
+                                    onClick={() => handleEventClick("four")}
+                                >
+                                    <Link>
+                                        <p className='px-3 fs-5 border adm-login-details-btn '>₹400</p>
                                     </Link>
                                 </button>
                             </div>
@@ -324,11 +375,25 @@ const StepconeAdmin = () => {
                                     }
                                 </ul>
                             </div>
+                            <div className='sc-adm-event'>
+                                <ul className='text-light text-start px-3'>
+                                    <Link className='' >
+                                        <button
+                                            onClick={() => handleEventClick("allevents")}
+                                            className='sc-adm-event-click text-start'>
+                                            <li className='px-2'>All Events Data</li>
+                                        </button>
+                                    </Link>
+                                </ul>
+                            </div>
                             <div className='st-adm-dub-div'>
                                 {/* this is the dublicate div for adjustments */}
                             </div>
                         </div>
                     </div>
+
+
+
 
                     {/* Table Content */}
 
@@ -349,6 +414,7 @@ const StepconeAdmin = () => {
                                             <th scope="col">Mobile</th>
                                             <th scope="col">Term</th>
                                             <th scope="col">Branch</th>
+                                            <th scope="col">Time Stamp</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -363,6 +429,10 @@ const StepconeAdmin = () => {
                                                         <td>{stud.mobile}</td>
                                                         <td>term-{stud.term}</td>
                                                         <td>{stud.branch}</td>
+                                                        <td>{new Date(new Date(stud.live_timestamp).setHours(
+                                                            new Date(stud.live_timestamp).getHours() + 5,
+                                                            new Date(stud.live_timestamp).getMinutes() + 30
+                                                        )).toLocaleString()}</td>
                                                     </tr>
                                                 ))
                                             )
@@ -396,12 +466,17 @@ const StepconeAdmin = () => {
                                         <tr>
                                             <th scope="col">S.No</th>
                                             <th scope="col">Student Name</th>
+                                            <th scope="col">Stepcone Id</th>
                                             <th scope="col">College Name</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">Mobile</th>
                                             <th scope="col">Term</th>
                                             <th scope="col">Branch</th>
                                             <th scope="col">Accomodation</th>
+                                            <th scope="col">Amount Paid</th>
+                                            <th scope="col">Trans. Status</th>
+                                            <th scope="col">Trans. Id</th>
+                                            <th scope="col">Time Stamp</th>
 
                                         </tr>
                                     </thead>
@@ -412,6 +487,7 @@ const StepconeAdmin = () => {
                                                     <tr>
                                                         <th scope="row">{index + 1}</th>
                                                         <td>{stud.username}</td>
+                                                        <td>{stud.stepcone_id}</td>
                                                         <td>{stud.clg_name}</td>
                                                         <td>{stud.email}</td>
                                                         <td>{stud.mobile}</td>
@@ -429,6 +505,183 @@ const StepconeAdmin = () => {
                                                                 )
                                                             }
                                                         </td>
+                                                        <td>{stud.paid_amount}</td>
+                                                        <td>{stud.TransStatus}</td>
+                                                        <td>{stud.TransId}</td>
+                                                        <td>{new Date(new Date(stud.live_timestamp).setHours(
+                                                            new Date(stud.live_timestamp).getHours() + 5,
+                                                            new Date(stud.live_timestamp).getMinutes() + 30
+                                                        )).toLocaleString()}</td>
+
+                                                    </tr>
+                                                ))
+                                            )
+                                        }
+                                        {
+                                            !eventFetchedData && (
+                                                <div className='position-absolute d-flex justify-content-center col-9' >
+                                                    <h3 className='text-center text-danger m-auto'>No data found</h3>
+                                                </div>
+                                            )
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        )
+                    }
+
+
+
+
+                    {/* FOR 400 PAID PEOPLE */}
+                    {/*  {products
+          .filter(product => product.category === "Men") // Filter products based on category
+          .map(product => (
+            <li key={product.id}>{product.name}</li> // Render filtered products
+          ))} */}
+                    {
+                        (currEvent === "four") && (
+                            <div className='col col-10 ' id='adm-table-div' >
+                                <div className="adm-event-hdng text-center d-flex  flex-column justify-content-center ">
+                                    <h1 className='text-secondary sc-adm-curr-event  fs-2 py-4 border-bottom' >{currEvent} hundred</h1>
+                                    <h4 className='text-dark'>Number of Students: {eventFetchedData && eventFetchedData.length > 0 ? eventFetchedData.filter(stud => stud.paid_amount == 410).length : "N/A"}</h4>
+                                </div>
+                                <table className="adm-data-table table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">S.No</th>
+                                            <th scope="col">Student Name</th>
+                                            <th scope="col">Stepcone Id</th>
+                                            <th scope="col">College Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Mobile</th>
+                                            <th scope="col">Term</th>
+                                            <th scope="col">Branch</th>
+                                            <th scope="col">Accomodation</th>
+                                            <th scope="col">Amount Paid</th>
+                                            <th scope="col">Trans. Status</th>
+                                            <th scope="col">Trans. Id</th>
+                                            <th scope="col">Time Stamp</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            eventFetchedData && (
+                                                eventFetchedData.filter(stud => stud.paid_amount == 410).map((stud, index) => (
+
+                                                    <tr>
+                                                        <th scope="row">{index + 1}</th>
+                                                        <td>{stud.username}</td>
+                                                        <td>{stud.stepcone_id}</td>
+                                                        <td>{stud.clg_name}</td>
+                                                        <td>{stud.email}</td>
+                                                        <td>{stud.mobile}</td>
+                                                        <td>term-{stud.term}</td>
+                                                        <td>{stud.branch}</td>
+                                                        <td>
+                                                            {
+                                                                stud.accomodation == 0 && (
+                                                                    "not Registered"
+                                                                )
+                                                            }
+                                                            {
+                                                                stud.accomodation == 1 && (
+                                                                    "Registered"
+                                                                )
+                                                            }
+                                                        </td>
+                                                        <td>{stud.paid_amount}</td>
+                                                        <td>{stud.TransStatus}</td>
+                                                        <td>{stud.TransId}</td>
+                                                        <td>{new Date(new Date(stud.live_timestamp).setHours(
+                                                            new Date(stud.live_timestamp).getHours() + 5,
+                                                            new Date(stud.live_timestamp).getMinutes() + 30
+                                                        )).toLocaleString()}</td>
+
+                                                    </tr>
+                                                ))
+                                            )
+                                        }
+                                        {
+                                            !eventFetchedData && (
+                                                <div className='position-absolute d-flex justify-content-center col-9' >
+                                                    <h3 className='text-center text-danger m-auto'>No data found</h3>
+                                                </div>
+                                            )
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        )
+                    }
+
+
+                    {/* FOR THE 600 PAID STUDENTS */}
+
+
+                    {
+                        (currEvent === "six") && (
+                            <div className='col col-10 ' id='adm-table-div' >
+                                <div className="adm-event-hdng text-center d-flex  flex-column justify-content-center ">
+                                    <h1 className='text-secondary sc-adm-curr-event  fs-2 py-4 border-bottom' >{currEvent} hundred</h1>
+                                    <h4 className='text-dark'>Number of Students: {eventFetchedData ? eventFetchedData[0] ? eventFetchedData.filter(stud => stud.paid_amount >= 600).length : "N/A" : 'N/A'}</h4>
+                                </div>
+                                <table className="adm-data-table table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">S.No</th>
+                                            <th scope="col">Student Name</th>
+                                            <th scope="col">Stepcone Id</th>
+                                            <th scope="col">College Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Mobile</th>
+                                            <th scope="col">Term</th>
+                                            <th scope="col">Branch</th>
+                                            <th scope="col">Accomodation</th>
+                                            <th scope="col">Amount Paid</th>
+                                            <th scope="col">Trans. Status</th>
+                                            <th scope="col">Trans. Id</th>
+                                            <th scope="col">Time Stamp</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            eventFetchedData && (
+                                                eventFetchedData.filter(stud => stud.paid_amount >= 600).map((stud, index) => (
+
+                                                    <tr>
+                                                        <th scope="row">{index + 1}</th>
+                                                        <td>{stud.username}</td>
+                                                        <td>{stud.stepcone_id}</td>
+                                                        <td>{stud.clg_name}</td>
+                                                        <td>{stud.email}</td>
+                                                        <td>{stud.mobile}</td>
+                                                        <td>term-{stud.term}</td>
+                                                        <td>{stud.branch}</td>
+                                                        <td>
+                                                            {
+                                                                stud.accomodation == 0 && (
+                                                                    "not Registered"
+                                                                )
+                                                            }
+                                                            {
+                                                                stud.accomodation == 1 && (
+                                                                    "Registered"
+                                                                )
+                                                            }
+                                                        </td>
+                                                        <td>{stud.paid_amount}</td>
+                                                        <td>{stud.TransStatus}</td>
+                                                        <td>{stud.TransId}</td>
+                                                        <td>{new Date(new Date(stud.live_timestamp).setHours(
+                                                            new Date(stud.live_timestamp).getHours() + 5,
+                                                            new Date(stud.live_timestamp).getMinutes() + 30
+                                                        )).toLocaleString()}</td>
+
                                                     </tr>
                                                 ))
                                             )
@@ -456,7 +709,7 @@ const StepconeAdmin = () => {
                             <div className='col col-10 ' id='adm-table-div' >
                                 <div className="adm-event-hdng text-center d-flex  flex-column justify-content-center ">
                                     <h1 className='text-secondary sc-adm-curr-event  fs-2 py-4 border-bottom' >{currEvent}</h1>
-                                    <h4 className='text-dark'>Number of Teams: {eventFetchedData ? eventFetchedData[0] ? eventFetchedData.length / eventFetchedData[0].Teamsize : "N/A" : 'N/A'}</h4>
+                                    <h4 className='text-dark'>Number of Teams: {eventFetchedData ? eventFetchedData[0] ? teamsCount : "N/A" : 'N/A'}</h4>
                                 </div>
                                 <table className="adm-data-table table table-striped">
                                     <thead>
@@ -464,12 +717,15 @@ const StepconeAdmin = () => {
                                             <th scope="col">S.No</th>
                                             <th scope="col">Team Id</th>
                                             <th scope="col">Team Name</th>
+                                            <th scope="col">Event Name</th>
                                             <th scope="col">Name</th>
                                             <th scope="col">Student Email</th>
                                             <th scope="col">Mobile</th>
                                             <th scope="col">Amount</th>
                                             <th scope="col">payment Status</th>
+                                            <th scope="col">trans Id</th>
                                             <th scope="col">Participant</th>
+                                            <th scope="col">Time Stamp</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -480,11 +736,13 @@ const StepconeAdmin = () => {
                                                         <th scope="row">{index + 1}</th>
                                                         <td>{stud.teamId}</td>
                                                         <td>{stud.Teamname}</td>
+                                                        <td>{stud.Eventname}</td>
                                                         <td>{stud.name}</td>
                                                         <td>{stud.email}</td>
                                                         <td>{stud.mobile}</td>
                                                         <td>{stud.amount}/-</td>
-                                                        <td>{stud.transStatus}</td>
+                                                        <td>{stud.TransStatus}</td>
+                                                        <td>{stud.TransId}</td>
                                                         <td>
                                                             {
                                                                 stud.Affiliated == 1 && (
@@ -497,6 +755,10 @@ const StepconeAdmin = () => {
                                                                 )
                                                             }
                                                         </td>
+                                                        <td>{new Date(new Date(stud.live_timestamp).setHours(
+                                                            new Date(stud.live_timestamp).getHours() + 5,
+                                                            new Date(stud.live_timestamp).getMinutes() + 30
+                                                        )).toLocaleString()}</td>
                                                     </tr>
                                                 ))
                                             )

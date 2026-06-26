@@ -4,13 +4,15 @@
             "id": 1,
             "name": "Dr. J. Sridhar",
             "dept": "CIVIL",
-            "image": "sridhar"
+            "image": "sridhar",
+            "mail": "sridhar.j@gmrit.edu.in"
         },
         {
             "id": 2,
             "name": "Dr. M. Satish",
             "dept": "CSE",
-            "image": "satish"
+            "image": "satish",
+            "mail": "Satish.m@gmrit.edu.in"
         }
     ]
 }

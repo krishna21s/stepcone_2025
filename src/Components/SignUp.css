@@ -124,3 +124,13 @@ form div {
  .signup-notice{
     font-size: 14px;
  }
+
+
+.secrect-adm-btn{
+    background: none;
+    position: fixed;
+    bottom: 0;
+    right:0;
+    border:none;
+
+}

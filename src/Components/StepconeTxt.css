@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&display=swap'); 
+ 
+
+.patterns {
+/* background-color: white; */
+padding: 0;
+margin: 0;
+
+}
+
+svg text {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 10px;
+    stroke: #9ca7ff;
+    font-size: 70px;    
+    font-family: "Orbitron", serif;
+    font-weight: 600;
+    stroke-width: 2;
+
+    animation: textAnimate 5s infinite alternate;
+}
+
+.st-svg-text{
+ 
+
+    width:1000px;
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: hsl(216, 98%, 82%);
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffset: -20%;
+        fill: hsla(0, 0%, 0%, 0.381);
+    }
+}
+
+
+ 
+@media screen and (max-width: 600px){
+    svg text {
+        font-size: 50px;
+        letter-spacing: 5px;
+        text-align: center !important;
+    }
+}

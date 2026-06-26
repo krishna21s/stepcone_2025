@@ -4,7 +4,7 @@ import App from './App.jsx'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import ScrollToTop from './Components/ScrollToTop.jsx';
 
@@ -23,13 +23,28 @@ import GeneralRegistration from './Components/GeneralRegistration.jsx';
 import StepconeAdmin from './Components/StepconeAdmin.jsx';
 import Details from './Components/Details.jsx';
 import Queries from './Components/Queries.jsx';
+import Privacy_policy from './Components/Privacy_policy.jsx'
+import Terms_conditions from './Components/Terms_conditions.jsx';
+import Admin_Login from './Components/Admin_Login';
+import CheckoutEvent from './Components/CheckoutEvent.jsx';
+import SoveniourBook from './Components/SoveniourBook.jsx';
+
 const encodePath = (path) => btoa(path); // Encode using Base64
 const decodePath = (encodedPath) => atob(encodedPath); // 
 
+const isAuthenticated = () => {
+  return localStorage.getItem("adminToken") !== null;
+};
+
+const ProtectedRoute = ({ element }) => {
+  return isAuthenticated() ? element : <Navigate to="/admin" replace />;
+};
+
+
 createRoot(document.getElementById('root')).render(
   <>
-    <BrowserRouter basename="/">
-    <ScrollToTop/>
+    <HashRouter >
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path={`/${encodePath("/stepcone_$_@&***)(714)530$215 && --event")}`} element={<EventsPage />} />
@@ -43,11 +58,29 @@ createRoot(document.getElementById('root')).render(
         <Route path={`/${encodePath("/stepcone_$_@*502&502##$ -++==*(&^%$#----developers and team")}`} element={<AboutPage />} />
         <Route path={`/${encodePath("/stepcone_$_@*502378r 34374 #$%3$%245 details")}`} element={<Details />} />
         <Route path="/makepayment" element={<PaymentInterface />} />
-        <Route path="/90sc86-2025-adm-g19M98R" element={<StepconeAdmin />} />
-        <Route path="/90sc86-2025-adm-g19M98R/queries" element={<Queries />} />
+        <Route path="/B90sc86-2025-adm-g19M98R" element={<StepconeAdmin />} />
+        <Route path="/B90sc86-2025-adm-g19M98R" element={isAuthenticated() ? <StepconeAdmin /> : <Navigate to="/admin" replace />} />
+        <Route path="/90sc86-2025-adm-g19M98R/stepcone-queries" element={<Queries />} />
+        <Route path="/aboutTeam" element={<AboutPage />} />
+        <Route path="/privacypolicy" element={<Privacy_policy />} />
+        <Route path="/termsconditions" element={<Terms_conditions />} />
+        <Route path="/checkout" element={<CheckoutEvent />} />
+        <Route path="/admin" element={<Admin_Login />} />
+        <Route path="/souvenir" element={<SoveniourBook />} />
+
         <Route path='*' element={<InvalidPage />} />
       </Routes>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </>
 )
+
+
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(registrations => {
+    registrations.forEach(registration => {
+      registration.unregister();
+    });
+  });
+}

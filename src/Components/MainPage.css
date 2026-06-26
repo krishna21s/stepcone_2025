@@ -304,6 +304,66 @@
     background-position: center;
 }
 
+.incircle10 {
+    background-image: url('../Assets/stud_chapterLogos/igbc.jpg'), linear-gradient(to bottom, white, white);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+.marquee-hdng-note {
+    top: 30px;
+}
+
+/* LOADING ANIMATIONS  */
+/* General Styles */
+
+/* Loading Screen */
+#loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+}
+
+.glowing-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    /* Allows each letter to be treated individually */
+}
+
+.glowing-text span {
+    opacity: 0;
+    /* Initially hide each letter */
+    color: #ffffff;
+}
+
+.loading_stepcone {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+/* Main Content */
+#main-content {
+    display: none;
+    /* Initially hidden */
+    opacity: 0;
+    /* For fade-in effect */
+    /* text-align: center; */
+}
+
 /* These are the animations  to flip the cirlces */
 
 

@@ -35,3 +35,8 @@
         inset 154px 100px 83px rgba(0, 0, 0, 0.21),
         inset 2px 0px 6px rgba(255, 255, 255, 0.738);
 }
+
+.get-mail-pass button:hover{
+    color: antiquewhite !important;
+    transition: 0.3s;
+}

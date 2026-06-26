@@ -20,13 +20,20 @@ import img10 from '/Assets/details_info/IMG-20241210-WA0015[1].jpg';
 import stepconevid from '/Assets/details_info/stepcone2k25vid.mp4';
 import Footer from "./Footer.jsx";
 import { Navbar } from "react-bootstrap";
+
+
 const Details = () => {
     const [deg, setdeg] = useState(0);
     const [clicks, setclicks] = useState(1);
+    const [ringColor, setRingColor] = useState('');
+
+
+
     const handleplay = () => {
         const circle = document.querySelector(".circle-parent")
         if (clicks == 1) {
-            document.querySelector("#one").style.backgroundColor = "blue";
+            setRingColor('s2');
+            // document.querySelector("#one").style.backgroundColor = "blue";
             document.querySelector("#general-reg").style.display = "block";
             document.querySelector("#video-sc").style.display = "none";
             document.querySelector("#gallery-sc").style.display = "none";
@@ -34,22 +41,29 @@ const Details = () => {
 
 
         } else if (clicks == 2) {
-            document.querySelector("#two").style.backgroundColor = "blue";
+
+            setRingColor('s1');
+
+            // document.querySelector("#two").style.backgroundColor = "blue";
             document.querySelector("#general-reg").style.display = "none";
             document.querySelector("#video-sc").style.display = "block";
             document.querySelector("#gallery-sc").style.display = "none";
             document.querySelector("#query-sc").style.display = "none";
 
         } else if (clicks == 3) {
-            document.querySelector("#three").style.backgroundColor = "blue";
+            setRingColor('s3');
+
+            // document.querySelector("#three").s
+            // tyle.backgroundColor = "blue";
             document.querySelector("#general-reg").style.display = "none";
             document.querySelector("#video-sc").style.display = "none";
             document.querySelector("#gallery-sc").style.display = "block";
             document.querySelector("#query-sc").style.display = "none";
 
         } else {
+            setRingColor('s4');
 
-            document.querySelector("#four").style.backgroundColor = "blue";
+            // document.querySelector("#four").style.backgroundColor = "blue";
             document.querySelector("#general-reg").style.display = "none";
             document.querySelector("#video-sc").style.display = "none";
             document.querySelector("#gallery-sc").style.display = "none";
@@ -58,7 +72,7 @@ const Details = () => {
         }
 
         setdeg(deg + 90);
-        console.log(deg);
+         
         // console.log(clicks);
         circle.style.rotate = `${deg}deg`;
         if (clicks == 4) {
@@ -75,9 +89,9 @@ const Details = () => {
 
     const CurrUserData = async () => {
         try {
-            const response = await axios.get("api/stepcone_backend/userdata.php");
-            console.log(response.data);
-            setCurrentStudData(response.data.session);
+            const response = await axios.get("/stepcone/stepcone_backend/userdata.php");
+             
+            setCurrentStudData(response.data.user);
         }
         catch {
             console.log("error");
@@ -101,7 +115,7 @@ const Details = () => {
         setLastQueryTime(currentTime);
         const queryRaisedUserData = {
             "query": document.querySelector("#query").value,
-            "email": currentStudData.myemail,
+            "email": currentStudData.email,
             "mobile": document.querySelector("#mobile").value,
             "name": currentStudData.username
         }
@@ -110,7 +124,7 @@ const Details = () => {
                 alert("Your Login is required to proceed");
                 return;
             }
-            const response = await axios.post("api/stepcone_backend/queries.php", queryRaisedUserData)
+            const response = await axios.post("/stepcone/stepcone_backend/queries.php", queryRaisedUserData)
             console.log(response.data);
             alert(response.data.message);
         }
@@ -118,6 +132,9 @@ const Details = () => {
             console.log("error");
         }
     }
+
+
+
     return (
         <>
             <NavBar />
@@ -160,16 +177,16 @@ const Details = () => {
                         </div>
                         <div className="circle-parent position-relative my-5 px-4">
                             <div class="details-circle-design">
-                                <div className="s1" id="two">
+                                <div className={ringColor == 's1' ? 'ring-active s1' : 's1'} id="two" >
                                     <FontAwesomeIcon icon={faVideo} size="xl" style={{ color: "#ffffff", rotate: "-135deg" }} />
                                 </div>
-                                <div className="s2" id="one">
+                                <div className={`${ringColor == 's2' ? 'ring-active s2' : 's2'}`} id="one" >
                                     <FontAwesomeIcon icon={faAddressCard} size="xl" style={{ color: "#ffffff", rotate: "-45deg" }} />
                                 </div>
-                                <div className="s3" id="three">
+                                <div className={`${ringColor == 's3' ? 'ring-active s3' : 's3'}`} id="three">
                                     <FontAwesomeIcon icon={faImages} size="xl" style={{ color: "#ffffff", rotate: "135deg" }} />
                                 </div>
-                                <div className="s4" id="four">
+                                <div className={`${ringColor == 's4' ? 'ring-active s4' : 's4'}`} id="four" >
                                     <FontAwesomeIcon icon={faQuestion} size="2xl" style={{ color: "#ffffff", rotate: "45deg" }} />
                                 </div>
                             </div>
@@ -271,62 +288,74 @@ const Details = () => {
                         </div>
 
                         {/* general */}
-                        <div className="general-main text-wrap" id="general-reg">
-                            <center><h3 className="details-title fs-3">General Registration</h3></center>
-                            <hr />
-                            <div className="mx-1 text-justify">
-                                <h4 className="details-title text-info fs-5">Externals(Non-GMRIT Students):</h4>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    External participants are required to pay a registration fee of ₹600.
-                                </div>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    Ensure the payment is made before the registration deadline.
-                                </div>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    One-Day Comfortable Stay
+                        <center>
+                            <div className="general-main text-wrap" id="general-reg">
+                                <center><h3 className="details-title fs-3">General Registration</h3></center>
+                                <hr />
+                                <div className="mx-1 text-justify d-flex flex-column gap-2">
+                                    <h4 className="details-title text-info fs-5">Externals(₹600 paid Students):</h4>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        <span className="text-wrap">Two-Day Stay
+                                        </span>
+                                    </div>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        Meals for Two Days
+
+                                    </div>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        You can enjoy all the events with General Registration. However, to actively participate in a specific event, you need to complete its individual event registration.
+
+                                    </div>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        Exclusive STEPCONE Kit with materials, goodies, and souvenirs
+
+                                    </div>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        Will have opportunity to attend the culturals, all Events and also Overnight events( HackHub, Web-Astra, CAD Mania, Tinker CAD, DIODE, Marvel Modelling ) during fest.
+                                    </div>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        Your email will be used for sharing important updates and resources.
+                                    </div>
+
 
                                 </div>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    Delicious Meals
-                                </div>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    Exclusive STEPCONE Kit
-                                </div>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    Your email will be used for sharing important updates and resources.
-                                </div>
+                                <div className="mx-1 text-justify  d-flex flex-column gap-2">
 
+                                    <h4 className="details-title fs-5 text-info my-3">Externals(₹400 paid Students):</h4>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        No Stay
 
+                                    </div>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        Participants are allowed only between 9:00 AM and 5:00 PM for the two days for events within the college premises.
+                                    </div>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        Not allowed for Culturals and Overnight Events
+
+                                    </div>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        Stepcone event timings are from 9:00 AM to 5:00 PM. Participants who have paid ₹400 are not permitted to attend cultural events and overnight events( HackHub, Web-Astra, CAD Mania, Tinker CAD, DIODE, Marvel Modelling ).
+                                    </div>
+                                    <div className="general">
+                                        <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
+                                        NOTE: All participants paying ₹400 for fest registration are required to enroll in at least one event to be eligible for STEPCONE fest.
+
+                                    </div>
+
+                                </div>
                             </div>
-                            <div className="mx-1 text-justify">
+                        </center>
 
-                                <h4 className="details-title fs-5 text-info my-3">Internals(GMRIT Students):</h4>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    Internal students can register for free.
-                                </div>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    Ensure all necessary details are provided during registration
-                                </div>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    Your email will be used for sharing important updates and resources.
-
-                                </div>
-                                <div className="general">
-                                    <img src="https://www.seekpng.com/png/full/104-1043438_csgo-silver-png-banner-freeuse-library-csgo-silver.png" width="15px" alt="" />
-                                    Providing accurate details ensures smooth communication throughout the event.
-                                </div>
-
-                            </div>
-                        </div>
 
                     </div>
                 </div>

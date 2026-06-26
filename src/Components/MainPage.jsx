@@ -17,7 +17,11 @@ import Navbar from './Navbar';
 import PosterPage_pg3 from './PosterPage_pg3';
 import StudentBodies_pg4 from './StudentBodies_pg4';
 import Footer from './Footer';
+import Faq from './Faq.jsx';
+import StartingPage from './StartingPage.jsx';
 import AboutPage from './AboutPage.jsx';
+
+
 const MainPage = () => {
   useEffect(() => {
     window.scrollTo({
@@ -62,79 +66,43 @@ const MainPage = () => {
     });
   }, []);
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Change the duration as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
+
+
 
   return (
-    <div className='main '>
-      <AnimatedCursor
-        className='animated-cursor'
-        innerSize={8}
-        outerSize={8}
-        color='177, 188, 199'
-        outerAlpha={0.5}
-        innerScale={2}
-        outerScale={6}
-        clickables={[
-          'a',
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          'label[for]',
-          'select',
-          'textarea',
-          'button',
-          '.link',
-          'p', // Add paragraph tags
-          'span', // Span tags are often used for inline text
-          'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img',// Header tags for title text
-          {
-            target: '.custom',
-            options: {
-              innerSize: 12,
-              outerSize: 12,
-              color: '255, 255, 255',
-              outerAlpha: 5,
-              innerScale: 2,
-              outerScale: 5
-            }
-          }
-        ]}
-      />
-      <ParallaxProvider id=''>
-        <Navbar />
+    <>
 
-        <ParallaxBanner
-          id='home'
-          layers={[
-            {
-              image: bgImg, speed: 50,
-              className: 'background-img',
-            },
-            {
-              speed: 20,
-              className: '',
-              children: (
-                <div class="stepcone-logo-div position-absolute top-0 start-0 end-0 bottom-0 d-flex flex-column align-items-center justify-content-center">
-                  <img className='stepcone-logo' data-aos='fade-down' data-aos-duration='1500' src={stepConeImg} alt="" height='150px' />
-                  <h1 class=" text-white main-text text-center mx-3 my-3" data-aos='zoom-out-up' style={{ fontFamily: "Orbitron, sans-serif" }}>StepCone 2025</h1>
-                </div>
+      <Navbar />
 
-              ),
-            },
-            {
-              image: earthImg, speed: foregroundSpeed, className: "foreground-img "
-            },
-          ]}
-          className="aspect-[3/1] banner-1"
-        />
-      </ParallaxProvider>
+
+      <StartingPage />
+
+      <div className="marquee-hdng-note position-fixed start-50 translate-middle pt-3">
+        <marquee direction="left" behavior="scroll" scrollamount="7">
+          <h5 className="">Registrations are now live! Secure your spot today!</h5>
+        </marquee>
+      </div>
+
       {/* this is poster page's component */}
       {/* <Page_2 /> */}
       <PosterPage_pg3 />
       <StudentBodies_pg4 />
       <Footer />
-    </div>
+      <Faq />
+    </>
   );
 };
-export default MainPage
+
+export default MainPage;

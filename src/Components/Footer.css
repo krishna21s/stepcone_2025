@@ -242,6 +242,8 @@ p {
     }
 }
 
+
+
 @media screen and (max-width: 450px) {
     .inner-header {
         height: 35vh;
@@ -339,4 +341,23 @@ p {
     border-radius: 50%;
     display: block;
     /* Ensures the images don’t have extra padding or space */
+}
+
+
+.hitcount{
+    background-color: #b8c1bf86 !important;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 601px) and (max-width:1199px) {
+    .box {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1570px) {
+    .box {
+        display: none;
+    }
 }

@@ -1,0 +1,304 @@
+.hero-quantum-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* Background behind both iframe and canvas */
+  background: radial-gradient(ellipse at center, #0b0b0b 0%, #000 70%);
+  font-family: inherit;
+}
+
+/* Layering: iframe under, canvas over it, then UI over all */
+.sketchfab-slot {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  z-index: 1; /* below the canvas */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: clamp(8px, 3vw, 40px);
+  padding-right: clamp(8px, 2vw, 20px);
+}
+
+.sketchfab-slot.desktop {
+  /* Left column for desktop */
+}
+
+.sketchfab-slot.mobile {
+  /* Center top for mobile */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 0 0;
+}
+
+.sketchfab-frame {
+  width: min(46vw, 720px);
+  aspect-ratio: 4 / 3;
+  max-height: 75vh;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(180,134,31,0.35), 0 12px 40px rgba(0,0,0,0.6);
+  background: transparent;
+}
+
+.sketchfab-slot.mobile .sketchfab-frame {
+  width: 92vw;
+  max-height: 46vh;
+  aspect-ratio: 4 / 3;
+}
+
+.sketchfab-frame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+}
+
+.skfb-attr {
+  font-size: 11px;
+  color: #b7a067;
+  text-align: right;
+  padding-top: 4px;
+}
+
+.hero-quantum-wrapper .logo-slot {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  z-index: 10;
+}
+
+.canvas-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2; /* above iframe */
+  /* Blend glow from the canvas nicely over the iframe */
+  mix-blend-mode: screen;
+  pointer-events: auto;
+}
+
+.overlay-ui {
+  position: absolute;
+  top: 50%;
+  right: clamp(16px, 7vw, 140px);
+  transform: translateY(-50%);
+  z-index: 9;
+  color: #f9d978;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-shadow: 0 0 12px rgba(255, 214, 95, 0.4);
+}
+
+.hero-quantum-wrapper.mobile .overlay-ui {
+  top: auto;
+  bottom: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  align-items: center;
+  text-align: center;
+}
+
+.fest-title {
+  font-size: clamp(2.2rem, 7vw, 4.2rem);
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  background: linear-gradient(180deg,#ffe7a1,#b4861f);
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.fest-title::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 50% 50%, rgba(255,230,142,0.3), transparent 70%);
+  mix-blend-mode: screen;
+  pointer-events:none;
+}
+
+.subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  letter-spacing: 0.15em;
+  color:#e8cd7f;
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.hero-quantum-wrapper.mobile .cta-row {
+  flex-direction: column;
+  width: 100%;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg,#b4861f,#f9d978);
+  border: none;
+  padding: 0.75rem 1.3rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  color:#1a1a1a;
+  font-weight: 600;
+  position: relative;
+  border-radius: 8px;
+  overflow:hidden;
+}
+
+.cta-btn:hover::before {
+  transform: translateX(0);
+}
+
+.cta-btn::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: linear-gradient(90deg,rgba(255,255,255,0.5),rgba(255,255,255,0) 70%);
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.cta-btn.outline {
+  background: rgba(15,15,15,0.65);
+  color:#f9d978;
+  border: 1px solid #b4861f;
+}
+
+.hint {
+  font-size: 12px;
+  padding: 6px 10px;
+  background: rgba(20,20,20,0.75);
+  border:1px solid #b4861f;
+  border-radius: 6px;
+  color:#f9d978;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Optional: soften edges where canvas glow overlaps iframe */
+.canvas-layer canvas {
+  filter: saturate(1.05);
+}
+
+@media (max-width: 768px) {
+  .fest-title { letter-spacing: 0.05em; }
+}
+
+.hero-qc-simple {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+/* Left panel occupies available width (you can constrain max-width if desired) */
+.qc-panel {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: clamp(12px, 3vw, 40px);
+  box-sizing: border-box;
+}
+
+/* Wrapper around iframe to control aspect + sizing */
+.embed-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #0d0d0d, #050505);
+  box-shadow:
+    0 0 0 1px rgba(212,175,55,0.25),
+    0 6px 24px -4px rgba(0,0,0,0.7),
+    inset 0 0 40px -12px rgba(212,175,55,0.35);
+}
+
+.embed-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+/* Title overlay inside same panel */
+.title-overlay {
+  position: absolute;
+  top: clamp(24px, 8vh, 80px);
+  left: clamp(24px, 5vw, 100px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fest-title {
+  margin: 0;
+  font-size: clamp(2.4rem, 6.5vw, 5rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  background: linear-gradient(180deg,#ffe9af 0%, #b4861f 80%);
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  text-shadow:
+    0 0 14px rgba(255,223,140,0.35),
+    0 0 40px rgba(255,223,140,0.15);
+}
+
+.fest-title::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 35% 40%, rgba(255,221,138,0.4), transparent 70%);
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-qc-simple {
+    flex-direction: column;
+  }
+
+  .qc-panel {
+    padding: 12px;
+  }
+
+  .embed-wrapper {
+    max-width: none;
+    height: calc(100vh - 12px * 2);
+    border-radius: 12px;
+  }
+
+  .title-overlay {
+    top: 20px;
+    left: 20px;
+  }
+
+  .fest-title {
+    font-size: clamp(2.2rem, 10vw, 3.8rem);
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Optional subtle animated glow on title */
+@keyframes glowPulse {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(255,214,95,0.35)); }
+  50% { filter: drop-shadow(0 0 20px rgba(255,214,95,0.55)); }
+}
+.fest-title {
+  animation: glowPulse 4.5s ease-in-out infinite;
+}

@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.checkout-main {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  padding-top: 70px !important;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "mulish";
+  background: radial-gradient(
+    circle,
+    rgb(124, 137, 177) 0%,
+    rgb(40, 41, 66) 100%
+  ) !important;
+}
+
+.checkout-main div {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.checkout-teamlead {
+  color: rgb(226, 226, 139);
+}
+
+.checkout-nav {
+  z-index: 500;
+}
+
+.check-proceed-pay {
+  background-color: rgb(50, 88, 115);
+  border-radius: 7px;
+  border: 0;
+  font-family: "mulish";
+  padding: 7px 17px !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.check-proceed-pay:hover {
+  transition: 0.4s;
+  background-color: rgb(66, 108, 146);
+}
+
+.event-checkout-hdng {
+  background-color: rgb(68, 98, 122);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.checkout-event-img {
+  box-shadow: 7.6px 8.1px 4.3px rgba(0, 0, 0, 0.43),
+    25.5px 27.3px 14.3px rgba(0, 0, 0, 0.266),
+    114px 122px 64px rgba(0, 0, 0, 0.19);
+}
+
+
+.checkout-team-member{
+  color: #e0e0e0;
+  font-weight: 200;
+}
+
+.razorpay-img{
+  box-shadow: 7.6px 8.1px 4.3px rgba(0, 0, 0, 0.43),
+  25.5px 27.3px 14.3px rgba(0, 0, 0, 0.266),
+  114px 122px 64px rgba(0, 0, 0, 0.19);
+}

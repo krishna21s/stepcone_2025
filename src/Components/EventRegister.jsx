@@ -9,6 +9,13 @@ import { faEnvelope, faUnlock, faRightToBracket } from '@fortawesome/free-solid-
 
 
 const EventRegister = () => {
+
+
+    useEffect(() => {
+        window.location.reload();
+    }, []);
+
+    
     const navigate = useNavigate();
     const [formValue, setFormValue] = useState({
         email: "",
@@ -32,7 +39,7 @@ const EventRegister = () => {
         };
 
         try {
-            const response = await axios.post("api/stepcone_backend/login.php", formData);
+            const response = await axios.post("/stepcone/stepcone_backend/login.php", formData);
             const responseData = response.data;
             console.log(responseData)
             if (responseData.status === "success") {

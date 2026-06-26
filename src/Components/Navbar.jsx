@@ -15,7 +15,7 @@ const Navbar = () => {
   const [checkAccom, setCheckAccom] = useState("0");
   const handleAccomBtn = async () => {
     const res = await axios.get(
-      "api/stepcone_backend/isloggedin.php"
+      "/stepcone/stepcone_backend/isloggedin.php"
     )
 
     const data = res.data;
@@ -75,6 +75,24 @@ const Navbar = () => {
     };
   }, []);
 
+  const [currentStudData, setCurrentStudData] = useState(null);
+
+
+  const CurrUserData = async () => {
+    try {
+      const response = await axios.get("/stepcone/stepcone_backend/userdata.php");
+      setCurrentStudData(response.data);
+    }
+    catch {
+      console.log("error");
+    }
+  }
+
+  useEffect(
+    () => {
+      CurrUserData();
+    }, []);
+
   return (
     <>
       <div className="nav-main position-fixed">
@@ -90,6 +108,7 @@ const Navbar = () => {
             alt="Menu Icon"
           />
         </div>
+
         <div className="menu">
           <img
             className="menu-close m-2"
@@ -111,6 +130,18 @@ const Navbar = () => {
             <Link className="nav-links text-white" to={`/${encodePath("/stepcone_$_@*502378r 34374 #$%3$%245 details")}`}>
               <h4>Details</h4>
             </Link>
+            <Link className="nav-links text-white" to='/aboutTeam'>
+              <h4>Event Crew</h4>
+            </Link>
+            {
+              currentStudData && checkLoggedIn == '1' && currentStudData.user.affiliated == "0" && currentStudData.user.accomodation == "0" && (
+                <div className="nav-links">
+                  <Link className="nav-links text-white" to={`/${encodePath("/stepcone_$_**23209@&***(072462)8''8&#%$@^#@#%$^&*^&%^$%#$@#General-Registration")}`}>
+                    <h4 >General Reg.</h4>
+                  </Link>
+                </div>
+              )
+            }
             <div className="nav-links">
               {
                 checkLoggedIn === "1" && (

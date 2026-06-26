@@ -11,36 +11,65 @@ import AOS from 'aos';
 import Fa_Logo from "/Assets/fa_stud_logo.png"
 import Stud_Logo from "/Assets/stud.png";
 
+
 // CENTRAL IMPORTS
 import Gpl from '/Assets/events_info/POSTERS/CENTRAL/GPL.jpg';
-import PaperPresentation from '/Assets/events_info/POSTERS/CENTRAL/PAPER_PRESENTATION.png';
+import PaperPresentation from '/Assets/events_info/POSTERS/CENTRAL/PAPER_PRESENTATION.jpg';
 import ProjectExhibition from '/Assets/events_info/POSTERS/CENTRAL/PROJECT_EXHIBITION_CONTEST.jpg';
-import StartupIdeaContest from '/Assets/events_info/POSTERS/CENTRAL/STARTUP_IDEA_CONTEST.png';
+import StartupIdeaContest from '/Assets/events_info/POSTERS/CENTRAL/STARTUP_IDEA_CONTEST.jpg';
+
 
 // CIVIL IMPORTS
-import CiviLogic from '/Assets/events_info/POSTERS/CE/CIVILOGIC.png'
-import FunFusion from '/Assets/events_info/POSTERS/CE/FUNFUSION.png'
-import HydroHike from '/Assets/events_info/POSTERS/CE/HYDROHIKE.png'
-import MarvelModelling from '/Assets/events_info/POSTERS/CE/MARVEL_MODELLING.png'
-import Ttt1 from '/Assets/events_info/POSTERS/CE/TTT1.png'
-import GisWorkshop from '/Assets/events_info/POSTERS/CE/WORKSHOP.png'
+import CiviLogic from '/Assets/events_info/POSTERS/CE/civi_logic.jpg'
+import FunFusion from '/Assets/events_info/POSTERS/CE/fun_fusion.jpg'
+import HydroHike from '/Assets/events_info/POSTERS/CE/hydro_hike_2.o.jpg'
+import MarvelModelling from '/Assets/events_info/POSTERS/CE/marvel_modelling.jpg'
+import Ttt1 from '/Assets/events_info/POSTERS/CE/TTT1.jpg'
+import GisWorkshop from '/Assets/events_info/POSTERS/CE/GIS_for_Image_Processing.jpg'
+
 
 // MECH IMPORTS
 import Cad_Mania from '/Assets/events_info/POSTERS/MECH/CAD_MANIA.jpg';
-import Cnc_Codethon from '/Assets/events_info/POSTERS/MECH/CNC_CODETHON.jpg';
-import Condition_Monitoring from '/Assets/events_info/POSTERS/MECH/CONDITION_MONITORING.jpg';
-import Cypher_Crack from '/Assets/events_info/POSTERS/MECH/CYPHER_CRACK.jpg';
-import Eme_Ml from '/Assets/events_info/POSTERS/MECH/EME_ML.jpg';
+import Cnc_Codethon from '/Assets/events_info/POSTERS/MECH/CNC-CODETHON.jpg';
+import Cypher_Crack from '/Assets/events_info/POSTERS/MECH/cipher_crack.jpg';
 import Jal_Vega from '/Assets/events_info/POSTERS/MECH/JAL_VEGA.jpg';
+import conditionMonitoring from '/Assets/events_info/POSTERS/MECH/COND_MONITORING.jpg';
+import mechWithMl from '/Assets/events_info/POSTERS/MECH/ME_ML.jpg';
+
+
 
 //ECE IMPORTS
 import Circuit_Debugging from "/Assets/events_info/POSTERS/ECE/CIRCUIT_DEBUGGING.jpg";
-import Fox_Hunt from "/Assets/events_info/POSTERS/ECE/FOX_HUNT.jpg";
+import Fox_Hunt from "/Assets/events_info/POSTERS/ECE/fox_hunt.jpg";
 import Mind_Spark from "/Assets/events_info/POSTERS/ECE/MIND_SPARK.jpg";
-import Panchatantra from "/Assets/events_info/POSTERS/ECE/PANCHATANTRA.jpg";
-import Robo_Race from "/Assets/events_info/POSTERS/ECE/ROBO_RACE.jpg";
+import Panchatantra from "/Assets/events_info/POSTERS/ECE/panchatantra.jpg";
+import Robo_Race from "/Assets/events_info/POSTERS/ECE/robo_race_poster_(ECE).jpg";
 import Sensors from "/Assets/events_info/POSTERS/ECE/SENSORS.jpg";
 import Tinker_Cad from "/Assets/events_info/POSTERS/ECE/TINKER_CAD.jpg";
+
+
+// EEE IMPORTS  
+import aiForEng from "/Assets/events_info/POSTERS/EEE/ai_for_engineering_applications.jpg";
+import codeSpark from "/Assets/events_info/POSTERS/EEE/CODE_SPARK.jpg";
+import diode from "/Assets/events_info/POSTERS/EEE/DIODE.jpg";
+import droneNavChallenge from "/Assets/events_info/POSTERS/EEE/DRONE_NAVIGATION_CHALLENGE.jpg";
+import engParadox from "/Assets/events_info/POSTERS/EEE/ENGINEERING_PARADOX.jpg";
+import powerPathChallenge from "/Assets/events_info/POSTERS/EEE/POWER_PATH_CHALLENGE.jpg";
+
+
+// CSE IMPORTS
+import dataCraze from "/Assets/events_info/POSTERS/CSE/Data_Craze.jpg";
+import exploreSky from "/Assets/events_info/POSTERS/CSE/EXPLORING_THE_SKY.jpg";
+import hackHub from "/Assets/events_info/POSTERS/CSE/HACK_HUB.jpg";
+import levelUp from "/Assets/events_info/POSTERS/CSE/LEVEL_UP.jpg";
+import llm from "/Assets/events_info/POSTERS/CSE/llm.jpg";
+import powerBi from "/Assets/events_info/POSTERS/CSE/power_BI.jpg";
+import reelsStudio from "/Assets/events_info/POSTERS/CSE/REELS_STUDIO.jpg";
+import refactor from "/Assets/events_info/POSTERS/CSE/refactor.jpg";
+import technoHunt from "/Assets/events_info/POSTERS/CSE/techno_hunt.jpg";
+import tradeMasters from "/Assets/events_info/POSTERS/CSE/trade_masters.jpg";
+import webAstra from "/Assets/events_info/POSTERS/CSE/web_astra.jpg";
+import droneTechnology from "/Assets/events_info/POSTERS/CSE/droneTech.jpg";
 
 
 const encodePath = (path) => btoa(path); // Encode using Base64
@@ -76,20 +105,24 @@ const EventDetails = () => {
 
         window.open(`Assets/events_info${event.ruleBook}`, "_blank"); // Open the file
     }
+    const handlePsClick = () => {
+        window.open(`Assets/events_info${event.problemStatements}`, "_blank"); // Open the file
+    }
+
+
 
     const imageMap = {
         FunFusion: FunFusion,
         CiviLogic: CiviLogic,
         HydroHike: HydroHike,
         MarvelModelling: MarvelModelling,
-        Ttt1: Ttt1,
         GisWorkshop: GisWorkshop,
         Cad_Mania: Cad_Mania,
-        Cnc_Codethon: Cnc_Codethon,
-        Condition_Monitoring: Condition_Monitoring,
+        CncCodethon: Cnc_Codethon,
         Cypher_Crack: Cypher_Crack,
-        Eme_Ml: Eme_Ml,
         Jal_Vega: Jal_Vega,
+        conditionMonitoring: conditionMonitoring,
+        mechWithMl: mechWithMl,
         Circuit_Debugging: Circuit_Debugging,
         Fox_Hunt: Fox_Hunt,
         Mind_Spark: Mind_Spark,
@@ -100,8 +133,28 @@ const EventDetails = () => {
         Gpl: Gpl,
         StartupIdeaContest: StartupIdeaContest,
         PaperPresentation: PaperPresentation,
-        ProjectExhibition: ProjectExhibition
+        ProjectExhibition: ProjectExhibition,
+        aiForEng: aiForEng,
+        codeSpark: codeSpark,
+        diode: diode,
+        droneNavChallenge: droneNavChallenge,
+        engParadox: engParadox,
+        powerPathChallenge: powerPathChallenge,
+        dataCraze: dataCraze,
+        exploreSky: exploreSky,
+        hackHub: hackHub,
+        levelUp: levelUp,
+        llm: llm,
+        powerBi: powerBi,
+        reelsStudio: reelsStudio,
+        refactor: refactor,
+        technoHunt: technoHunt,
+        tradeMasters: tradeMasters,
+        webAstra: webAstra,
+        Ttt1: Ttt1,
+        droneTechnology: droneTechnology
     };
+
 
 
     // CHECKING WHETHER LOGGEDIN OR  NOT
@@ -109,7 +162,7 @@ const EventDetails = () => {
     const [checkLoggedIn, setCheckLoggedIn] = useState("0");
     const handleLoginBtn = async () => {
         const res = await axios.get(
-            "api/stepcone_backend/isloggedin.php"
+            "/stepcone/stepcone_backend/isloggedin.php"
         )
 
         const data = res.data;
@@ -162,12 +215,19 @@ const EventDetails = () => {
                         </div>
                         <div className='col col-12 col-md-6 col-lg-6  col-xl-6 name text-center '>
                             <div>
-                                <h1 className='details-event-name fs-2 pt-5 ' data-aos="fade-up-down">{event.name}({event.dept})</h1>
+                                <h1 className='details-event-name fs-2 pt-5 ' data-aos="fade-up-down">{event.name}<br />({event.dept})</h1>
                                 <p className='text-white event-date fs-5 py-3 m-auto '>Event Date: {event.date}</p>
                             </div>
                             <div className="event-pdf py-2">
                                 <a href='' className='  event-rulebook-btn  btn-md p-2 px-3 rounded-2 text-white' rel="noopener noreferrer" onClick={handlePdfClick}>Rule Book Pdf</a>
                             </div>
+                            {
+                                event.problemStatements && (
+                                    <div className="event-pdf py-3">
+                                        <a href='' className='  event-ps-btn   p-2 px-3 rounded-2 text-white' rel="noopener noreferrer" onClick={handlePsClick}>Problem Statements Pdf</a>
+                                    </div>
+                                )
+                            }
                         </div>
                     </div>
 
@@ -191,7 +251,7 @@ const EventDetails = () => {
                                 <h3 className=' team-size'>Team Size: <h5>{event.teamSize}</h5></h3>
                             </div>
                             <div className='' data-aos="fade-up-down">
-                                <h3 className='py-5 registration-fee'>Registration Fee: <h5>{event.registrationFee}/-</h5></h3>
+                                <h3 className='py-5 registration-fee'>Registration Fee: <h5>{event.id == 1 ? "Per head " : ""}{event.registrationFee}/-</h5></h3>
 
                                 <button className='rounded-3 border details-register-btn '
                                     data-aos="fade-up-down"
@@ -218,6 +278,7 @@ const EventDetails = () => {
                                             </div>
                                             <div className="fa-stud-details">
                                                 <h3>{faculty.name}</h3>
+                                                <p className='text-light text-center'>{faculty.details}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -231,7 +292,7 @@ const EventDetails = () => {
                     </div>
 
 
-                    <div className="student-coordinators row min-height100VH my-3">
+                    {/* <div className="student-coordinators row min-height100VH my-3">
                         <div className='col col-12 my-4 d-flex flex-column justify-content-center align-items-center'>
                             <h1 className='faculty-heading fs-1'>Student Co-ordinators</h1>
                         </div>
@@ -259,7 +320,7 @@ const EventDetails = () => {
                             }
 
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

@@ -91,6 +91,7 @@
     font-weight: 700;
     font-style: normal;
     text-shadow: 6px 2.5px 3px rgb(0, 0, 0);
+    text-wrap: wrap;
 }
 
 .faculty-heading,
@@ -117,7 +118,7 @@
     font-style: normal;
 }
 
-.event-details-main .event-back-btn{
+.event-details-main .event-back-btn {
     position: fixed;
     z-index: 30;
     top: 10px;
@@ -137,7 +138,7 @@
     background: rgb(118, 145, 190);
 }
 
-.event-details-main .back-btn  {
+.event-details-main .back-btn {
     /* background-color: rgb(255, 255, 255); */
     position: relative;
     padding: 5px 12px;
@@ -263,6 +264,25 @@
     /* Simulate the cursor */
     animation: typing 7s steps(60, end), blink 0.5s step-end infinite;
 }
+
+
+.event-ps-btn {
+    background: rgba(35, 104, 129, 0.545);
+    font-size: small;
+    box-shadow:
+        5.3px 3.4px 2.9px rgba(0, 0, 0, 0.065),
+        13.4px 8.7px 7.2px rgba(0, 0, 0, 0.093),
+        27.3px 17.7px 14.7px rgba(0, 0, 0, 0.117),
+        inset 0.2px 36.5px 30.3px rgba(0, 0, 0, 0.145),
+        inset 154px 100px 83px rgba(0, 0, 0, 0.21),
+        inset 2px 0px 6px rgba(255, 255, 255, 0.738);
+}
+
+.event-ps-btn:hover {
+    transition: 0.5s;
+    background: rgba(47, 45, 58, 0.786) !important;
+}
+
 
 
 @keyframes typing {

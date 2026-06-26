@@ -32,12 +32,22 @@ const EventRegisterForm = () => {
     // Default fallback for event data
     const { event } = location.state || { event: { name: "", teamSize: 1, registrationFee: 0 } };
     const teamsize = event.teamSize - 1; // Number of team members
+    const [teamSizeSlider, setTeamSizeSlider] = useState(2);
+
+
+    useEffect(
+        () => {
+            if (teamsize <= 2) {
+                setTeamSizeSlider(teamsize);
+            }
+        }, [teamsize]
+    )
 
     const [formData, setFormData] = useState({
         Teamname: "",
         teamLeadEmail: "",
-        membersMail: Array(teamsize).fill(""), // Initialize with empty strings
-    });
+        membersMail: teamsize <= 2 ? Array(teamsize).fill("") : Array(teamSizeSlider).fill(""),
+    })
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -70,7 +80,7 @@ const EventRegisterForm = () => {
     // Getting the sesssion stored data 
     const handleCredentials = async () => {
         try {
-            const response = await axios.get("api/stepcone_backend/userdata.php");
+            const response = await axios.get("/stepcone/stepcone_backend/userdata.php");
             const data = response.data;
             setUserData(data); // Update state with fetched data
             console.log(data);
@@ -81,14 +91,15 @@ const EventRegisterForm = () => {
 
     }
 
+
     // FUNCTION TO CHECK WHETHER USER TAKEN ACCOMODATION OR NOT
     const handleAccomCheck = async () => {
         const userCheckData = {
-            email: "abdulyunus295@gmail.com",
+            email: "",
             // affiliated: userData.session.aff,
         }
         try {
-            const res = await axios.post("api/stepcone_backend/check_accom.php", userCheckData);
+            const res = await axios.post("/stepcone/stepcone_backend/check_accom.php", userCheckData);
             const checkedData = res.data;
             console.log(checkedData);
             setAccomCheckData(checkedData.accomodation.accomodation);
@@ -116,56 +127,54 @@ const EventRegisterForm = () => {
 
 
 
-
     const handleSubmit = async (e) => {
-        if (userData.session.aff == '1' || (userData.session.aff == '0' && accomCheckData == '1')) {
-            if (dataInput) {
-                const formDataValue = {
-                    email: formData.teamLeadEmail,
-                    teamName: formData.Teamname,
-                    teamLead: formData.teamLeadEmail,
-                    members: formData.membersMail,
-                    eventName: event.name,
-                    teamSize: event.teamSize,
-                    amount: event.registrationFee,
-                };
+        console.log(accomCheckData);
+        if (dataInput) {
+            const formDataValue = {
+                email: formData.teamLeadEmail,
+                teamName: formData.Teamname,
+                teamLead: formData.teamLeadEmail,
+                members: formData.membersMail,
+                eventName: event.name,
+                teamSize: event.teamSize,
+                amount: event.registrationFee,
+            };
 
-                setLoading(true);
-                e.preventDefault();
-                console.log(formDataValue);
+            setLoading(true);
+            e.preventDefault();
+            navigate(`/checkout`, { state: { formDataValue } });
+            // console.log(formDataValue);
 
-                try {
-                    const response = await axios.post('api/stepcone_backend/paymentgateway.php', formDataValue);
-                    console.log("this is the response data", response.data);
-                    const checkMailExist = response.data;
-                    if (checkMailExist.status == 'error') {
-                        alert(checkMailExist.message);
-                        return;
-                    }
-                    const resData = response.data.responseData;
-                    const url = resData.data.instrumentResponse.redirectInfo.url;
-                    if (resData && url) {
-                        // Store the form data for use after redirect
-                        sessionStorage.setItem("formDataValue", JSON.stringify(formDataValue));
-                        if (confirm("Payment Initiated") === true) {
-                            sessionStorage.setItem("paymentStatus", "pending");
-                            window.location.href = url;
-                        }
+            // try {
+            //     const response = await axios.post('/stepcone/stepcone_backend/paymentgateway.php', formDataValue);
+            //     console.log("this is the response data -->", response.data);
+            //     // const checkMailExist = response.data;
+            //     if (response.data.status == 'success') {
 
-                        // Redirecting to payment gateway URL
-                    }
-                } catch (error) {
-                    console.error("Error initiating payment:", error);
-                }
-                finally {
-                    setLoading(false);
-                }
-            }
+            //         alert(response.data.message);
+            //     }
+            //     else {
+            //         alert(response.data.message);
+            //     }
+            //     const resData = response.data.responseData;
+            //     const url = resData.data.instrumentResponse.redirectInfo.url;
+            //     if (resData && url) {
+            //         // Store the form data for use after redirect
+            //         sessionStorage.setItem("formDataValue", JSON.stringify(formDataValue));
+            //         sessionStorage.setItem("paymentStatus", "pending");
+            //         window.location.href = url;
+
+            //         // Redirecting to payment gateway URL
+            //     }
+            // } catch (error) {
+            //     console.error("Error initiating payment:", error);
+            // }
+            // finally {
+            //     setLoading(false);
+            // }
         }
-        else {
-            alert("Please complete general registration first");
-            navigate(`/${encodePath("/stepcone_$_**23209@&***(072462)8''8&#%$@^#@#%$^&*^&%^$%#$@#General-Registration")}`);
-        }
+
+
     };
 
 
@@ -180,18 +189,25 @@ const EventRegisterForm = () => {
                 setLoading(true);
                 const formDataValue = JSON.parse(storedFormData);
                 const response = await axios.post(
-                    `api/stepcone_backend/paymentcallback.php`,
-                    formDataValue
+                    "/stepcone/stepcone_backend/paymentcallback.php",
                 );
                 const statusResponse = response.data;
-                console.log("Payment callback response:", statusResponse);
+                console.log("Payment callback response:", statusResponse, statusResponse.status);
 
-                // Reset payment status after a successful callback
-                sessionStorage.setItem("paymentStatus", "completed");
+                if (statusResponse.status === "success") {
+                    alert(statusResponse.message)
+                    // Reset payment status after a successful callback
+                    sessionStorage.setItem("paymentStatus", "completed");
 
-                // Optionally clear the form data   
-                sessionStorage.removeItem("formDataValue");
-                alert(statusResponse.message);
+                    // Optionally clear the form data   
+                    sessionStorage.removeItem("formDataValue");
+                }
+                else {
+                    alert(statusResponse.message);
+                    setLoading(false);
+                    navigate('/stepcone/')
+                    return;
+                }
                 navigate(`/${encodePath("/stepcone_$_@*502&502##$ -++==002) && --profile")}`)
             } catch (error) {
                 // setLoading(false);
@@ -204,9 +220,9 @@ const EventRegisterForm = () => {
     };
 
 
-    useEffect(() => {
-        handlePaymentCallback();
-    }, []);
+    // useEffect(() => {
+    //     handlePaymentCallback();
+    // }, []);
 
 
 
@@ -237,7 +253,7 @@ const EventRegisterForm = () => {
 
                 <div className="EventForm d-md-flex justify-content-between align-items-center p-3 gap-4 rounded-4 m-3">
                     <div className="w-md-50 w-100">
-                        <form onSubmit={handleSubmit} action="/makepayment" state={{ event }}>
+                        <form onSubmit={handleSubmit} state={{ event }}>
                             <div className="mb-3">
                                 <FontAwesomeIcon icon={faPeopleGroup} className="mx-0" />
                                 <label htmlFor="Teamname" className="form-label">
@@ -266,40 +282,79 @@ const EventRegisterForm = () => {
                                     value={formData.teamLeadEmail}
                                     onChange={handleInputChange}
                                     required
+
                                     className="form-control bg-transparent border-0 border-bottom rounded-0 text-light"
                                 />
                             </div>
+                            {
+                                teamsize > 2 ? (
+                                    <>
+                                        <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow-md w-md-50 ">
+                                            <h2 className="fs-5 font-semibold mb-2">Select Team Size</h2>
+                                            <input
+                                                type="range"
+                                                min="2"
+                                                max={teamsize}
+                                                value={teamSizeSlider}
+                                                onChange={(e) => setTeamSizeSlider(Number(e.target.value))}
+                                                className="w-75 cursor-pointer"
+                                            />
+                                            <span className="mt-2 text-xl font-bold text-blue-600">
+                                                {teamSizeSlider + 1}
+                                            </span>
+                                        </div>
 
-                            <div>
-                                {Array.from({ length: teamsize }).map((_, index) => (
-                                    <div key={index} className="mb-3">
-                                        <FontAwesomeIcon icon={faEnvelope} className="mx-1" />
-                                        <label htmlFor={`member${index + 1}Mail`} className="form-label">
-                                            Member {index + 1} Email
-                                        </label>
-                                        <input
-                                            type="email"
-                                            id={`member${index + 1}Mail`}
-                                            name={`member${index + 1}Mail`}
-                                            value={formData.membersMail[index]}
-                                            onChange={handleInputChange}
-                                            required
-                                            className="form-control bg-transparent border-0 border-bottom rounded-0 text-light"
-                                        />
+                                        <div>
+                                            {Array.from({ length: teamSizeSlider }).map((_, index) => (
+                                                <div key={index} className="mb-3">
+                                                    <FontAwesomeIcon icon={faEnvelope} className="mx-1" />
+                                                    <label htmlFor={`member${index + 1}Mail`} className="form-label">
+                                                        Member {index + 1} Email
+                                                    </label>
+                                                    <input
+                                                        type="email"
+                                                        id={`member${index + 1}Mail`}
+                                                        name={`member${index + 1}Mail`}
+                                                        value={formData.membersMail[index]}
+                                                        onChange={handleInputChange}
+                                                        required
+                                                        className="form-control bg-transparent border-0 border-bottom rounded-0 text-light"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div>
+                                        {Array.from({ length: teamsize }).map((_, index) => (
+                                            <div key={index} className="mb-3">
+                                                <FontAwesomeIcon icon={faEnvelope} className="mx-1" />
+                                                <label htmlFor={`member${index + 1}Mail`} className="form-label">
+                                                    Member {index + 1} Email
+                                                </label>
+                                                <input
+                                                    type="email"
+                                                    id={`member${index + 1}Mail`}
+                                                    name={`member${index + 1}Mail`}
+                                                    value={formData.membersMail[index]}
+                                                    onChange={handleInputChange}
+                                                    required
+                                                    className="form-control bg-transparent border-0 border-bottom rounded-0 text-light"
+                                                />
+                                            </div>
+                                        ))}
                                     </div>
-                                ))}
-                            </div>
-
-
+                                )
+                            }
                             <button type="submit" className="btn btn-primary mt-3"
                             >
-                                {/* <Link
-                                    to="/makepayment"
-                                    state={{ event }}
+                                { /*<Link
+                                    to="/checkoutevent"
+                                    state={{ formDataValue }}
                                 >
                                 </Link> */}
-                                <FontAwesomeIcon icon={faIndianRupeeSign} />
-                                &nbsp;PAY {event.registrationFee}/-
+                                {/* <FontAwesomeIcon icon={faIndianRupeeSign} /> */}
+                                Proceed to Checkout
                             </button>
                         </form>
                     </div>

@@ -39,6 +39,7 @@
     border: 2px solid rgb(186, 216, 255);
     overflow: hidden;
     backdrop-filter: blur(55px);
+    will-change: transform;
 }
 
 .menu .sub-menu {
@@ -88,3 +89,5 @@
     outline: none;
     opacity: 0.6;
 }
+
+

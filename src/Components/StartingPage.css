@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Great+Vibes&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Onest:wght@100..900&family=Orbitron:wght@400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poiret+One&family=Signika+Negative:wght@300..700&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.starting-page-main {
+    height: 100vh;
+    background: black;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.earth-box {
+    width: 100%;
+    position: absolute;
+    top: 400px;
+    will-change: transform;
+    filter: hue-rotate(25deg);
+}
+
+
+.stepcone-title-img {
+    margin: 10px;
+    height: 130px;
+    width: 180px;
+}
+
+
+.stepcone-title-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    font-size: 65px;
+    color: aliceblue;
+    letter-spacing: 4.2px;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+.stepcone-title {
+    font-weight: 400;
+    font-size: 65px;
+    color: aliceblue;
+    letter-spacing: 4.2px;
+    
+    text-align: center;
+    -webkit-animation: glow 4s ease-in-out infinite alternate;
+    -moz-animation: glow 4s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite reverse;
+
+}
+
+/* .glow {
+    color: #fff;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+  
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite reverse;
+  } */
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: none;
+    }
+  
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 15px #005ae289, 0 0 20px #3596fda0, 0 0 25px #6532ffb0, 0 0 40px #5667ff, 0 0 50px #7251f5, 0 0 60px #446dff;
+    }
+  }
+
+
+.landing-box {
+    background-image: url('../../public/Assets/landingbg2.gif');
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-size: 160vh;
+    background-position: center;
+    height: 100%;
+ 
+}
+
+.shadow {
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    color: aliceblue;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.282), rgba(0, 0, 0, 0.603) 80%);
+
+}
+
+@media screen and (max-width:550px) {
+    .stepcone-title {
+        font-size: 40px;
+    }
+
+    .stepcone-title-img {
+        height: 100px;
+        width: 130px;
+    }
+    .landing-box{
+        background-size: cover;
+
+    }
+}
+
+@media screen and (max-width:450px) {
+    .earth-box {
+        width: 850px;
+        top: 70%;
+    }
+ 
+}
+
+@media (min-width: 451px) and (max-width:1270px){
+    .earth-box {
+        display: none;
+    }
+}

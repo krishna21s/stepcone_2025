@@ -72,6 +72,13 @@ const StudentBodies_pg4 = (props) => {
             </div>
           </div>
 
+          <div className='col d-flex justify-content-center col-6 col-md-5 col-lg-4  my-4' data-aos='fade-right'>
+            <div className="circle  ">
+              <div className='incircle10 incircle'>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

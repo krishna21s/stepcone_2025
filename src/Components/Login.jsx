@@ -38,25 +38,25 @@ const Login = () => {
         };
 
         try {
-            const response = await axios.post("api/stepcone_backend/login.php", formData);
+            const response = await axios.post("/stepcone/stepcone_backend/login.php", formData);
             const responseData = response.data;
-            console.log(responseData)
             if (responseData.status === "success") {
                 alert(responseData.message);
                 setLoading(false);
                 if (responseData.affiliated === "1") {
-                    window.location.href = "/";
-                    console.log(responseData.affiliated)
+                    window.location.href = "/stepcone/";
                 } else {
                     setLoading(false);
-                    if (responseData.nongmruser.accomodation === "0") {
+                    if (responseData.nongmruser.accomodation === "0" && responseData.nongmruser.paid_amount == 0) {
                         // alert(responseData.message);
-                        console.log(responseData.nongmruser.accomodation)
-                        window.location.href = `/${encodePath("/stepcone_$_**23209@&***(072462)8''8&#%$@^#@#%$^&*^&%^$%#$@#General-Registration")}`;
+
+                        navigate(`/${encodePath("/stepcone_$_**23209@&***(072462)8''8&#%$@^#@#%$^&*^&%^$%#$@#General-Registration")}`);
+                        // window.location.href = `${encodePath("/stepcone_$_**23209@&***(072462)8''8&#%$@^#@#%$^&*^&%^$%#$@#General-Registration")}`;
+
                     }
                     else {
-                        window.location.href = "/";
-                        console.log(responseData.nongmruser.accomodation);
+                        window.location.href = "/stepcone/";
+
                     }
                 }
             } else {
@@ -71,6 +71,29 @@ const Login = () => {
             setLoading(false);
         }
     };
+
+
+
+    const handleGetPassword = async () => {
+        const enteredEmail = prompt("Enter registerd email: ");
+        setLoading(true);
+        if (enteredEmail) {
+            const enteredEmailJson = {
+                email: enteredEmail
+            }
+            const response = await axios.post("/stepcone/stepcone_backend/get_mail_password.php",
+                enteredEmailJson
+            );
+            if (response.data) {
+                alert(response.data.message);
+            }
+        }
+        else {
+            setLoading(false);
+            return;
+        }
+        setLoading(false);
+    }
 
     return (
         <>
@@ -131,7 +154,11 @@ const Login = () => {
                                     >
                                         Don't have an account? Sign Up
                                     </Link>
+                                    <div className="get-mail-pass d-flex justify-content-center">
+                                        <button className="my-2 bg-transparent border-0 text-info" onClick={handleGetPassword}>forgot password ?</button>
+                                    </div>
                                 </div>
+
                             </div>
                             <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
                                 <img

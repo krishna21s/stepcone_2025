@@ -128,6 +128,10 @@
          /* Add padding for smaller screens */
      }
 
+     .gallery {
+         width: 350px !important;
+     }
+
      .details-text {
          word-spacing: 0px;
          font-size: 17px;
@@ -135,9 +139,11 @@
 
      .general-main {
          margin-left: 0px;
-         padding-right: 5px;
+         padding-right: 35px;
+         width: 350px !important;
+         /* background: black; */
          text-wrap: wrap;
-         font-size: 13px;
+         font-size: 16px;
 
      }
 
@@ -297,6 +303,7 @@
 
  .general-main {
      text-align: justify;
+     text-wrap: wrap;
  }
 
  .circle-parent {
@@ -317,4 +324,10 @@
      font-weight: 100;
      /* color: #4caf50 !important; */
      /* font-size: 17px; */
+ }
+
+
+ .ring-active {
+     background-color: #22e5ff;
+     transition: 0.5s;
  }

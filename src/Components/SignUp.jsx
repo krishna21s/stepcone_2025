@@ -1,27 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./signup.css";
 import axios from "axios";
+
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage, faUser, faBuildingColumns, faEnvelope, faPaperclip, faPhone, faGraduationCap, faArrowUp19, faUnlock, faHandshakeSimple, faIdBadge } from '@fortawesome/free-solid-svg-icons';
 import ProgImg from '/Assets/programmer_img.png';
 import StepConeImg from '/Assets/STEPCONE[1].png';
 import LoadingAnimation from "./LoadingAnimation";
 
+const encodePath = (path) => btoa(path); // Encode using Base64
+const decodePath = (encodedPath) => atob(encodedPath); // 
+
 
 const SignUp = () => {
     const [clgBelongs, setClgBelongs] = useState("");
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
     const [myEmail, setEmail] = useState({
         email: "",
         username: "",
+        affiliated: ""
     });
-
 
 
     const handleCollegeChange = (e) => {
         setClgBelongs(e.target.value);
-    };
+        setEmail({ ...myEmail, affiliated: clgBelongs })
 
+    };
     const [formvalue, setFormvalue] = useState({
         username: "",
         affiliated: "",
@@ -36,10 +43,6 @@ const SignUp = () => {
         profilepic: ""
     });
 
-
-
-
-
     const checkOtpValue = parseInt(sessionStorage.getItem('otp'), 10);
 
     function checkOtp(otpFromSession, otpFromForm) {
@@ -48,16 +51,16 @@ const SignUp = () => {
     const handleInput = (e) => {
         setFormvalue({ ...formvalue, [e.target.name]: e.target.value });
     };
+
+
     const handleOTP = (e) => {
         setEmail({ ...myEmail, [e.target.name]: e.target.value });
     };
 
 
-
     const handleSubmit = async (e) => {
         setLoading(true);
         e.preventDefault();
-        console.log(formvalue.otp);
         if (!checkOtp(checkOtpValue, formvalue.otp)) {
             alert("Invalid OTP. Please check.");
             setLoading(false);
@@ -82,15 +85,18 @@ const SignUp = () => {
         }
 
         try {
-            const response = await axios.post("api/stepcone_backend/signUp.php", formData);
+            const response = await axios.post("/stepcone/stepcone_backend/signUp.php", formData);
             const { status, message } = response.data;
-            console.log(response.data);
 
             if (status === 0) {
                 alert(message);
             } else if (status === 1) {
                 alert(message);
-                window.location.href = `${encodePath("/stepcone_$_@&&& 530$215 && --login")}`;
+
+
+                // ...
+
+                navigate(`/${encodePath("/stepcone_$_@&&& 530$215 && --login")}`);
             }
         } catch (error) {
             console.error("Error during sign up:", error);
@@ -101,34 +107,41 @@ const SignUp = () => {
     };
 
 
-
     //email
     const [isHidden, setIsHidden] = useState(false);
     const [message, setMessage] = useState("");
     const handleEmail = async (e) => {
 
         setLoading(true);
-        console.log(myEmail);
         e.preventDefault();
         //hide btn
         setIsHidden(true); // Hide the button
-        setMessage("Wait for 30 seconds");
 
-        setTimeout(() => {
-            setIsHidden(false); // Show the button after 30 seconds
-            setMessage(""); // Clear the message
-        }, 30000);
+
+        let time = 30;
+        const intervalId = setInterval(() => {
+            setMessage(`Wait for ${time} seconds`);
+            time--;
+            if (time === 0) {
+                setIsHidden(false);
+                setMessage("");
+                clearInterval(intervalId);
+            }
+        }, 1000);
+
         // Prevent the form from submitting normally
         if (!myEmail.email) {
             e.preventDefault();
             alert('Please Enter Email')
         }
+
         const OTPVerify = {
             email: myEmail.email,
             username: myEmail.username,
+            affiliated: clgBelongs
         };
         const response = await axios
-            .post("api/stepcone_backend/otp.php",
+            .post("/stepcone/stepcone_backend/otp.php",
                 OTPVerify) // Path to your PHP file
             .then((response) => {
                 const responseData = response.data;
@@ -150,11 +163,12 @@ const SignUp = () => {
         // FUNCTION FOR HANDLE PRIFILE PIC
 
     };
-
-    // const handleProfilePic = (e) => {
-    //     setProfileImg(e.target.files[0]);
-    // }
-
+    // console.log(formvalue.jntu)
+    // console.log(myEmail.email)
+    // // const handleProfilePic = (e) => {
+    // //     setProfileImg(e.target.files[0]);
+    // // }
+    // console.log(JntuForMail)
 
 
     return (
@@ -254,11 +268,26 @@ const SignUp = () => {
                                 <div className="d-sm-flex gap-1">
                                     <div className="w-sm-75">
                                         <FontAwesomeIcon icon={faEnvelope} className="mx-1" />
-                                        <label htmlFor="email">EMAIL</label>
+                                        {
+                                            clgBelongs == "" && (
+                                                <label htmlFor="email">EMAIL</label>
+                                            )
+                                        }
+                                        {
+                                            clgBelongs == "1" && (
+                                                <label htmlFor="email">JNTU MAIL</label>
+                                            )
+                                        }
+                                        {
+                                            clgBelongs == "0" && (
+                                                <label htmlFor="email">GMAIL</label>
+                                            )
+                                        }
                                         <input
                                             type="email"
                                             name="email"
                                             value={myEmail.email}
+
                                             onChange={handleOTP}
                                             required
                                             placeholder="Enter Email"
@@ -364,24 +393,23 @@ const SignUp = () => {
                                         className="input-signup"
                                     />
                                 </div>
-                                <div>
+                                {/* <div>
                                     <FontAwesomeIcon icon={faImage} style={{ color: "#ffffff", }} className="mx-1" />
-                                    <label htmlFor="profilepic">Upload Profile</label> <br />
+                                    <label htmlFor="profilepic">Upload Profile (not mandatory)</label> <br />
                                     <input
                                         type="file"
                                         name="profilepic"
                                         accept="image/*"
                                         // onChange={handleProfilePic}
-                                        required
                                         className="input-signup"
                                     />
 
-                                    <p className="text-warning signup-notice">Note:please upload file under 50kb and passport size photo</p>
-                                </div>
+                                    <p className="text-warning signup-notice">Note:please upload file under 100kb and passport size photo</p>
+                                </div> */}
 
                                 <div>
                                     <center>
-                                        <button type="submit" className="register">Singup</button>
+                                        <button type="submit" className="register">Sign up</button>
                                     </center>
                                 </div>
                             </form>

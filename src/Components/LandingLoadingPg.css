@@ -1,0 +1,43 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Full viewport height */
+    background-color: #000000;
+    /* Background color */
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    /* Light grey */
+    border-top: 8px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    /* Size of the loader */
+    height: 60px;
+    /* Size of the loader */
+    animation: spin 1s linear infinite;
+    /* Animation */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+p {
+    margin-top: 20px;
+    /* Space between loader and text */
+    font-size: 18px;
+    /* Font size */
+    color: #333;
+    /* Text color */
+}
